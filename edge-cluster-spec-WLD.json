@@ -18,21 +18,21 @@
       "edgeTep1IP": "10.2.204.10/24",
       "edgeTep2IP": "10.2.204.11/24",
       "edgeTepVlan": 204,
-      "clusterId": "84a216fa-f9af-43cf-8f04-ddff5165b2ad",
+      "clusterId": "41617453-80be-4800-ba54-36d868790436",
       "interRackCluster": false,
       "uplinkNetwork": [
         {
-          "peerIP": "10.2.90.1/24",
-          "bgpPeerPassword": "",
-          "asnPeer": 65000,
           "uplinkVlan": 90,
+          "bgpPeerPassword": "",
+          "peerIP": "10.2.90.1/24",
+          "asnPeer": 65000,
           "uplinkInterfaceIP": "10.2.90.4/24"
         },
         {
-          "peerIP": "10.2.91.1/24",
-          "bgpPeerPassword": "",
-          "asnPeer": 65000,
           "uplinkVlan": 91,
+          "bgpPeerPassword": "",
+          "peerIP": "10.2.91.1/24",
+          "asnPeer": 65000,
           "uplinkInterfaceIP": "10.2.91.4/24"
         }
       ]
@@ -45,21 +45,21 @@
       "edgeTep1IP": "10.2.204.12/24",
       "edgeTep2IP": "10.2.204.13/24",
       "edgeTepVlan": 204,
-      "clusterId": "84a216fa-f9af-43cf-8f04-ddff5165b2ad",
+      "clusterId": "41617453-80be-4800-ba54-36d868790436",
       "interRackCluster": false,
       "uplinkNetwork": [
         {
-          "peerIP": "10.2.90.1/24",
-          "bgpPeerPassword": "",
-          "asnPeer": 65000,
           "uplinkVlan": 90,
+          "bgpPeerPassword": "",
+          "peerIP": "10.2.90.1/24",
+          "asnPeer": 65000,
           "uplinkInterfaceIP": "10.2.90.5/24"
         },
         {
-          "peerIP": "10.2.91.1/24",
-          "bgpPeerPassword": "",
-          "asnPeer": 65000,
           "uplinkVlan": 91,
+          "bgpPeerPassword": "",
+          "peerIP": "10.2.91.1/24",
+          "asnPeer": 65000,
           "uplinkInterfaceIP": "10.2.91.5/24"
         }
       ]

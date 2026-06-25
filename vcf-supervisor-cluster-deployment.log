@@ -1,0 +1,139 @@
+[06-25-2026_05:10:52] Checking WLD vCenter connectivity...
+[06-25-2026_05:10:52] Successfully connected to WLD vCenter
+[06-25-2026_05:10:52] Found cluster with MoRef: domain-c9
+[06-25-2026_05:10:53] Using storage policy ID: aa6d5a82-1c88-45da-85d3-3d74b91a5bad
+[06-25-2026_05:10:53] Looking up Distributed Virtual Switch...
+[06-25-2026_05:10:53] Auto-discovered DVS: wld-cl01-vds01
+[06-25-2026_05:10:53] Found DVS 'wld-cl01-vds01' with UUID: 50 13 62 59 c7 e2 1d 64-0f ff 85 4f f3 00 03 15
+[06-25-2026_05:10:53] Checking management network from SDDC Manager (source of transportType metadata)...
+[06-25-2026_05:10:54] Found WLD domain 'w01' with ID: 243f495b-3c94-4742-adac-f0ebb1cc43d5
+[06-25-2026_05:10:54] Querying cluster ID: 41617453-80be-4800-ba54-36d868790436 for network configuration...
+[06-25-2026_05:10:54] No VDS specs found for cluster 'wld-cl01'
+[06-25-2026_05:10:54] WARNING: Could not retrieve management network from SDDC Manager
+[06-25-2026_05:10:54] The script will attempt pattern-based fallback during deployment
+[06-25-2026_05:10:54] Checking NSX Manager connectivity at 10.2.101.201...
+[06-25-2026_05:10:54] Found NSX Edge Cluster with ID: 4f88e530-98b2-407c-b168-5eef3bfeaebc
+[06-25-2026_05:10:54] Found NSX Tier-0 Gateway with ID: bddcef6e-1904-481b-bc65-7104bd24d4ea
+[06-25-2026_05:10:55] Auto-discovered DVS: wld-cl01-vds01
+[06-25-2026_05:10:55] Using DVS 'wld-cl01-vds01' with UUID: 50 13 62 59 c7 e2 1d 64-0f ff 85 4f f3 00 03 15
+[06-25-2026_05:10:55] Creating TKG Content Library...
+[06-25-2026_05:10:55] Using datastore: wld-cl01-vsan01 (datastore-20)
+[06-25-2026_05:10:56] Attempting to create subscribed content library...
+[06-25-2026_05:10:56] Probing subscription URL to get SSL certificate thumbprint...
+[06-25-2026_05:10:57] Got SSL thumbprint: b6:49:37:52:8a:d1:91:a6:a8:55:23:6d:c7:4c:bd:3b:2c:c4:29:54
+[06-25-2026_05:10:57] Probe status: CERTIFICATE_ERROR
+[06-25-2026_05:10:57]   Probe error: HTTP request error: cannot authenticate SSL certificate for host wp-content.vmware.com.
+[06-25-2026_05:10:57] DEBUG: Subscribed library spec:
+[06-25-2026_05:10:57] {
+  "subscription_info": {
+    "authentication_method": "NONE",
+    "on_demand": true,
+    "automatic_sync_enabled": true,
+    "subscription_url": "https://wp-content.vmware.com/v2/latest/lib.json",
+    "ssl_thumbprint": "b6:49:37:52:8a:d1:91:a6:a8:55:23:6d:c7:4c:bd:3b:2c:c4:29:54"
+  },
+  "storage_backings": [
+    {
+      "type": "DATASTORE",
+      "datastore_id": "datastore-20"
+    }
+  ],
+  "name": "TKG-Content-Library",
+  "description": "TKG Content Library for Supervisor Cluster",
+  "type": "SUBSCRIBED"
+}
+[06-25-2026_05:10:58] Created Subscribed Content Library 'TKG-Content-Library' with ID: f4769ee2-04df-473d-813d-6f2fab1becb4
+[06-25-2026_05:10:58] Querying SDDC Manager for management network (transportType = MANAGEMENT or VM_MANAGEMENT)...
+[06-25-2026_05:10:59] Found WLD domain 'w01' with ID: 243f495b-3c94-4742-adac-f0ebb1cc43d5
+[06-25-2026_05:10:59] Querying cluster ID: 41617453-80be-4800-ba54-36d868790436 for network configuration...
+[06-25-2026_05:10:59] No VDS specs found for cluster 'wld-cl01'
+[06-25-2026_05:10:59] SDDC Manager lookup failed or returned no result
+[06-25-2026_05:10:59] Listing all available networks in vCenter for reference...
+[06-25-2026_05:10:59] Available networks in vCenter:
+[06-25-2026_05:10:59]   - wld-cl01-vds01-management-DVPG (Type: DISTRIBUTED_PORTGROUP, MoRef: dvportgroup-26)
+[06-25-2026_05:10:59]   - wld-cl01-vds01-vsan (Type: DISTRIBUTED_PORTGROUP, MoRef: dvportgroup-15)
+[06-25-2026_05:10:59]   - wld-cl01-vds01-management (Type: DISTRIBUTED_PORTGROUP, MoRef: dvportgroup-13)
+[06-25-2026_05:10:59]   - VCF-edge_wld-ec01_PG-wld-cl01-vds01-External-2 (Type: DISTRIBUTED_PORTGROUP, MoRef: dvportgroup-29)
+[06-25-2026_05:10:59]   - wld-cl01-vds01-DVUplinks-11 (Type: DISTRIBUTED_PORTGROUP, MoRef: dvportgroup-12)
+[06-25-2026_05:10:59]   - VCF-edge_wld-ec01_PG-wld-cl01-vds01-External-1 (Type: DISTRIBUTED_PORTGROUP, MoRef: dvportgroup-28)
+[06-25-2026_05:10:59]   - none (Type: STANDARD_PORTGROUP, MoRef: network-31)
+[06-25-2026_05:10:59]   - wld-cl01-vds01-vmotion (Type: DISTRIBUTED_PORTGROUP, MoRef: dvportgroup-14)
+[06-25-2026_05:10:59] Attempting pattern-based fallback (looking for VM management portgroup)...
+[06-25-2026_05:10:59] No vm_management portgroup found, trying management portgroup...
+[06-25-2026_05:10:59] Using management network: wld-cl01-vds01-management (MoRef: dvportgroup-13)
+[06-25-2026_05:10:59] DEBUG: Workload Management Spec:
+[06-25-2026_05:10:59] Spec saved to supervisor-cluster-spec.json
+[06-25-2026_05:10:59] Enabling Workload Management on cluster domain-c9...
+[06-25-2026_05:11:02] Workload Management enablement initiated successfully
+[06-25-2026_05:11:02] Waiting for Supervisor Cluster to become ready (this may take 20-30 minutes)...
+[06-25-2026_05:11:02] Monitoring Supervisor deployment progress via conditions...
+[06-25-2026_05:11:03] [00:00] Deployment Progress (config_status: CONFIGURING):
+[06-25-2026_05:11:03]   ○ InfrastructureInitialized (WaitingForInfrastructureInitialization)
+[06-25-2026_05:11:03]   ○ ControlPlaneVMsDeployed
+[06-25-2026_05:11:03]   ○ ControlPlaneVMsConfigured
+[06-25-2026_05:11:03]   K8s Status: Initializing (this is normal during deployment)
+[06-25-2026_05:11:33] [00:30] Deployment Progress (config_status: CONFIGURING):
+[06-25-2026_05:11:33]   ✓ InfrastructureInitialized
+[06-25-2026_05:11:33]   ○ ControlPlaneVMsDeployed (WaitingForControlPlaneVMsDeployed)
+[06-25-2026_05:11:33]   ○ ControlPlaneVMsConfigured
+[06-25-2026_05:11:33]   K8s Status: Initializing (this is normal during deployment)
+[06-25-2026_05:13:04] [02:01] Deployment Progress (config_status: CONFIGURING):
+[06-25-2026_05:13:04]   ✓ InfrastructureInitialized
+[06-25-2026_05:13:04]   ○ ControlPlaneVMsDeployed (FailedWithSystemError)
+[06-25-2026_05:13:04]   ○ ControlPlaneVMsConfigured
+[06-25-2026_05:13:04]   ○ CoreServicesConfigured (WaitingForCoreServicesConfigured)
+[06-25-2026_05:13:04]   K8s Status: Initializing (this is normal during deployment)
+[06-25-2026_05:17:05] [06:02] Deployment Progress (config_status: CONFIGURING):
+[06-25-2026_05:17:05]   ✓ InfrastructureInitialized
+[06-25-2026_05:17:05]   ○ ControlPlaneVMsDeployed (WaitingForControlPlaneVMsDeployed)
+[06-25-2026_05:17:05]   ○ ControlPlaneVMsConfigured (FailedWithSystemError)
+[06-25-2026_05:17:05]   ○ CoreServicesConfigured (WaitingForCoreServicesConfigured)
+[06-25-2026_05:17:05]   K8s Status: Initializing (this is normal during deployment)
+[06-25-2026_05:18:36] [07:33] Deployment Progress (config_status: CONFIGURING):
+[06-25-2026_05:18:36]   ✓ InfrastructureInitialized
+[06-25-2026_05:18:36]   ✓ ControlPlaneVMsDeployed
+[06-25-2026_05:18:36]   ○ ControlPlaneVMsConfigured (FailedWithSystemError)
+[06-25-2026_05:18:36]   ○ CoreServicesConfigured (WaitingForCoreServicesConfigured)
+[06-25-2026_05:18:36]   K8s Status: Initializing (this is normal during deployment)
+[06-25-2026_05:24:40] [13:37] Deployment Progress (config_status: CONFIGURING):
+[06-25-2026_05:24:40]   ✓ InfrastructureInitialized
+[06-25-2026_05:24:40]   ✓ ControlPlaneVMsDeployed
+[06-25-2026_05:24:40]   ○ ControlPlaneVMsConfigured (WaitingForControlPlaneVMsConfigured)
+[06-25-2026_05:24:40]   ○ CoreServicesConfigured (WaitingForCoreServicesConfigured)
+[06-25-2026_05:24:40]   ✓ LoadbalancerConfigured
+[06-25-2026_05:25:40] [14:38] Deployment Progress (config_status: CONFIGURING):
+[06-25-2026_05:25:40]   ✓ InfrastructureInitialized
+[06-25-2026_05:25:40]   ✓ ControlPlaneVMsDeployed
+[06-25-2026_05:25:40]   ✓ ControlPlaneVMsConfigured
+[06-25-2026_05:25:40]   ○ CoreServicesConfigured (WaitingForCoreServicesConfigured)
+[06-25-2026_05:25:40]   ✓ LoadbalancerConfigured
+[06-25-2026_05:26:41] [15:38] Deployment Progress (config_status: CONFIGURING):
+[06-25-2026_05:26:41]   ✓ InfrastructureInitialized
+[06-25-2026_05:26:41]   ✓ ControlPlaneVMsDeployed
+[06-25-2026_05:26:41]   ○ ControlPlaneVMsConfigured (WaitingForControlPlaneVMsConfigured)
+[06-25-2026_05:26:41]   ○ CoreServicesConfigured (WaitingForCoreServicesConfigured)
+[06-25-2026_05:26:41]   ✓ LoadbalancerConfigured
+[06-25-2026_05:27:42] [16:39] Deployment Progress (config_status: CONFIGURING):
+[06-25-2026_05:27:42]   ✓ InfrastructureInitialized
+[06-25-2026_05:27:42]   ✓ ControlPlaneVMsDeployed
+[06-25-2026_05:27:42]   ✓ ControlPlaneVMsConfigured
+[06-25-2026_05:27:42]   ○ CoreServicesConfigured (FailedWithSystemError)
+[06-25-2026_05:27:42]   ✓ LoadbalancerConfigured
+[06-25-2026_05:33:44] ═══════════════════════════════════════════════════════════════
+[06-25-2026_05:33:44]   Supervisor Cluster is now RUNNING!
+[06-25-2026_05:33:44] ═══════════════════════════════════════════════════════════════
+[06-25-2026_05:33:44]   Config Status: RUNNING
+[06-25-2026_05:33:44]   Kubernetes Status: WARNING
+[06-25-2026_05:33:44]   API Server Endpoint: 10.2.220.1
+[06-25-2026_05:33:44]   Final Conditions:
+[06-25-2026_05:33:44]     ✓ InfrastructureInitialized
+[06-25-2026_05:33:44]     ✓ ControlPlaneVMsDeployed
+[06-25-2026_05:33:44]     ✓ ControlPlaneVMsConfigured
+[06-25-2026_05:33:44]     ✓ CoreServicesConfigured
+[06-25-2026_05:33:44]     ✓ LoadbalancerConfigured
+[06-25-2026_05:33:44] Creating initial namespace 'wld-ns-01'...
+[06-25-2026_05:33:44] Namespace 'wld-ns-01' created successfully
+[06-25-2026_05:33:44] Supervisor Cluster Deployment Complete!
+[06-25-2026_05:33:44]   StartTime: 06/25/2026 17:10:52
+[06-25-2026_05:33:44]   EndTime: 06/25/2026 17:33:44
+[06-25-2026_05:33:44]   Duration: 22.87 minutes

@@ -1,0 +1,890 @@
+[06-24-2026_09:23:39] Connecting to Management vCenter Server labvcsa.lab.io ...
+[06-24-2026_09:23:39] Deploying VCF Installer VM vcfinst ...
+[06-24-2026_09:24:08] Powering On vcfinst ...
+[06-24-2026_09:24:08] Waiting for VCF Installer API to become ready...
+[06-24-2026_09:26:14]   ✓ VCF Installer API is now ready!
+[06-24-2026_09:26:14] Transfering configuration shell script (vcfIntScript.sh) to VCF Installer VM ...
+[06-24-2026_09:26:14] Running configuration shell script on VCF Installer VM ...
+[06-24-2026_09:30:23] 
+========================================
+[06-24-2026_09:30:23]   PARALLEL MGMT ESXi DEPLOYMENT
+[06-24-2026_09:30:23]   Total hosts: 4
+[06-24-2026_09:30:23]   Max concurrent: 4
+[06-24-2026_09:30:23] ========================================
+
+[06-24-2026_09:30:23] [1/4] Starting deployment: esx01 (10.2.100.10)
+[06-24-2026_09:30:23] [2/4] Starting deployment: esx02 (10.2.100.11)
+[06-24-2026_09:30:24] [3/4] Starting deployment: esx03 (10.2.100.12)
+[06-24-2026_09:30:24] [4/4] Starting deployment: esx04 (10.2.100.13)
+[06-24-2026_09:30:24] 
+Waiting for remaining deployments to complete...
+[06-24-2026_09:30:24]   4 deployment(s) still in progress...
+[06-24-2026_09:31:02]   ✓ [esx01] Completed in 0.63 min
+[06-24-2026_09:31:02]   ✓ [esx02] Completed in 0.63 min
+[06-24-2026_09:31:02]   ✓ [esx03] Completed in 0.63 min
+[06-24-2026_09:31:02]   ✓ [esx04] Completed in 0.62 min
+[06-24-2026_09:31:02] 
+========================================
+[06-24-2026_09:31:02]   MGMT ESXi DEPLOYMENT SUMMARY
+[06-24-2026_09:31:02]   Total: 4 | Success: 4 | Failed: 0
+[06-24-2026_09:31:02] ========================================
+
+[06-24-2026_09:31:02] 
+========================================
+[06-24-2026_09:31:02]   PARALLEL WLD ESXi DEPLOYMENT
+[06-24-2026_09:31:02]   Total hosts: 3
+[06-24-2026_09:31:02]   Max concurrent: 4
+[06-24-2026_09:31:02] ========================================
+
+[06-24-2026_09:31:02] [1/3] Starting deployment: esx05 (10.2.200.10)
+[06-24-2026_09:31:02] [2/3] Starting deployment: esx06 (10.2.200.11)
+[06-24-2026_09:31:02] [3/3] Starting deployment: esx07 (10.2.200.12)
+[06-24-2026_09:31:02] 
+Waiting for remaining deployments to complete...
+[06-24-2026_09:31:02]   3 deployment(s) still in progress...
+[06-24-2026_09:31:37]   ✓ [esx05] Completed in 0.58 min
+[06-24-2026_09:31:37]   ✓ [esx06] Completed in 0.57 min
+[06-24-2026_09:31:37]   ✓ [esx07] Completed in 0.57 min
+[06-24-2026_09:31:37] 
+========================================
+[06-24-2026_09:31:37]   WLD ESXi DEPLOYMENT SUMMARY
+[06-24-2026_09:31:37]   Total: 3 | Success: 3 | Failed: 0
+[06-24-2026_09:31:37] ========================================
+
+[06-24-2026_09:31:37] Creating vApp Nested-VCF-9-Lab-rhy1kd4b ...
+[06-24-2026_09:31:38] Moving Nested Management ESXi VMs into Nested-VCF-9-Lab-rhy1kd4b vApp ...
+
+Name                 PowerState Num CPUs MemoryGB
+----                 ---------- -------- --------
+esx01                PoweredOn  24       160,000
+
+
+Name                 PowerState Num CPUs MemoryGB
+----                 ---------- -------- --------
+esx02                PoweredOn  24       160,000
+
+
+Name                 PowerState Num CPUs MemoryGB
+----                 ---------- -------- --------
+esx03                PoweredOn  24       160,000
+
+
+Name                 PowerState Num CPUs MemoryGB
+----                 ---------- -------- --------
+esx04                PoweredOn  24       160,000
+
+[06-24-2026_09:31:43] Moving Nested Workload ESXi VMs into Nested-VCF-9-Lab-rhy1kd4b vApp ...
+
+Name                 PowerState Num CPUs MemoryGB
+----                 ---------- -------- --------
+esx05                PoweredOn  24       160,000
+
+
+Name                 PowerState Num CPUs MemoryGB
+----                 ---------- -------- --------
+esx06                PoweredOn  24       160,000
+
+
+Name                 PowerState Num CPUs MemoryGB
+----                 ---------- -------- --------
+esx07                PoweredOn  24       160,000
+
+[06-24-2026_09:31:47] Moving vcfinst into Nested-VCF-9-Lab-rhy1kd4b vApp ...
+
+Name                 PowerState Num CPUs MemoryGB
+----                 ---------- -------- --------
+vcfinst              PoweredOn  4        16,000
+
+[06-24-2026_09:31:48] Moving Nested-VCF-9-Lab-rhy1kd4b to VM Folder TSLAB ...
+
+Name                 Status    CpuSharesL CpuReserva CpuLimitMh MemSharesL MemReservationG      MemLimitGB
+                                     evel    tionMhz          z       evel               B
+----                 ------    ---------- ---------- ---------- ---------- ---------------      ----------
+Nested-VCF-9-Lab-rh… Started       Normal          0         -1     Normal           0,000          -1,000
+
+[06-24-2026_09:31:49] Generating VCF Management Domain deployment JSON file vcf-mgmt-rhy1kd4b.json
+[06-24-2026_09:31:49] 
+========================================
+[06-24-2026_09:31:49]   VCF SOFTWARE DEPOT CONFIGURATION
+[06-24-2026_09:31:49] ========================================
+
+[06-24-2026_09:31:49] Waiting for VCF Installer API to become ready...
+[06-24-2026_09:31:52]   ✓ VCF Installer API is now ready!
+[06-24-2026_09:31:52] DEBUG: Method: PUT
+[06-24-2026_09:31:52] DEBUG: Uri: https://vcfinst.vcf.lab.io/v1/system/settings/depot
+[06-24-2026_09:31:54] ✓ Successfully connected to VCF Software Depot
+[06-24-2026_09:31:54] DEBUG: Initiating depot sync
+[06-24-2026_09:31:54] ✓ VCF Software Depot sync initiated
+[06-24-2026_09:31:54] Waiting for depot sync to complete...
+[06-24-2026_10:00:25]   ✓ VCF Software Depot synced successfully
+[06-24-2026_10:00:25] Retrieving VCF release components...
+[06-24-2026_10:00:26]   Found 16 components for VCF 9.1.0.0
+[06-24-2026_10:00:26] 
+Initiating bundle downloads...
+[06-24-2026_10:00:26] Processing: VCF_SERVICE_VCD_MIGRATION_BACKEND [1998d24e-9fa4-5a13-b795-472537e224d2]
+[06-24-2026_10:00:26] DEBUG: Starting download for bundle 1998d24e-9fa4-5a13-b795-472537e224d2
+[06-24-2026_10:00:26]   ▶ Bundle download initiated: 
+[06-24-2026_10:00:26] Processing: VRA [8adb94df-7a39-5c96-a924-215cce4a605c]
+[06-24-2026_10:00:26] DEBUG: Starting download for bundle 8adb94df-7a39-5c96-a924-215cce4a605c
+[06-24-2026_10:00:26]   ▶ Bundle download initiated: 
+[06-24-2026_10:00:26] Processing: VRA [ad46043f-a8b3-50c0-b994-9783fbce2f4d]
+[06-24-2026_10:00:26] DEBUG: Starting download for bundle ad46043f-a8b3-50c0-b994-9783fbce2f4d
+[06-24-2026_10:00:26]   ▶ Bundle download initiated: 
+[06-24-2026_10:00:26] Processing: VCF_SDDC_LCM [75c2165f-ac1e-55da-8c96-d394bf441f56]
+[06-24-2026_10:00:26] DEBUG: Starting download for bundle 75c2165f-ac1e-55da-8c96-d394bf441f56
+[06-24-2026_10:00:26]   ▶ Bundle download initiated: 
+[06-24-2026_10:00:26] Processing: VCF_SDDC_LCM [2a141812-4173-5fe1-be1e-35a1059a6485]
+[06-24-2026_10:00:26] DEBUG: Starting download for bundle 2a141812-4173-5fe1-be1e-35a1059a6485
+[06-24-2026_10:00:26]   ▶ Bundle download initiated: 
+[06-24-2026_10:00:26] Processing: VCF_LICENSE_SERVER [62f68bab-de0c-5d96-8222-577c3ac4270e]
+[06-24-2026_10:00:26] DEBUG: Starting download for bundle 62f68bab-de0c-5d96-8222-577c3ac4270e
+[06-24-2026_10:00:26]   ▶ Bundle download initiated: 
+[06-24-2026_10:00:26] Processing: VCF_LICENSE_SERVER [eb2aa9bf-11df-5ce0-add9-69864dd4fa7d]
+[06-24-2026_10:00:26] DEBUG: Starting download for bundle eb2aa9bf-11df-5ce0-add9-69864dd4fa7d
+[06-24-2026_10:00:26]   ▶ Bundle download initiated: 
+[06-24-2026_10:00:26] Processing: VCENTER [581cfc8b-6d2e-51e1-8412-528c4506e419]
+[06-24-2026_10:00:26] DEBUG: Starting download for bundle 581cfc8b-6d2e-51e1-8412-528c4506e419
+[06-24-2026_10:00:26]   ▶ Bundle download initiated: 
+[06-24-2026_10:00:26] Processing: VCENTER [0a02f34d-2e9d-500d-bbb6-b417e9e96870]
+[06-24-2026_10:00:27] DEBUG: Starting download for bundle 0a02f34d-2e9d-500d-bbb6-b417e9e96870
+[06-24-2026_10:00:27]   ▶ Bundle download initiated: 
+[06-24-2026_10:00:27] Processing: NSX_T_MANAGER [043bbcda-7ec2-5874-84e4-0f51472f3d5c]
+[06-24-2026_10:00:27] DEBUG: Starting download for bundle 043bbcda-7ec2-5874-84e4-0f51472f3d5c
+[06-24-2026_10:00:27]   ▶ Bundle download initiated: 
+[06-24-2026_10:00:27] Processing: NSX_T_MANAGER [19c57bf5-4492-59b8-83eb-6d45c51acff3]
+[06-24-2026_10:00:27] DEBUG: Starting download for bundle 19c57bf5-4492-59b8-83eb-6d45c51acff3
+[06-24-2026_10:00:27]   ▶ Bundle download initiated: 
+[06-24-2026_10:00:27] Processing: VROPS [2a4a0cfa-c823-5999-a831-f12dc522b95f]
+[06-24-2026_10:00:27] DEBUG: Starting download for bundle 2a4a0cfa-c823-5999-a831-f12dc522b95f
+[06-24-2026_10:00:27]   ▶ Bundle download initiated: 
+[06-24-2026_10:00:27] Processing: VROPS [e48612e2-12f1-50b7-bff2-ec60a0d06861]
+[06-24-2026_10:00:27] DEBUG: Starting download for bundle e48612e2-12f1-50b7-bff2-ec60a0d06861
+[06-24-2026_10:00:27]   ▶ Bundle download initiated: 
+[06-24-2026_10:00:27] Processing: VIDB [0911b05e-e5c1-5036-867f-7a12066c8d06]
+[06-24-2026_10:00:27] DEBUG: Starting download for bundle 0911b05e-e5c1-5036-867f-7a12066c8d06
+[06-24-2026_10:00:27]   ▶ Bundle download initiated: 
+[06-24-2026_10:00:27] Processing: SDDC_MANAGER [fe5daf52-a3e1-5487-8ec4-25270533bb23]
+[06-24-2026_10:00:27] DEBUG: Starting download for bundle fe5daf52-a3e1-5487-8ec4-25270533bb23
+[06-24-2026_10:00:27]   ▶ Bundle download initiated: 
+[06-24-2026_10:00:27] Processing: SDDC_MANAGER [de3a3d15-6b06-5171-9e07-683baa634155]
+[06-24-2026_10:00:27] DEBUG: Starting download for bundle de3a3d15-6b06-5171-9e07-683baa634155
+[06-24-2026_10:00:27]   ▶ Bundle download initiated: 
+[06-24-2026_10:00:27] Processing: VCF_SALT [3092fe38-b997-5f2f-b397-6776c6601880]
+[06-24-2026_10:00:27] DEBUG: Starting download for bundle 3092fe38-b997-5f2f-b397-6776c6601880
+[06-24-2026_10:00:27]   ▶ Bundle download initiated: 
+[06-24-2026_10:00:27] Processing: VCF_SALT [d7b7f50b-f15e-55ce-8d80-54a5104183f2]
+[06-24-2026_10:00:28] DEBUG: Starting download for bundle d7b7f50b-f15e-55ce-8d80-54a5104183f2
+[06-24-2026_10:00:28]   ▶ Bundle download initiated: 
+[06-24-2026_10:00:28] Processing: VCF_OPS_CLOUD_PROXY [9599b55f-952b-5b2f-a96a-7529a9e904ae]
+[06-24-2026_10:00:28] DEBUG: Starting download for bundle 9599b55f-952b-5b2f-a96a-7529a9e904ae
+[06-24-2026_10:00:28]   ▶ Bundle download initiated: 
+[06-24-2026_10:00:28] Processing: VCF_OPS_CLOUD_PROXY [c7afe212-0aef-58a8-8cf5-dcdcc7818327]
+[06-24-2026_10:00:28] DEBUG: Starting download for bundle c7afe212-0aef-58a8-8cf5-dcdcc7818327
+[06-24-2026_10:00:28]   ▶ Bundle download initiated: 
+[06-24-2026_10:00:28] Processing: TELEMETRY_ACCEPTOR [cfdc3829-f065-50ec-8c4e-2c2fc85ccc56]
+[06-24-2026_10:00:28] DEBUG: Starting download for bundle cfdc3829-f065-50ec-8c4e-2c2fc85ccc56
+[06-24-2026_10:00:28]   ▶ Bundle download initiated: 
+[06-24-2026_10:00:28] Processing: VSP [aa88f811-700a-5384-b86e-c40191985348]
+[06-24-2026_10:00:28] DEBUG: Starting download for bundle aa88f811-700a-5384-b86e-c40191985348
+[06-24-2026_10:00:28]   ▶ Bundle download initiated: 
+[06-24-2026_10:00:28] Processing: VCF_SALT_RAAS [1e7fd7e4-042c-5c6c-a7ba-a2c926a90f4f]
+[06-24-2026_10:00:28] DEBUG: Starting download for bundle 1e7fd7e4-042c-5c6c-a7ba-a2c926a90f4f
+[06-24-2026_10:00:28]   ▶ Bundle download initiated: 
+[06-24-2026_10:00:28] Processing: VCF_SALT_RAAS [d1a8d3cd-74de-59c1-a26d-d46cf170430c]
+[06-24-2026_10:00:28] DEBUG: Starting download for bundle d1a8d3cd-74de-59c1-a26d-d46cf170430c
+[06-24-2026_10:00:28]   ▶ Bundle download initiated: 
+[06-24-2026_10:00:28] Processing: VCF_FLEET_LCM [ad3f0777-a0c9-509c-86cd-86001cebcf8f]
+[06-24-2026_10:00:28] DEBUG: Starting download for bundle ad3f0777-a0c9-509c-86cd-86001cebcf8f
+[06-24-2026_10:00:28]   ▶ Bundle download initiated: 
+[06-24-2026_10:00:28] Processing: VCF_FLEET_LCM [ee6974ad-a803-58a3-b0c2-b86bf61e622b]
+[06-24-2026_10:00:28] DEBUG: Starting download for bundle ee6974ad-a803-58a3-b0c2-b86bf61e622b
+[06-24-2026_10:00:28]   ▶ Bundle download initiated: 
+[06-24-2026_10:00:28] Processing: DEPOT_SERVICE [2549d171-774b-5662-8a40-a40f8cb2cf11]
+[06-24-2026_10:00:28] DEBUG: Starting download for bundle 2549d171-774b-5662-8a40-a40f8cb2cf11
+[06-24-2026_10:00:28]   ▶ Bundle download initiated: 
+[06-24-2026_10:00:29] 
+Monitoring bundle download progress...
+[06-24-2026_10:00:29]   Bundle Status: 0 completed | 27 in progress | 0 failed
+[06-24-2026_10:00:29]     DEBUG: Available properties for NSX_T_MANAGER: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:00:29]     → NSX_T_MANAGER: SCHEDULED
+[06-24-2026_10:00:29]     DEBUG: Available properties for VROPS: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:00:29]     → VROPS: SCHEDULED
+[06-24-2026_10:00:29]     DEBUG: Available properties for VCF_SALT_RAAS: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:00:29]     → VCF_SALT_RAAS: SCHEDULED
+[06-24-2026_10:00:29]     DEBUG: Available properties for VCF_OPS_CLOUD_PROXY: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:00:29]     → VCF_OPS_CLOUD_PROXY: SCHEDULED
+[06-24-2026_10:00:29]     DEBUG: Available properties for VIDB: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:00:29]     → VIDB: SCHEDULED
+[06-24-2026_10:00:29]     DEBUG: Available properties for VCF_FLEET_LCM: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:00:29]     → VCF_FLEET_LCM: SCHEDULED
+[06-24-2026_10:00:29]     DEBUG: Available properties for VCF_SERVICE_VCD_MIGRATION_BACKEND: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:00:29]     → VCF_SERVICE_VCD_MIGRATION_BACKEND: SCHEDULED
+[06-24-2026_10:00:29]     DEBUG: Available properties for VCF_LICENSE_SERVER: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:00:29]     → VCF_LICENSE_SERVER: SCHEDULED
+[06-24-2026_10:00:29]     DEBUG: Available properties for VCF_SALT: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:00:29]     → VCF_SALT: SCHEDULED
+[06-24-2026_10:00:29]     DEBUG: Available properties for VCF_SDDC_LCM: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:00:29]     → VCF_SDDC_LCM: SCHEDULED
+[06-24-2026_10:00:29]     DEBUG: Available properties for VCF_SALT: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:00:29]     → VCF_SALT: SCHEDULED
+[06-24-2026_10:00:29]     DEBUG: Available properties for SDDC_MANAGER: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:00:29]     → SDDC_MANAGER: SCHEDULED
+[06-24-2026_10:00:29]     DEBUG: Available properties for VROPS: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:00:29]     → VROPS: SCHEDULED
+[06-24-2026_10:00:29]     DEBUG: Available properties for VCENTER: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:00:29]     → VCENTER: SCHEDULED
+[06-24-2026_10:00:29]     DEBUG: Available properties for VCF_SDDC_LCM: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:00:29]     → VCF_SDDC_LCM: SCHEDULED
+[06-24-2026_10:00:29]     DEBUG: Available properties for NSX_T_MANAGER: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:00:29]     → NSX_T_MANAGER: SCHEDULED
+[06-24-2026_10:00:29]     DEBUG: Available properties for VSP: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:00:29]     → VSP: SCHEDULED
+[06-24-2026_10:00:29]     DEBUG: Available properties for VRA: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadStartTime, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:00:29]     → VRA: INPROGRESS
+[06-24-2026_10:00:29]     DEBUG: Available properties for DEPOT_SERVICE: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:00:29]     → DEPOT_SERVICE: SCHEDULED
+[06-24-2026_10:00:29]     DEBUG: Available properties for VCENTER: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:00:29]     → VCENTER: SCHEDULED
+[06-24-2026_10:00:29]     DEBUG: Available properties for VCF_FLEET_LCM: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:00:29]     → VCF_FLEET_LCM: SCHEDULED
+[06-24-2026_10:00:29]     DEBUG: Available properties for VCF_SALT_RAAS: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:00:29]     → VCF_SALT_RAAS: SCHEDULED
+[06-24-2026_10:00:29]     DEBUG: Available properties for TELEMETRY_ACCEPTOR: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:00:29]     → TELEMETRY_ACCEPTOR: SCHEDULED
+[06-24-2026_10:00:29]     DEBUG: Available properties for VCF_OPS_CLOUD_PROXY: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:00:29]     → VCF_OPS_CLOUD_PROXY: SCHEDULED
+[06-24-2026_10:00:29]     DEBUG: Available properties for SDDC_MANAGER: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:00:29]     → SDDC_MANAGER: SCHEDULED
+[06-24-2026_10:00:29]     DEBUG: Available properties for VCF_LICENSE_SERVER: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:00:29]     → VCF_LICENSE_SERVER: SCHEDULED
+[06-24-2026_10:00:29]     DEBUG: Available properties for VRA: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadStartTime, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:00:29]     → VRA: INPROGRESS
+[06-24-2026_10:01:29]   Bundle Status: 0 completed | 25 in progress | 0 failed
+[06-24-2026_10:01:29]     DEBUG: Available properties for NSX_T_MANAGER: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:01:29]     → NSX_T_MANAGER: SCHEDULED
+[06-24-2026_10:01:29]     DEBUG: Available properties for VROPS: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:01:29]     → VROPS: SCHEDULED
+[06-24-2026_10:01:29]     DEBUG: Available properties for VCF_SALT_RAAS: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:01:29]     → VCF_SALT_RAAS: SCHEDULED
+[06-24-2026_10:01:29]     DEBUG: Available properties for VCF_OPS_CLOUD_PROXY: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:01:29]     → VCF_OPS_CLOUD_PROXY: SCHEDULED
+[06-24-2026_10:01:29]     DEBUG: Available properties for VIDB: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:01:29]     → VIDB: SCHEDULED
+[06-24-2026_10:01:29]     DEBUG: Available properties for VCF_FLEET_LCM: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:01:29]     → VCF_FLEET_LCM: SCHEDULED
+[06-24-2026_10:01:29]     DEBUG: Available properties for VCF_LICENSE_SERVER: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:01:29]     → VCF_LICENSE_SERVER: SCHEDULED
+[06-24-2026_10:01:29]     DEBUG: Available properties for VCF_SALT: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:01:29]     → VCF_SALT: SCHEDULED
+[06-24-2026_10:01:29]     DEBUG: Available properties for VCF_SALT: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:01:29]     → VCF_SALT: SCHEDULED
+[06-24-2026_10:01:29]     DEBUG: Available properties for SDDC_MANAGER: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:01:29]     → SDDC_MANAGER: SCHEDULED
+[06-24-2026_10:01:29]     DEBUG: Available properties for VROPS: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:01:29]     → VROPS: SCHEDULED
+[06-24-2026_10:01:29]     DEBUG: Available properties for VCENTER: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:01:29]     → VCENTER: SCHEDULED
+[06-24-2026_10:01:29]     DEBUG: Available properties for VCF_SDDC_LCM: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadStartTime, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:01:29]     → VCF_SDDC_LCM: INPROGRESS
+[06-24-2026_10:01:29]     DEBUG: Available properties for NSX_T_MANAGER: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:01:29]     → NSX_T_MANAGER: SCHEDULED
+[06-24-2026_10:01:29]     DEBUG: Available properties for VSP: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:01:29]     → VSP: SCHEDULED
+[06-24-2026_10:01:29]     DEBUG: Available properties for VRA: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadStartTime, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:01:29]     → VRA: INPROGRESS
+[06-24-2026_10:01:29]     DEBUG: Available properties for DEPOT_SERVICE: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:01:29]     → DEPOT_SERVICE: SCHEDULED
+[06-24-2026_10:01:29]     DEBUG: Available properties for VCENTER: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:01:29]     → VCENTER: SCHEDULED
+[06-24-2026_10:01:29]     DEBUG: Available properties for VCF_FLEET_LCM: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:01:29]     → VCF_FLEET_LCM: SCHEDULED
+[06-24-2026_10:01:29]     DEBUG: Available properties for VCF_SALT_RAAS: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:01:29]     → VCF_SALT_RAAS: SCHEDULED
+[06-24-2026_10:01:29]     DEBUG: Available properties for TELEMETRY_ACCEPTOR: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:01:29]     → TELEMETRY_ACCEPTOR: SCHEDULED
+[06-24-2026_10:01:29]     DEBUG: Available properties for VCF_OPS_CLOUD_PROXY: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:01:29]     → VCF_OPS_CLOUD_PROXY: SCHEDULED
+[06-24-2026_10:01:29]     DEBUG: Available properties for SDDC_MANAGER: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:01:29]     → SDDC_MANAGER: SCHEDULED
+[06-24-2026_10:01:29]     DEBUG: Available properties for VCF_LICENSE_SERVER: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:01:29]     → VCF_LICENSE_SERVER: SCHEDULED
+[06-24-2026_10:01:29]     DEBUG: Available properties for VRA: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadStartTime, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:01:29]     → VRA: INPROGRESS
+[06-24-2026_10:02:29]   Bundle Status: 0 completed | 23 in progress | 0 failed
+[06-24-2026_10:02:29]     DEBUG: Available properties for NSX_T_MANAGER: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:02:29]     → NSX_T_MANAGER: SCHEDULED
+[06-24-2026_10:02:29]     DEBUG: Available properties for VROPS: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:02:29]     → VROPS: SCHEDULED
+[06-24-2026_10:02:29]     DEBUG: Available properties for VCF_SALT_RAAS: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:02:29]     → VCF_SALT_RAAS: SCHEDULED
+[06-24-2026_10:02:29]     DEBUG: Available properties for VCF_OPS_CLOUD_PROXY: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:02:29]     → VCF_OPS_CLOUD_PROXY: SCHEDULED
+[06-24-2026_10:02:29]     DEBUG: Available properties for VIDB: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:02:29]     → VIDB: SCHEDULED
+[06-24-2026_10:02:29]     DEBUG: Available properties for VCF_FLEET_LCM: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:02:29]     → VCF_FLEET_LCM: SCHEDULED
+[06-24-2026_10:02:29]     DEBUG: Available properties for VCF_SALT: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:02:29]     → VCF_SALT: SCHEDULED
+[06-24-2026_10:02:29]     DEBUG: Available properties for VCF_SALT: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:02:29]     → VCF_SALT: SCHEDULED
+[06-24-2026_10:02:29]     DEBUG: Available properties for SDDC_MANAGER: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:02:29]     → SDDC_MANAGER: SCHEDULED
+[06-24-2026_10:02:29]     DEBUG: Available properties for VROPS: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:02:29]     → VROPS: SCHEDULED
+[06-24-2026_10:02:29]     DEBUG: Available properties for VCENTER: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:02:29]     → VCENTER: SCHEDULED
+[06-24-2026_10:02:29]     DEBUG: Available properties for NSX_T_MANAGER: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:02:29]     → NSX_T_MANAGER: SCHEDULED
+[06-24-2026_10:02:29]     DEBUG: Available properties for VSP: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:02:29]     → VSP: SCHEDULED
+[06-24-2026_10:02:29]     DEBUG: Available properties for VRA: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadStartTime, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:02:29]     → VRA: INPROGRESS
+[06-24-2026_10:02:29]     DEBUG: Available properties for DEPOT_SERVICE: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:02:29]     → DEPOT_SERVICE: SCHEDULED
+[06-24-2026_10:02:29]     DEBUG: Available properties for VCENTER: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:02:29]     → VCENTER: SCHEDULED
+[06-24-2026_10:02:29]     DEBUG: Available properties for VCF_FLEET_LCM: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:02:29]     → VCF_FLEET_LCM: SCHEDULED
+[06-24-2026_10:02:29]     DEBUG: Available properties for VCF_SALT_RAAS: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:02:29]     → VCF_SALT_RAAS: SCHEDULED
+[06-24-2026_10:02:29]     DEBUG: Available properties for TELEMETRY_ACCEPTOR: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:02:29]     → TELEMETRY_ACCEPTOR: SCHEDULED
+[06-24-2026_10:02:29]     DEBUG: Available properties for VCF_OPS_CLOUD_PROXY: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:02:29]     → VCF_OPS_CLOUD_PROXY: SCHEDULED
+[06-24-2026_10:02:29]     DEBUG: Available properties for SDDC_MANAGER: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:02:29]     → SDDC_MANAGER: SCHEDULED
+[06-24-2026_10:02:29]     DEBUG: Available properties for VCF_LICENSE_SERVER: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadStartTime, downloadEndTime, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:02:29]     → VCF_LICENSE_SERVER: VALIDATING
+[06-24-2026_10:02:29]     DEBUG: Available properties for VRA: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadStartTime, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:02:29]     → VRA: INPROGRESS
+[06-24-2026_10:03:29]   Bundle Status: 0 completed | 22 in progress | 0 failed
+[06-24-2026_10:03:29]     DEBUG: Available properties for NSX_T_MANAGER: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:03:29]     → NSX_T_MANAGER: SCHEDULED
+[06-24-2026_10:03:29]     DEBUG: Available properties for VROPS: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:03:29]     → VROPS: SCHEDULED
+[06-24-2026_10:03:29]     DEBUG: Available properties for VCF_SALT_RAAS: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:03:29]     → VCF_SALT_RAAS: SCHEDULED
+[06-24-2026_10:03:29]     DEBUG: Available properties for VCF_OPS_CLOUD_PROXY: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:03:29]     → VCF_OPS_CLOUD_PROXY: SCHEDULED
+[06-24-2026_10:03:29]     DEBUG: Available properties for VIDB: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:03:29]     → VIDB: SCHEDULED
+[06-24-2026_10:03:29]     DEBUG: Available properties for VCF_FLEET_LCM: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:03:29]     → VCF_FLEET_LCM: SCHEDULED
+[06-24-2026_10:03:29]     DEBUG: Available properties for VCF_SALT: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:03:29]     → VCF_SALT: SCHEDULED
+[06-24-2026_10:03:29]     DEBUG: Available properties for VCF_SALT: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:03:29]     → VCF_SALT: SCHEDULED
+[06-24-2026_10:03:29]     DEBUG: Available properties for SDDC_MANAGER: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:03:29]     → SDDC_MANAGER: SCHEDULED
+[06-24-2026_10:03:29]     DEBUG: Available properties for VROPS: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:03:29]     → VROPS: SCHEDULED
+[06-24-2026_10:03:29]     DEBUG: Available properties for VCENTER: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:03:29]     → VCENTER: SCHEDULED
+[06-24-2026_10:03:29]     DEBUG: Available properties for NSX_T_MANAGER: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:03:29]     → NSX_T_MANAGER: SCHEDULED
+[06-24-2026_10:03:29]     DEBUG: Available properties for VSP: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:03:29]     → VSP: SCHEDULED
+[06-24-2026_10:03:29]     DEBUG: Available properties for VRA: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadStartTime, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:03:29]     → VRA: INPROGRESS
+[06-24-2026_10:03:29]     DEBUG: Available properties for DEPOT_SERVICE: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:03:29]     → DEPOT_SERVICE: SCHEDULED
+[06-24-2026_10:03:29]     DEBUG: Available properties for VCENTER: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadStartTime, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:03:29]     → VCENTER: INPROGRESS
+[06-24-2026_10:03:29]     DEBUG: Available properties for VCF_FLEET_LCM: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:03:29]     → VCF_FLEET_LCM: SCHEDULED
+[06-24-2026_10:03:29]     DEBUG: Available properties for VCF_SALT_RAAS: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:03:29]     → VCF_SALT_RAAS: SCHEDULED
+[06-24-2026_10:03:29]     DEBUG: Available properties for TELEMETRY_ACCEPTOR: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:03:29]     → TELEMETRY_ACCEPTOR: SCHEDULED
+[06-24-2026_10:03:29]     DEBUG: Available properties for VCF_OPS_CLOUD_PROXY: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:03:29]     → VCF_OPS_CLOUD_PROXY: SCHEDULED
+[06-24-2026_10:03:29]     DEBUG: Available properties for SDDC_MANAGER: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:03:29]     → SDDC_MANAGER: SCHEDULED
+[06-24-2026_10:03:29]     DEBUG: Available properties for VRA: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadStartTime, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:03:29]     → VRA: INPROGRESS
+[06-24-2026_10:04:29]   Bundle Status: 0 completed | 22 in progress | 0 failed
+[06-24-2026_10:04:29]     DEBUG: Available properties for NSX_T_MANAGER: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:04:29]     → NSX_T_MANAGER: SCHEDULED
+[06-24-2026_10:04:29]     DEBUG: Available properties for VROPS: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:04:29]     → VROPS: SCHEDULED
+[06-24-2026_10:04:29]     DEBUG: Available properties for VCF_SALT_RAAS: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:04:29]     → VCF_SALT_RAAS: SCHEDULED
+[06-24-2026_10:04:29]     DEBUG: Available properties for VCF_OPS_CLOUD_PROXY: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:04:29]     → VCF_OPS_CLOUD_PROXY: SCHEDULED
+[06-24-2026_10:04:29]     DEBUG: Available properties for VIDB: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:04:29]     → VIDB: SCHEDULED
+[06-24-2026_10:04:29]     DEBUG: Available properties for VCF_FLEET_LCM: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:04:29]     → VCF_FLEET_LCM: SCHEDULED
+[06-24-2026_10:04:29]     DEBUG: Available properties for VCF_SALT: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:04:29]     → VCF_SALT: SCHEDULED
+[06-24-2026_10:04:29]     DEBUG: Available properties for VCF_SALT: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:04:29]     → VCF_SALT: SCHEDULED
+[06-24-2026_10:04:29]     DEBUG: Available properties for SDDC_MANAGER: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:04:29]     → SDDC_MANAGER: SCHEDULED
+[06-24-2026_10:04:29]     DEBUG: Available properties for VROPS: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:04:29]     → VROPS: SCHEDULED
+[06-24-2026_10:04:29]     DEBUG: Available properties for VCENTER: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:04:29]     → VCENTER: SCHEDULED
+[06-24-2026_10:04:29]     DEBUG: Available properties for NSX_T_MANAGER: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:04:29]     → NSX_T_MANAGER: SCHEDULED
+[06-24-2026_10:04:29]     DEBUG: Available properties for VSP: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:04:29]     → VSP: SCHEDULED
+[06-24-2026_10:04:29]     DEBUG: Available properties for VRA: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadStartTime, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:04:29]     → VRA: INPROGRESS
+[06-24-2026_10:04:29]     DEBUG: Available properties for DEPOT_SERVICE: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:04:29]     → DEPOT_SERVICE: SCHEDULED
+[06-24-2026_10:04:29]     DEBUG: Available properties for VCENTER: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadStartTime, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:04:29]     → VCENTER: INPROGRESS
+[06-24-2026_10:04:29]     DEBUG: Available properties for VCF_FLEET_LCM: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:04:29]     → VCF_FLEET_LCM: SCHEDULED
+[06-24-2026_10:04:29]     DEBUG: Available properties for VCF_SALT_RAAS: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:04:29]     → VCF_SALT_RAAS: SCHEDULED
+[06-24-2026_10:04:29]     DEBUG: Available properties for TELEMETRY_ACCEPTOR: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:04:29]     → TELEMETRY_ACCEPTOR: SCHEDULED
+[06-24-2026_10:04:29]     DEBUG: Available properties for VCF_OPS_CLOUD_PROXY: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:04:30]     → VCF_OPS_CLOUD_PROXY: SCHEDULED
+[06-24-2026_10:04:30]     DEBUG: Available properties for SDDC_MANAGER: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:04:30]     → SDDC_MANAGER: SCHEDULED
+[06-24-2026_10:04:30]     DEBUG: Available properties for VRA: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadStartTime, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:04:30]     → VRA: INPROGRESS
+[06-24-2026_10:05:30]   Bundle Status: 0 completed | 22 in progress | 0 failed
+[06-24-2026_10:05:30]     DEBUG: Available properties for NSX_T_MANAGER: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:05:30]     → NSX_T_MANAGER: SCHEDULED
+[06-24-2026_10:05:30]     DEBUG: Available properties for VROPS: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:05:30]     → VROPS: SCHEDULED
+[06-24-2026_10:05:30]     DEBUG: Available properties for VCF_SALT_RAAS: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:05:30]     → VCF_SALT_RAAS: SCHEDULED
+[06-24-2026_10:05:30]     DEBUG: Available properties for VCF_OPS_CLOUD_PROXY: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:05:30]     → VCF_OPS_CLOUD_PROXY: SCHEDULED
+[06-24-2026_10:05:30]     DEBUG: Available properties for VIDB: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:05:30]     → VIDB: SCHEDULED
+[06-24-2026_10:05:30]     DEBUG: Available properties for VCF_FLEET_LCM: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:05:30]     → VCF_FLEET_LCM: SCHEDULED
+[06-24-2026_10:05:30]     DEBUG: Available properties for VCF_SALT: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:05:30]     → VCF_SALT: SCHEDULED
+[06-24-2026_10:05:30]     DEBUG: Available properties for VCF_SALT: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:05:30]     → VCF_SALT: SCHEDULED
+[06-24-2026_10:05:30]     DEBUG: Available properties for SDDC_MANAGER: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:05:30]     → SDDC_MANAGER: SCHEDULED
+[06-24-2026_10:05:30]     DEBUG: Available properties for VROPS: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:05:30]     → VROPS: SCHEDULED
+[06-24-2026_10:05:30]     DEBUG: Available properties for VCENTER: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:05:30]     → VCENTER: SCHEDULED
+[06-24-2026_10:05:30]     DEBUG: Available properties for NSX_T_MANAGER: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:05:30]     → NSX_T_MANAGER: SCHEDULED
+[06-24-2026_10:05:30]     DEBUG: Available properties for VSP: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:05:30]     → VSP: SCHEDULED
+[06-24-2026_10:05:30]     DEBUG: Available properties for VRA: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadStartTime, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:05:30]     → VRA: INPROGRESS
+[06-24-2026_10:05:30]     DEBUG: Available properties for DEPOT_SERVICE: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:05:30]     → DEPOT_SERVICE: SCHEDULED
+[06-24-2026_10:05:30]     DEBUG: Available properties for VCENTER: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadStartTime, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:05:30]     → VCENTER: INPROGRESS
+[06-24-2026_10:05:30]     DEBUG: Available properties for VCF_FLEET_LCM: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:05:30]     → VCF_FLEET_LCM: SCHEDULED
+[06-24-2026_10:05:30]     DEBUG: Available properties for VCF_SALT_RAAS: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:05:30]     → VCF_SALT_RAAS: SCHEDULED
+[06-24-2026_10:05:30]     DEBUG: Available properties for TELEMETRY_ACCEPTOR: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:05:30]     → TELEMETRY_ACCEPTOR: SCHEDULED
+[06-24-2026_10:05:30]     DEBUG: Available properties for VCF_OPS_CLOUD_PROXY: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:05:30]     → VCF_OPS_CLOUD_PROXY: SCHEDULED
+[06-24-2026_10:05:30]     DEBUG: Available properties for SDDC_MANAGER: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:05:30]     → SDDC_MANAGER: SCHEDULED
+[06-24-2026_10:05:30]     DEBUG: Available properties for VRA: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadStartTime, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:05:30]     → VRA: INPROGRESS
+[06-24-2026_10:06:30]   Bundle Status: 0 completed | 22 in progress | 0 failed
+[06-24-2026_10:06:30]     DEBUG: Available properties for NSX_T_MANAGER: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:06:30]     → NSX_T_MANAGER: SCHEDULED
+[06-24-2026_10:06:30]     DEBUG: Available properties for VROPS: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:06:30]     → VROPS: SCHEDULED
+[06-24-2026_10:06:30]     DEBUG: Available properties for VCF_SALT_RAAS: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:06:30]     → VCF_SALT_RAAS: SCHEDULED
+[06-24-2026_10:06:30]     DEBUG: Available properties for VCF_OPS_CLOUD_PROXY: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:06:30]     → VCF_OPS_CLOUD_PROXY: SCHEDULED
+[06-24-2026_10:06:30]     DEBUG: Available properties for VIDB: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:06:30]     → VIDB: SCHEDULED
+[06-24-2026_10:06:30]     DEBUG: Available properties for VCF_FLEET_LCM: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:06:30]     → VCF_FLEET_LCM: SCHEDULED
+[06-24-2026_10:06:30]     DEBUG: Available properties for VCF_SALT: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:06:30]     → VCF_SALT: SCHEDULED
+[06-24-2026_10:06:30]     DEBUG: Available properties for VCF_SALT: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:06:30]     → VCF_SALT: SCHEDULED
+[06-24-2026_10:06:30]     DEBUG: Available properties for SDDC_MANAGER: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:06:30]     → SDDC_MANAGER: SCHEDULED
+[06-24-2026_10:06:30]     DEBUG: Available properties for VROPS: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:06:30]     → VROPS: SCHEDULED
+[06-24-2026_10:06:30]     DEBUG: Available properties for VCENTER: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:06:30]     → VCENTER: SCHEDULED
+[06-24-2026_10:06:30]     DEBUG: Available properties for NSX_T_MANAGER: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:06:30]     → NSX_T_MANAGER: SCHEDULED
+[06-24-2026_10:06:30]     DEBUG: Available properties for VSP: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:06:30]     → VSP: SCHEDULED
+[06-24-2026_10:06:30]     DEBUG: Available properties for VRA: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadStartTime, downloadEndTime, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:06:30]     → VRA: VALIDATING
+[06-24-2026_10:06:30]     DEBUG: Available properties for DEPOT_SERVICE: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:06:30]     → DEPOT_SERVICE: SCHEDULED
+[06-24-2026_10:06:30]     DEBUG: Available properties for VCENTER: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadStartTime, downloadEndTime, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:06:30]     → VCENTER: VALIDATING
+[06-24-2026_10:06:30]     DEBUG: Available properties for VCF_FLEET_LCM: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:06:30]     → VCF_FLEET_LCM: SCHEDULED
+[06-24-2026_10:06:30]     DEBUG: Available properties for VCF_SALT_RAAS: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:06:30]     → VCF_SALT_RAAS: SCHEDULED
+[06-24-2026_10:06:30]     DEBUG: Available properties for TELEMETRY_ACCEPTOR: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:06:30]     → TELEMETRY_ACCEPTOR: SCHEDULED
+[06-24-2026_10:06:30]     DEBUG: Available properties for VCF_OPS_CLOUD_PROXY: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:06:30]     → VCF_OPS_CLOUD_PROXY: SCHEDULED
+[06-24-2026_10:06:30]     DEBUG: Available properties for SDDC_MANAGER: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:06:30]     → SDDC_MANAGER: SCHEDULED
+[06-24-2026_10:06:30]     DEBUG: Available properties for VRA: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadStartTime, downloadEndTime, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:06:30]     → VRA: VALIDATING
+[06-24-2026_10:07:30]   Bundle Status: 0 completed | 22 in progress | 0 failed
+[06-24-2026_10:07:30]     DEBUG: Available properties for NSX_T_MANAGER: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:07:30]     → NSX_T_MANAGER: SCHEDULED
+[06-24-2026_10:07:30]     DEBUG: Available properties for VROPS: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:07:30]     → VROPS: SCHEDULED
+[06-24-2026_10:07:30]     DEBUG: Available properties for VCF_SALT_RAAS: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:07:30]     → VCF_SALT_RAAS: SCHEDULED
+[06-24-2026_10:07:30]     DEBUG: Available properties for VCF_OPS_CLOUD_PROXY: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:07:30]     → VCF_OPS_CLOUD_PROXY: SCHEDULED
+[06-24-2026_10:07:30]     DEBUG: Available properties for VIDB: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:07:30]     → VIDB: SCHEDULED
+[06-24-2026_10:07:30]     DEBUG: Available properties for VCF_FLEET_LCM: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:07:30]     → VCF_FLEET_LCM: SCHEDULED
+[06-24-2026_10:07:30]     DEBUG: Available properties for VCF_SALT: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:07:30]     → VCF_SALT: SCHEDULED
+[06-24-2026_10:07:30]     DEBUG: Available properties for VCF_SALT: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:07:30]     → VCF_SALT: SCHEDULED
+[06-24-2026_10:07:30]     DEBUG: Available properties for SDDC_MANAGER: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:07:30]     → SDDC_MANAGER: SCHEDULED
+[06-24-2026_10:07:30]     DEBUG: Available properties for VROPS: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:07:30]     → VROPS: SCHEDULED
+[06-24-2026_10:07:30]     DEBUG: Available properties for VCENTER: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:07:30]     → VCENTER: SCHEDULED
+[06-24-2026_10:07:30]     DEBUG: Available properties for NSX_T_MANAGER: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:07:30]     → NSX_T_MANAGER: SCHEDULED
+[06-24-2026_10:07:30]     DEBUG: Available properties for VSP: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:07:30]     → VSP: SCHEDULED
+[06-24-2026_10:07:30]     DEBUG: Available properties for VRA: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadStartTime, downloadEndTime, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:07:30]     → VRA: VALIDATING
+[06-24-2026_10:07:30]     DEBUG: Available properties for DEPOT_SERVICE: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:07:30]     → DEPOT_SERVICE: SCHEDULED
+[06-24-2026_10:07:30]     DEBUG: Available properties for VCENTER: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadStartTime, downloadEndTime, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:07:30]     → VCENTER: VALIDATING
+[06-24-2026_10:07:30]     DEBUG: Available properties for VCF_FLEET_LCM: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:07:30]     → VCF_FLEET_LCM: SCHEDULED
+[06-24-2026_10:07:30]     DEBUG: Available properties for VCF_SALT_RAAS: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:07:30]     → VCF_SALT_RAAS: SCHEDULED
+[06-24-2026_10:07:30]     DEBUG: Available properties for TELEMETRY_ACCEPTOR: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:07:30]     → TELEMETRY_ACCEPTOR: SCHEDULED
+[06-24-2026_10:07:30]     DEBUG: Available properties for VCF_OPS_CLOUD_PROXY: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:07:30]     → VCF_OPS_CLOUD_PROXY: SCHEDULED
+[06-24-2026_10:07:30]     DEBUG: Available properties for SDDC_MANAGER: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:07:30]     → SDDC_MANAGER: SCHEDULED
+[06-24-2026_10:07:30]     DEBUG: Available properties for VRA: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadStartTime, downloadEndTime, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:07:30]     → VRA: VALIDATING
+[06-24-2026_10:08:30]   Bundle Status: 0 completed | 19 in progress | 0 failed
+[06-24-2026_10:08:30]     DEBUG: Available properties for NSX_T_MANAGER: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadStartTime, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:08:30]     → NSX_T_MANAGER: INPROGRESS
+[06-24-2026_10:08:30]     DEBUG: Available properties for VROPS: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:08:30]     → VROPS: SCHEDULED
+[06-24-2026_10:08:30]     DEBUG: Available properties for VCF_SALT_RAAS: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:08:30]     → VCF_SALT_RAAS: SCHEDULED
+[06-24-2026_10:08:30]     DEBUG: Available properties for VCF_OPS_CLOUD_PROXY: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:08:30]     → VCF_OPS_CLOUD_PROXY: SCHEDULED
+[06-24-2026_10:08:30]     DEBUG: Available properties for VIDB: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:08:30]     → VIDB: SCHEDULED
+[06-24-2026_10:08:30]     DEBUG: Available properties for VCF_FLEET_LCM: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:08:30]     → VCF_FLEET_LCM: SCHEDULED
+[06-24-2026_10:08:30]     DEBUG: Available properties for VCF_SALT: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:08:30]     → VCF_SALT: SCHEDULED
+[06-24-2026_10:08:30]     DEBUG: Available properties for VCF_SALT: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:08:30]     → VCF_SALT: SCHEDULED
+[06-24-2026_10:08:30]     DEBUG: Available properties for SDDC_MANAGER: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:08:30]     → SDDC_MANAGER: SCHEDULED
+[06-24-2026_10:08:30]     DEBUG: Available properties for VROPS: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:08:30]     → VROPS: SCHEDULED
+[06-24-2026_10:08:30]     DEBUG: Available properties for VCENTER: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadStartTime, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:08:30]     → VCENTER: INPROGRESS
+[06-24-2026_10:08:30]     DEBUG: Available properties for NSX_T_MANAGER: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadStartTime, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:08:30]     → NSX_T_MANAGER: INPROGRESS
+[06-24-2026_10:08:30]     DEBUG: Available properties for VSP: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:08:30]     → VSP: SCHEDULED
+[06-24-2026_10:08:30]     DEBUG: Available properties for DEPOT_SERVICE: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:08:30]     → DEPOT_SERVICE: SCHEDULED
+[06-24-2026_10:08:30]     DEBUG: Available properties for VCF_FLEET_LCM: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:08:30]     → VCF_FLEET_LCM: SCHEDULED
+[06-24-2026_10:08:30]     DEBUG: Available properties for VCF_SALT_RAAS: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:08:30]     → VCF_SALT_RAAS: SCHEDULED
+[06-24-2026_10:08:30]     DEBUG: Available properties for TELEMETRY_ACCEPTOR: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:08:30]     → TELEMETRY_ACCEPTOR: SCHEDULED
+[06-24-2026_10:08:30]     DEBUG: Available properties for VCF_OPS_CLOUD_PROXY: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:08:30]     → VCF_OPS_CLOUD_PROXY: SCHEDULED
+[06-24-2026_10:08:30]     DEBUG: Available properties for SDDC_MANAGER: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:08:30]     → SDDC_MANAGER: SCHEDULED
+[06-24-2026_10:09:30]   Bundle Status: 0 completed | 19 in progress | 0 failed
+[06-24-2026_10:09:30]     DEBUG: Available properties for NSX_T_MANAGER: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadStartTime, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:09:30]     → NSX_T_MANAGER: INPROGRESS
+[06-24-2026_10:09:30]     DEBUG: Available properties for VROPS: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:09:30]     → VROPS: SCHEDULED
+[06-24-2026_10:09:30]     DEBUG: Available properties for VCF_SALT_RAAS: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:09:30]     → VCF_SALT_RAAS: SCHEDULED
+[06-24-2026_10:09:30]     DEBUG: Available properties for VCF_OPS_CLOUD_PROXY: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:09:30]     → VCF_OPS_CLOUD_PROXY: SCHEDULED
+[06-24-2026_10:09:30]     DEBUG: Available properties for VIDB: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:09:30]     → VIDB: SCHEDULED
+[06-24-2026_10:09:30]     DEBUG: Available properties for VCF_FLEET_LCM: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:09:30]     → VCF_FLEET_LCM: SCHEDULED
+[06-24-2026_10:09:30]     DEBUG: Available properties for VCF_SALT: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:09:30]     → VCF_SALT: SCHEDULED
+[06-24-2026_10:09:30]     DEBUG: Available properties for VCF_SALT: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:09:30]     → VCF_SALT: SCHEDULED
+[06-24-2026_10:09:30]     DEBUG: Available properties for SDDC_MANAGER: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:09:30]     → SDDC_MANAGER: SCHEDULED
+[06-24-2026_10:09:30]     DEBUG: Available properties for VROPS: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:09:30]     → VROPS: SCHEDULED
+[06-24-2026_10:09:30]     DEBUG: Available properties for VCENTER: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadStartTime, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:09:30]     → VCENTER: INPROGRESS
+[06-24-2026_10:09:30]     DEBUG: Available properties for NSX_T_MANAGER: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadStartTime, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:09:30]     → NSX_T_MANAGER: INPROGRESS
+[06-24-2026_10:09:30]     DEBUG: Available properties for VSP: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:09:30]     → VSP: SCHEDULED
+[06-24-2026_10:09:30]     DEBUG: Available properties for DEPOT_SERVICE: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:09:30]     → DEPOT_SERVICE: SCHEDULED
+[06-24-2026_10:09:30]     DEBUG: Available properties for VCF_FLEET_LCM: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:09:30]     → VCF_FLEET_LCM: SCHEDULED
+[06-24-2026_10:09:30]     DEBUG: Available properties for VCF_SALT_RAAS: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:09:30]     → VCF_SALT_RAAS: SCHEDULED
+[06-24-2026_10:09:30]     DEBUG: Available properties for TELEMETRY_ACCEPTOR: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:09:30]     → TELEMETRY_ACCEPTOR: SCHEDULED
+[06-24-2026_10:09:30]     DEBUG: Available properties for VCF_OPS_CLOUD_PROXY: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:09:30]     → VCF_OPS_CLOUD_PROXY: SCHEDULED
+[06-24-2026_10:09:30]     DEBUG: Available properties for SDDC_MANAGER: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:09:30]     → SDDC_MANAGER: SCHEDULED
+[06-24-2026_10:10:31]   Bundle Status: 0 completed | 19 in progress | 0 failed
+[06-24-2026_10:10:31]     DEBUG: Available properties for NSX_T_MANAGER: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadStartTime, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:10:31]     → NSX_T_MANAGER: INPROGRESS
+[06-24-2026_10:10:31]     DEBUG: Available properties for VROPS: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:10:31]     → VROPS: SCHEDULED
+[06-24-2026_10:10:31]     DEBUG: Available properties for VCF_SALT_RAAS: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:10:31]     → VCF_SALT_RAAS: SCHEDULED
+[06-24-2026_10:10:31]     DEBUG: Available properties for VCF_OPS_CLOUD_PROXY: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:10:31]     → VCF_OPS_CLOUD_PROXY: SCHEDULED
+[06-24-2026_10:10:31]     DEBUG: Available properties for VIDB: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:10:31]     → VIDB: SCHEDULED
+[06-24-2026_10:10:31]     DEBUG: Available properties for VCF_FLEET_LCM: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:10:31]     → VCF_FLEET_LCM: SCHEDULED
+[06-24-2026_10:10:31]     DEBUG: Available properties for VCF_SALT: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:10:31]     → VCF_SALT: SCHEDULED
+[06-24-2026_10:10:31]     DEBUG: Available properties for VCF_SALT: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:10:31]     → VCF_SALT: SCHEDULED
+[06-24-2026_10:10:31]     DEBUG: Available properties for SDDC_MANAGER: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:10:31]     → SDDC_MANAGER: SCHEDULED
+[06-24-2026_10:10:31]     DEBUG: Available properties for VROPS: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:10:31]     → VROPS: SCHEDULED
+[06-24-2026_10:10:31]     DEBUG: Available properties for VCENTER: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadStartTime, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:10:31]     → VCENTER: INPROGRESS
+[06-24-2026_10:10:31]     DEBUG: Available properties for NSX_T_MANAGER: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadStartTime, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:10:31]     → NSX_T_MANAGER: INPROGRESS
+[06-24-2026_10:10:31]     DEBUG: Available properties for VSP: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:10:31]     → VSP: SCHEDULED
+[06-24-2026_10:10:31]     DEBUG: Available properties for DEPOT_SERVICE: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:10:31]     → DEPOT_SERVICE: SCHEDULED
+[06-24-2026_10:10:31]     DEBUG: Available properties for VCF_FLEET_LCM: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:10:31]     → VCF_FLEET_LCM: SCHEDULED
+[06-24-2026_10:10:31]     DEBUG: Available properties for VCF_SALT_RAAS: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:10:31]     → VCF_SALT_RAAS: SCHEDULED
+[06-24-2026_10:10:31]     DEBUG: Available properties for TELEMETRY_ACCEPTOR: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:10:31]     → TELEMETRY_ACCEPTOR: SCHEDULED
+[06-24-2026_10:10:31]     DEBUG: Available properties for VCF_OPS_CLOUD_PROXY: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:10:31]     → VCF_OPS_CLOUD_PROXY: SCHEDULED
+[06-24-2026_10:10:31]     DEBUG: Available properties for SDDC_MANAGER: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:10:31]     → SDDC_MANAGER: SCHEDULED
+[06-24-2026_10:11:31]   Bundle Status: 0 completed | 19 in progress | 0 failed
+[06-24-2026_10:11:31]     DEBUG: Available properties for NSX_T_MANAGER: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadStartTime, downloadEndTime, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:11:31]     → NSX_T_MANAGER: VALIDATING
+[06-24-2026_10:11:31]     DEBUG: Available properties for VROPS: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:11:31]     → VROPS: SCHEDULED
+[06-24-2026_10:11:31]     DEBUG: Available properties for VCF_SALT_RAAS: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:11:31]     → VCF_SALT_RAAS: SCHEDULED
+[06-24-2026_10:11:31]     DEBUG: Available properties for VCF_OPS_CLOUD_PROXY: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:11:31]     → VCF_OPS_CLOUD_PROXY: SCHEDULED
+[06-24-2026_10:11:31]     DEBUG: Available properties for VIDB: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:11:31]     → VIDB: SCHEDULED
+[06-24-2026_10:11:31]     DEBUG: Available properties for VCF_FLEET_LCM: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:11:31]     → VCF_FLEET_LCM: SCHEDULED
+[06-24-2026_10:11:31]     DEBUG: Available properties for VCF_SALT: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:11:31]     → VCF_SALT: SCHEDULED
+[06-24-2026_10:11:31]     DEBUG: Available properties for VCF_SALT: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:11:31]     → VCF_SALT: SCHEDULED
+[06-24-2026_10:11:31]     DEBUG: Available properties for SDDC_MANAGER: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:11:31]     → SDDC_MANAGER: SCHEDULED
+[06-24-2026_10:11:31]     DEBUG: Available properties for VROPS: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:11:31]     → VROPS: SCHEDULED
+[06-24-2026_10:11:31]     DEBUG: Available properties for VCENTER: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadStartTime, downloadEndTime, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:11:31]     → VCENTER: VALIDATING
+[06-24-2026_10:11:31]     DEBUG: Available properties for NSX_T_MANAGER: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadStartTime, downloadEndTime, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:11:31]     → NSX_T_MANAGER: VALIDATING
+[06-24-2026_10:11:31]     DEBUG: Available properties for VSP: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:11:31]     → VSP: SCHEDULED
+[06-24-2026_10:11:31]     DEBUG: Available properties for DEPOT_SERVICE: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:11:31]     → DEPOT_SERVICE: SCHEDULED
+[06-24-2026_10:11:31]     DEBUG: Available properties for VCF_FLEET_LCM: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:11:31]     → VCF_FLEET_LCM: SCHEDULED
+[06-24-2026_10:11:31]     DEBUG: Available properties for VCF_SALT_RAAS: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:11:31]     → VCF_SALT_RAAS: SCHEDULED
+[06-24-2026_10:11:31]     DEBUG: Available properties for TELEMETRY_ACCEPTOR: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:11:31]     → TELEMETRY_ACCEPTOR: SCHEDULED
+[06-24-2026_10:11:31]     DEBUG: Available properties for VCF_OPS_CLOUD_PROXY: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:11:31]     → VCF_OPS_CLOUD_PROXY: SCHEDULED
+[06-24-2026_10:11:31]     DEBUG: Available properties for SDDC_MANAGER: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:11:31]     → SDDC_MANAGER: SCHEDULED
+[06-24-2026_10:12:31]   Bundle Status: 0 completed | 17 in progress | 0 failed
+[06-24-2026_10:12:31]     DEBUG: Available properties for VROPS: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadStartTime, downloadEndTime, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:12:31]     → VROPS: VALIDATING
+[06-24-2026_10:12:31]     DEBUG: Available properties for VCF_SALT_RAAS: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:12:31]     → VCF_SALT_RAAS: SCHEDULED
+[06-24-2026_10:12:31]     DEBUG: Available properties for VCF_OPS_CLOUD_PROXY: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:12:31]     → VCF_OPS_CLOUD_PROXY: SCHEDULED
+[06-24-2026_10:12:31]     DEBUG: Available properties for VIDB: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:12:31]     → VIDB: SCHEDULED
+[06-24-2026_10:12:31]     DEBUG: Available properties for VCF_FLEET_LCM: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:12:31]     → VCF_FLEET_LCM: SCHEDULED
+[06-24-2026_10:12:31]     DEBUG: Available properties for VCF_SALT: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:12:31]     → VCF_SALT: SCHEDULED
+[06-24-2026_10:12:31]     DEBUG: Available properties for VCF_SALT: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:12:31]     → VCF_SALT: SCHEDULED
+[06-24-2026_10:12:31]     DEBUG: Available properties for SDDC_MANAGER: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:12:31]     → SDDC_MANAGER: SCHEDULED
+[06-24-2026_10:12:31]     DEBUG: Available properties for VROPS: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadStartTime, downloadEndTime, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:12:31]     → VROPS: VALIDATING
+[06-24-2026_10:12:31]     DEBUG: Available properties for VCENTER: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadStartTime, downloadEndTime, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:12:31]     → VCENTER: VALIDATING
+[06-24-2026_10:12:31]     DEBUG: Available properties for VSP: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:12:31]     → VSP: SCHEDULED
+[06-24-2026_10:12:31]     DEBUG: Available properties for DEPOT_SERVICE: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:12:31]     → DEPOT_SERVICE: SCHEDULED
+[06-24-2026_10:12:31]     DEBUG: Available properties for VCF_FLEET_LCM: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:12:31]     → VCF_FLEET_LCM: SCHEDULED
+[06-24-2026_10:12:31]     DEBUG: Available properties for VCF_SALT_RAAS: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:12:31]     → VCF_SALT_RAAS: SCHEDULED
+[06-24-2026_10:12:31]     DEBUG: Available properties for TELEMETRY_ACCEPTOR: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:12:31]     → TELEMETRY_ACCEPTOR: SCHEDULED
+[06-24-2026_10:12:31]     DEBUG: Available properties for VCF_OPS_CLOUD_PROXY: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:12:31]     → VCF_OPS_CLOUD_PROXY: SCHEDULED
+[06-24-2026_10:12:31]     DEBUG: Available properties for SDDC_MANAGER: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:12:31]     → SDDC_MANAGER: SCHEDULED
+[06-24-2026_10:13:31]   Bundle Status: 0 completed | 11 in progress | 0 failed
+[06-24-2026_10:13:31]     DEBUG: Available properties for VCF_SALT_RAAS: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:13:31]     → VCF_SALT_RAAS: SCHEDULED
+[06-24-2026_10:13:31]     DEBUG: Available properties for VCF_OPS_CLOUD_PROXY: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:13:31]     → VCF_OPS_CLOUD_PROXY: SCHEDULED
+[06-24-2026_10:13:31]     DEBUG: Available properties for VCF_FLEET_LCM: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:13:31]     → VCF_FLEET_LCM: SCHEDULED
+[06-24-2026_10:13:31]     DEBUG: Available properties for VCF_SALT: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:13:31]     → VCF_SALT: SCHEDULED
+[06-24-2026_10:13:31]     DEBUG: Available properties for VCF_SALT: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:13:31]     → VCF_SALT: SCHEDULED
+[06-24-2026_10:13:31]     DEBUG: Available properties for VSP: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:13:31]     → VSP: SCHEDULED
+[06-24-2026_10:13:31]     DEBUG: Available properties for DEPOT_SERVICE: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:13:31]     → DEPOT_SERVICE: SCHEDULED
+[06-24-2026_10:13:31]     DEBUG: Available properties for VCF_FLEET_LCM: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:13:31]     → VCF_FLEET_LCM: SCHEDULED
+[06-24-2026_10:13:31]     DEBUG: Available properties for VCF_SALT_RAAS: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:13:31]     → VCF_SALT_RAAS: SCHEDULED
+[06-24-2026_10:13:31]     DEBUG: Available properties for TELEMETRY_ACCEPTOR: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:13:31]     → TELEMETRY_ACCEPTOR: SCHEDULED
+[06-24-2026_10:13:31]     DEBUG: Available properties for VCF_OPS_CLOUD_PROXY: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:13:31]     → VCF_OPS_CLOUD_PROXY: SCHEDULED
+[06-24-2026_10:14:31]   Bundle Status: 0 completed | 8 in progress | 0 failed
+[06-24-2026_10:14:31]     DEBUG: Available properties for VCF_SALT_RAAS: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:14:31]     → VCF_SALT_RAAS: SCHEDULED
+[06-24-2026_10:14:31]     DEBUG: Available properties for VCF_OPS_CLOUD_PROXY: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadStartTime, downloadEndTime, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:14:31]     → VCF_OPS_CLOUD_PROXY: VALIDATING
+[06-24-2026_10:14:31]     DEBUG: Available properties for VCF_FLEET_LCM: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:14:31]     → VCF_FLEET_LCM: SCHEDULED
+[06-24-2026_10:14:31]     DEBUG: Available properties for VSP: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadStartTime, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:14:31]     → VSP: INPROGRESS
+[06-24-2026_10:14:31]     DEBUG: Available properties for DEPOT_SERVICE: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:14:31]     → DEPOT_SERVICE: SCHEDULED
+[06-24-2026_10:14:31]     DEBUG: Available properties for VCF_FLEET_LCM: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:14:31]     → VCF_FLEET_LCM: SCHEDULED
+[06-24-2026_10:14:31]     DEBUG: Available properties for VCF_SALT_RAAS: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:14:31]     → VCF_SALT_RAAS: SCHEDULED
+[06-24-2026_10:14:31]     DEBUG: Available properties for VCF_OPS_CLOUD_PROXY: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadStartTime, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:14:31]     → VCF_OPS_CLOUD_PROXY: INPROGRESS
+[06-24-2026_10:15:31]   Bundle Status: 0 completed | 1 in progress | 0 failed
+[06-24-2026_10:15:31]     DEBUG: Available properties for VSP: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadStartTime, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:15:31]     → VSP: INPROGRESS
+[06-24-2026_10:16:31]   Bundle Status: 0 completed | 1 in progress | 0 failed
+[06-24-2026_10:16:31]     DEBUG: Available properties for VSP: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadStartTime, downloadEndTime, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:16:31]     → VSP: VALIDATING
+[06-24-2026_10:17:32]   Bundle Status: 0 completed | 1 in progress | 0 failed
+[06-24-2026_10:17:32]     DEBUG: Available properties for VSP: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadStartTime, downloadEndTime, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-24-2026_10:17:32]     → VSP: VALIDATING
+[06-24-2026_10:18:32]   Bundle Status: 0 completed | 0 in progress | 0 failed
+[06-24-2026_10:18:32] 
+✓ All bundles downloaded successfully!
+[06-24-2026_10:18:32] 
+========================================
+[06-24-2026_10:18:32]   STARTING VCF DEPLOYMENT BRINGUP
+[06-24-2026_10:18:32] ========================================
+
+[06-24-2026_10:18:32] Submitting deployment spec for pre-bringup validation ...
+[06-24-2026_10:18:32] DEBUG: Method: POST
+[06-24-2026_10:18:32] DEBUG: Uri: https://vcfinst.vcf.lab.io/v1/sddcs/validations
+[06-24-2026_10:18:35] Validation task id: 4129182e-c712-4019-a797-29959189d87e - polling until complete ...
+[06-24-2026_10:18:51]   [00:15] → running: Deployment Specification
+[06-24-2026_10:19:06]   [00:30] ✓ Deployment Specification  (2/17 done)
+[06-24-2026_10:19:06]   [00:30] ✓ Security Configuration  (2/17 done)
+[06-24-2026_10:19:06]   [00:30] → running: Versions and Bundles
+[06-24-2026_10:19:21]   [00:45] ✓ Versions and Bundles  (3/17 done)
+[06-24-2026_10:19:21]   [00:45] → running: ESX Host Configuration
+[06-24-2026_10:19:36]   [01:00] ✓ ESX Host Configuration  (4/17 done)
+[06-24-2026_10:19:36]   [01:00] → running: Time Synchronization
+[06-24-2026_10:19:52]   [01:15] ✓ Time Synchronization  (7/17 done)
+[06-24-2026_10:19:52]   [01:15] ✓ Existing SDDC Manager Configuration  (7/17 done)
+[06-24-2026_10:19:52]   [01:15] ✓ vSAN ESA Disks Eligibility  (7/17 done)
+[06-24-2026_10:19:52]   [01:15] → running: ESX Host vSAN HCL Compatibility
+[06-24-2026_10:20:37]   [02:00] still working on: ESX Host vSAN HCL Compatibility
+[06-24-2026_10:22:39]   [04:00] still working on: ESX Host vSAN HCL Compatibility
+[06-24-2026_10:23:09]   [04:30] ✓ Password Policies  (8/17 done)
+[06-24-2026_10:23:09]   [04:30] → running: Network Configuration
+[06-24-2026_10:24:40]   [06:00] still working on: Network Configuration
+[06-24-2026_10:26:27]   [07:45] ✓ Network Configuration  (9/17 done)
+[06-24-2026_10:26:27]   [07:45] → running: vMotion Network Connectivity
+[06-24-2026_10:26:42]   [08:00] still working on: vMotion Network Connectivity
+[06-24-2026_10:26:57]   [08:15] ✓ vMotion Network Connectivity  (10/17 done)
+[06-24-2026_10:26:57]   [08:15] → running: vSAN Network Connectivity
+[06-24-2026_10:27:43]   [09:00] ✓ vSAN Network Connectivity  (11/17 done)
+[06-24-2026_10:27:43]   [09:00] → running: NSX Host Overlay Network Connectivity
+[06-24-2026_10:28:13]   [09:30] ✓ NSX Host Overlay Network Connectivity  (14/17 done)
+[06-24-2026_10:28:13]   [09:30] ✓ VCF Installer Required Capacity Calculation  (14/17 done)
+[06-24-2026_10:28:13]   [09:30] ✓ VCF Installer Available Capacity Calculation  (14/17 done)
+[06-24-2026_10:28:28] ✓ VALIDATION PASSED (with non-blocking warnings)
+[06-24-2026_10:28:28]   These advisories are expected in a nested lab and do NOT stop deployment.
+[06-24-2026_10:28:28]   ⚠ DNS Resolution
+[06-24-2026_10:28:28]       • IP_RESOLVES_TO_MULTIPLE_FQDN x11 - Duplicate reverse-DNS (PTR) records - tidy up .vcf.local PTRs when convenient
+[06-24-2026_10:28:28]   ⚠ ESX Host vSAN HCL Compatibility
+[06-24-2026_10:28:28]       • VSAN_ESA_HOST_HCL_COMPATIBLE_ERROR x4 - Nested vNVMe disks are not on the HCL - expected; handled by disk-claim workaround
+[06-24-2026_10:28:28]       • NO_VSAN_ESA_CERTIFIED_DISKS x4 - No HCL-certified vSAN disks (nested storage) - expected in a lab
+[06-24-2026_10:28:28]   ⚠ VCF Installer Capacity Validation
+[06-24-2026_10:28:28]       • CAPACITY_NUMBER_OF_CORES_VALIDATION x1 - Fewer cores than the 110-core perf recommendation - fine for a lab
+[06-24-2026_10:28:29] Proceeding to bringup.
+[06-24-2026_10:28:29] Validation passed - proceeding to submit bringup.
+[06-24-2026_10:28:29] DEBUG: Method: POST
+[06-24-2026_10:28:29] DEBUG: Uri: https://vcfinst.vcf.lab.io/v1/sddcs
+[06-24-2026_10:28:53] ✓ VCF Deployment request submitted successfully
+[06-24-2026_10:28:53] 
+Open browser to the VMware VCF Installer UI to monitor deployment progress:
+[06-24-2026_10:28:53]   URL: https://vcfinst.vcf.lab.io/vcf-installer-ui/portal/progress-viewer
+[06-24-2026_10:28:53] Disconnecting from Management vCenter Server labvcsa.lab.io ...
+[06-24-2026_10:28:53] 
+╔════════════════════════════════════════════════════════════════╗
+[06-24-2026_10:28:53] ║         VCF 9 LAB DEPLOYMENT COMPLETE                         ║
+[06-24-2026_10:28:53] ╠════════════════════════════════════════════════════════════════╣
+[06-24-2026_10:28:53] ║  StartTime: 2026-06-24 09:23:37
+[06-24-2026_10:28:53] ║  EndTime:   2026-06-24 10:28:53
+[06-24-2026_10:28:53] ║  Duration:  65.27 minutes
+[06-24-2026_10:28:53] ║  Log File:  vcf-9-lab-deployment-rhy1kd4b.log
+[06-24-2026_10:28:53] ╚════════════════════════════════════════════════════════════════╝

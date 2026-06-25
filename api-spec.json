@@ -1,0 +1,118 @@
+<!--
+     Copyright (c) 2026 Broadcom. All Rights Reserved.
+     Broadcom Confidential. The term "Broadcom" refers to Broadcom Inc.
+     and/or its subsidiaries.
+-->
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8"/>
+      <title>VCF Installer</title>
+      <base href="/vcf-installer-ui/"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1"/>
+      <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+
+      <style>
+         .dot-elastic {
+            position: relative;
+            width: 10px;
+            height: 10px;
+            border-radius: 5px;
+            background-color: rgb(0, 114, 163);
+            color: rgb(0, 114, 163);
+            animation: dotElastic 1s infinite linear;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+         }
+
+         .dot-elastic::before,
+         .dot-elastic::after {
+            content: '';
+            display: inline-block;
+            position: absolute;
+            top: 0;
+         }
+
+         .dot-elastic::before {
+            left: -15px;
+            width: 10px;
+            height: 10px;
+            border-radius: 5px;
+            background-color: rgb(0, 114, 163);
+            color: rgb(0, 114, 163);
+            animation: dotElasticBefore 1s infinite linear;
+         }
+
+         .dot-elastic::after {
+            left: 15px;
+            width: 10px;
+            height: 10px;
+            border-radius: 5px;
+            background-color: rgb(0, 114, 163);
+            color: rgb(0, 114, 163);
+            animation: dotElasticAfter 1s infinite linear;
+         }
+
+         @keyframes dotElasticBefore {
+            0% {
+               transform: scale(1, 1);
+            }
+            25% {
+               transform: scale(1, 1.5);
+            }
+            50% {
+               transform: scale(1, 0.67);
+            }
+            75% {
+               transform: scale(1, 1);
+            }
+            100% {
+               transform: scale(1, 1);
+            }
+         }
+
+         @keyframes dotElastic {
+            0% {
+               transform: scale(1, 1);
+            }
+            25% {
+               transform: scale(1, 1);
+            }
+            50% {
+               transform: scale(1, 1.5);
+            }
+            75% {
+               transform: scale(1, 1);
+            }
+            100% {
+               transform: scale(1, 1);
+            }
+         }
+
+         @keyframes dotElasticAfter {
+            0% {
+               transform: scale(1, 1);
+            }
+            25% {
+               transform: scale(1, 1);
+            }
+            50% {
+               transform: scale(1, 0.67);
+            }
+            75% {
+               transform: scale(1, 1.5);
+            }
+            100% {
+               transform: scale(1, 1);
+            }
+         }
+      </style>
+   <link rel="stylesheet" href="styles.4714e216e71a7d05.css"></head>
+   <body cds-theme="light">
+      <app-root>
+         <div class="dot-elastic"></div>
+      </app-root>
+   <script src="runtime.ecaaa3752cd8dfbd.js" type="module"></script><script src="polyfills.70a7ac1a885d0993.js" type="module"></script><script src="main.dc8bed85166dcf14.js" type="module"></script></body>
+</html>
+

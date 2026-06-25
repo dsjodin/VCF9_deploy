@@ -4,14 +4,14 @@
   "deployWithoutLicenseKeys": true,
   "vcenterSpec": {
     "rootPassword": "VMware1!VMware1!",
-    "networkDetailsSpec": {
-      "subnetMask": "255.255.255.0",
-      "ipAddress": "10.1.101.200",
-      "dnsName": "wld-vc.vcf.lab.io",
-      "gateway": null
-    },
+    "datacenterName": "wld-dc",
     "name": "wld-vc",
-    "datacenterName": "wld-dc"
+    "networkDetailsSpec": {
+      "dnsName": "wld-vc.vcf.lab.io",
+      "subnetMask": "255.255.255.0",
+      "gateway": "10.2.101.1",
+      "ipAddress": "10.2.101.200"
+    }
   },
   "ssoDomainSpec": {
     "ssoDomainName": "vsphere.local",
@@ -23,46 +23,46 @@
         "name": "wld-cl01",
         "hostSpecs": [
           {
-            "id": "aaff5ac4-cf0f-4b5f-97b8-e7e119bbe019",
+            "id": "5d17e1e7-b2db-4fdd-8c09-1998a541087a",
             "hostNetworkSpec": {
               "vmNics": [
                 {
-                  "vdsName": "wld-cl01-vds01",
-                  "id": "vmnic0"
+                  "id": "vmnic0",
+                  "vdsName": "wld-cl01-vds01"
                 },
                 {
-                  "vdsName": "wld-cl01-vds01",
-                  "id": "vmnic1"
+                  "id": "vmnic1",
+                  "vdsName": "wld-cl01-vds01"
                 }
               ]
             }
           },
           {
-            "id": "5248040e-c897-43e8-9bf4-33deee25a4d1",
+            "id": "8fceaaa8-7d18-46ef-963d-4498e84405f1",
             "hostNetworkSpec": {
               "vmNics": [
                 {
-                  "vdsName": "wld-cl01-vds01",
-                  "id": "vmnic0"
+                  "id": "vmnic0",
+                  "vdsName": "wld-cl01-vds01"
                 },
                 {
-                  "vdsName": "wld-cl01-vds01",
-                  "id": "vmnic1"
+                  "id": "vmnic1",
+                  "vdsName": "wld-cl01-vds01"
                 }
               ]
             }
           },
           {
-            "id": "a6e79329-11e5-4fec-8f0b-91b66904b0da",
+            "id": "a4edf0a1-b4c2-478b-a261-b9a8eb51056f",
             "hostNetworkSpec": {
               "vmNics": [
                 {
-                  "vdsName": "wld-cl01-vds01",
-                  "id": "vmnic0"
+                  "id": "vmnic0",
+                  "vdsName": "wld-cl01-vds01"
                 },
                 {
-                  "vdsName": "wld-cl01-vds01",
-                  "id": "vmnic1"
+                  "id": "vmnic1",
+                  "vdsName": "wld-cl01-vds01"
                 }
               ]
             }
@@ -70,13 +70,32 @@
         ],
         "datastoreSpec": {
           "vsanDatastoreSpec": {
-            "datastoreName": "wld-cl01-vsan01",
             "esaConfig": {
               "enabled": true
-            }
+            },
+            "datastoreName": "wld-cl01-vsan01"
           }
         },
         "networkSpec": {
+          "vdsSpecs": [
+            {
+              "name": "wld-cl01-vds01",
+              "portGroupSpecs": [
+                {
+                  "transportType": "MANAGEMENT",
+                  "name": "wld-cl01-vds01-management"
+                },
+                {
+                  "transportType": "VMOTION",
+                  "name": "wld-cl01-vds01-vmotion"
+                },
+                {
+                  "transportType": "VSAN",
+                  "name": "wld-cl01-vds01-vsan"
+                }
+              ]
+            }
+          ],
           "nsxClusterSpec": {
             "nsxTClusterSpec": {
               "geneveVlanId": 203,
@@ -96,28 +115,9 @@
                 ]
               }
             }
-          },
-          "vdsSpecs": [
-            {
-              "name": "wld-cl01-vds01",
-              "portGroupSpecs": [
-                {
-                  "name": "wld-cl01-vds01-management",
-                  "transportType": "MANAGEMENT"
-                },
-                {
-                  "name": "wld-cl01-vds01-vmotion",
-                  "transportType": "VMOTION"
-                },
-                {
-                  "name": "wld-cl01-vds01-vsan",
-                  "transportType": "VSAN"
-                }
-              ]
-            }
-          ]
+          }
         },
-        "clusterImageId": "3ae2cf24-fb9f-4605-a5e7-20d30f0a99eb"
+        "clusterImageId": "ff8722b1-c54b-4027-9978-c77a96055435"
       }
     ]
   },
@@ -126,10 +126,10 @@
       {
         "name": "nsx02a",
         "networkDetailsSpec": {
-          "subnetMask": "255.255.255.0",
-          "ipAddress": "10.2.200.201",
           "dnsName": "nsx02a.vcf.lab.io",
-          "gateway": null
+          "subnetMask": "255.255.255.0",
+          "gateway": "10.2.101.1",
+          "ipAddress": "10.2.101.201"
         }
       }
     ],

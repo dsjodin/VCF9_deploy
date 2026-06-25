@@ -1,0 +1,127 @@
+[06-25-2026_15:34:24] Deploying Edge Cluster for WLD Domain...
+[06-25-2026_15:34:25] [WLD] Using vSphere cluster 'wld-cl01' with ID: 41617453-80be-4800-ba54-36d868790436
+[06-25-2026_15:34:25] Found hosts for Edge placement in 'wld-cl01': 5d17e1e7-b2db-4fdd-8c09-1998a541087a, 8fceaaa8-7d18-46ef-963d-4498e84405f1
+[06-25-2026_15:34:25] Edge Node 1: Dual uplinks configured (VLAN 90 + VLAN 91)
+[06-25-2026_15:34:25] Edge Node 2: Dual uplinks configured (VLAN 90 + VLAN 91)
+[06-25-2026_15:34:25] DEBUG: Edge Cluster Spec for WLD:
+[06-25-2026_15:34:25] {
+  "edgeClusterName": "wld-ec01",
+  "edgeClusterProfileType": "DEFAULT",
+  "edgeClusterType": "NSX-T",
+  "edgeRootPassword": "VMware1!VMware1!",
+  "edgeAdminPassword": "VMware1!VMware1!",
+  "edgeAuditPassword": "VMware1!VMware1!",
+  "edgeFormFactor": "MEDIUM",
+  "tier0ServicesHighAvailability": "ACTIVE_ACTIVE",
+  "mtu": 8900,
+  "asn": 65002,
+  "edgeNodeSpecs": [
+    {
+      "edgeNodeName": "wldedge01.vcf.lab.io",
+      "managementIP": "10.2.200.210/24",
+      "managementGateway": "10.2.200.1",
+      "edgeTepGateway": "10.2.204.1",
+      "edgeTep1IP": "10.2.204.10/24",
+      "edgeTep2IP": "10.2.204.11/24",
+      "edgeTepVlan": 204,
+      "clusterId": "41617453-80be-4800-ba54-36d868790436",
+      "interRackCluster": false,
+      "uplinkNetwork": [
+        {
+          "uplinkVlan": 90,
+          "bgpPeerPassword": "",
+          "peerIP": "10.2.90.1/24",
+          "asnPeer": 65000,
+          "uplinkInterfaceIP": "10.2.90.4/24"
+        },
+        {
+          "uplinkVlan": 91,
+          "bgpPeerPassword": "",
+          "peerIP": "10.2.91.1/24",
+          "asnPeer": 65000,
+          "uplinkInterfaceIP": "10.2.91.4/24"
+        }
+      ]
+    },
+    {
+      "edgeNodeName": "wldedge02.vcf.lab.io",
+      "managementIP": "10.2.200.211/24",
+      "managementGateway": "10.2.200.1",
+      "edgeTepGateway": "10.2.204.1",
+      "edgeTep1IP": "10.2.204.12/24",
+      "edgeTep2IP": "10.2.204.13/24",
+      "edgeTepVlan": 204,
+      "clusterId": "41617453-80be-4800-ba54-36d868790436",
+      "interRackCluster": false,
+      "uplinkNetwork": [
+        {
+          "uplinkVlan": 90,
+          "bgpPeerPassword": "",
+          "peerIP": "10.2.90.1/24",
+          "asnPeer": 65000,
+          "uplinkInterfaceIP": "10.2.90.5/24"
+        },
+        {
+          "uplinkVlan": 91,
+          "bgpPeerPassword": "",
+          "peerIP": "10.2.91.1/24",
+          "asnPeer": 65000,
+          "uplinkInterfaceIP": "10.2.91.5/24"
+        }
+      ]
+    }
+  ],
+  "tier0RoutingType": "EBGP",
+  "tier0Name": "w01-t0-gw01",
+  "tier1Name": "wld-ec01-t1-gw01",
+  "tier1Unhosted": false
+}
+[06-25-2026_15:34:25] Edge cluster spec for WLD saved to edge-cluster-spec-WLD.json
+[06-25-2026_15:34:26] Edge cluster deployment for WLD started with task ID: b4377422-48ef-47d2-821e-ee9452033bde
+[06-25-2026_15:34:27] [00:00] Task Pending (0% complete) [0/1 subtasks] | Next: Fetching task info...
+[06-25-2026_15:34:57] [00:30] Task In Progress (19% complete) [11/58 subtasks] | Subtask: Pre-Validation of NSX Edge Cluster Deployment (0%)
+[06-25-2026_15:36:27] [02:00] Task In Progress (19% complete) [11/58 subtasks] | Subtask: Pre-Validation of NSX Edge Cluster Deployment (0%)
+[06-25-2026_15:36:57] [02:30] Task In Progress (44% complete) [26/59 subtasks] | Subtask: Deploy and Configure Multiple NSX Edge Nodes (0%)
+[06-25-2026_15:38:27] [04:00] Task In Progress (44% complete) [26/59 subtasks] | Subtask: Deploy and Configure Multiple NSX Edge Nodes (0%)
+[06-25-2026_15:38:57] [04:30] Task In Progress (44% complete) [26/59 subtasks] | Subtask: Deploy and Configure Multiple NSX Edge Nodes (0%)
+[06-25-2026_15:40:27] [06:00] Task In Progress (44% complete) [26/59 subtasks] | Subtask: Deploy and Configure Multiple NSX Edge Nodes (0%)
+[06-25-2026_15:40:57] [06:30] Task In Progress (44% complete) [26/59 subtasks] | Subtask: Deploy and Configure Multiple NSX Edge Nodes (0%)
+[06-25-2026_15:42:28] [08:00] Task In Progress (44% complete) [26/59 subtasks] | Subtask: Deploy and Configure Multiple NSX Edge Nodes (0%)
+[06-25-2026_15:42:58] [08:31] Task In Progress (44% complete) [26/59 subtasks] | Subtask: Deploy and Configure Multiple NSX Edge Nodes (0%)
+[06-25-2026_15:44:28] [10:01] Task In Progress (44% complete) [26/59 subtasks] | Subtask: Deploy and Configure Multiple NSX Edge Nodes (0%)
+[06-25-2026_15:44:58] [10:31] Task In Progress (44% complete) [26/59 subtasks] | Subtask: Deploy and Configure Multiple NSX Edge Nodes (0%)
+[06-25-2026_15:46:28] [12:01] Task In Progress (45% complete) [27/60 subtasks] | Subtask: Deploy and Configure Multiple NSX Edge Nodes (0%)
+[06-25-2026_15:46:58] [12:31] Task In Progress (45% complete) [27/60 subtasks] | Subtask: Deploy and Configure Multiple NSX Edge Nodes (0%)
+[06-25-2026_15:48:28] [14:01] Task In Progress (45% complete) [27/60 subtasks] | Subtask: Deploy and Configure Multiple NSX Edge Nodes (0%)
+[06-25-2026_15:48:58] [14:31] Task In Progress (45% complete) [27/60 subtasks] | Subtask: Deploy and Configure Multiple NSX Edge Nodes (0%)
+[06-25-2026_15:50:29] [16:01] Task In Progress (45% complete) [27/60 subtasks] | Subtask: Deploy and Configure Multiple NSX Edge Nodes (0%)
+[06-25-2026_15:50:59] [16:31] Task In Progress (45% complete) [27/60 subtasks] | Subtask: Deploy and Configure Multiple NSX Edge Nodes (0%)
+[06-25-2026_15:52:29] [18:02] Task In Progress (45% complete) [27/60 subtasks] | Subtask: Deploy and Configure Multiple NSX Edge Nodes (0%)
+[06-25-2026_15:52:59] [18:32] Task In Progress (45% complete) [27/60 subtasks] | Subtask: Deploy and Configure Multiple NSX Edge Nodes (0%)
+[06-25-2026_15:54:29] [20:02] Task In Progress (45% complete) [27/60 subtasks] | Subtask: Deploy and Configure Multiple NSX Edge Nodes (0%)
+[06-25-2026_15:54:59] [20:32] Task In Progress (45% complete) [27/60 subtasks] | Subtask: Deploy and Configure Multiple NSX Edge Nodes (0%)
+[06-25-2026_15:55:29] [21:02] Task In Progress (66% complete) [41/62 subtasks] | Subtask: Create NSX Tier-0 Router (0%)
+[06-25-2026_15:56:29] [22:02] Task In Progress (66% complete) [41/62 subtasks] | Subtask: Create NSX Tier-0 Router (0%)
+[06-25-2026_15:56:59] [22:32] Task In Progress (66% complete) [41/62 subtasks] | Subtask: Create NSX Tier-0 Router (0%)
+[06-25-2026_15:58:29] [24:02] Task In Progress (66% complete) [41/62 subtasks] | Subtask: Create NSX Tier-0 Router (0%)
+[06-25-2026_15:58:59] [24:32] Task In Progress (66% complete) [41/62 subtasks] | Subtask: Create NSX Tier-0 Router (0%)
+[06-25-2026_16:00:29] [26:02] Task In Progress (76% complete) [47/62 subtasks] | Subtask: Create and Configure NSX Tier-1 Gateway (0%)
+[06-25-2026_16:00:59] [26:32] Task In Progress (76% complete) [47/62 subtasks] | Subtask: Create and Configure NSX Tier-1 Gateway (0%)
+[06-25-2026_16:02:29] [28:02] Task In Progress (76% complete) [47/62 subtasks] | Subtask: Create and Configure NSX Tier-1 Gateway (0%)
+[06-25-2026_16:02:59] [28:32] Task In Progress (76% complete) [47/62 subtasks] | Subtask: Create and Configure NSX Tier-1 Gateway (0%)
+[06-25-2026_16:04:30] [30:02] Task In Progress (76% complete) [47/62 subtasks] | Subtask: Create and Configure NSX Tier-1 Gateway (0%)
+[06-25-2026_16:05:00] [30:33] Task In Progress (76% complete) [47/62 subtasks] | Subtask: Create and Configure NSX Tier-1 Gateway (0%)
+[06-25-2026_16:06:30] [32:03] Task In Progress (81% complete) [50/62 subtasks] | Subtask: Verify NSX BGP Peering (0%)
+[06-25-2026_16:07:00] [32:33] Task In Progress (81% complete) [50/62 subtasks] | Subtask: Verify NSX BGP Peering (0%)
+[06-25-2026_16:08:30] [34:03] Task In Progress (81% complete) [50/62 subtasks] | Subtask: Verify NSX BGP Peering (0%)
+[06-25-2026_16:09:00] [34:33] Task In Progress (81% complete) [50/62 subtasks] | Subtask: Verify NSX BGP Peering (0%)
+[06-25-2026_16:09:30] [35:03] Task In Progress (89% complete) [55/62 subtasks] | Subtask: Enable/Disable SSH on NSX Edge Nodes (0%)
+[06-25-2026_16:10:30] [36:03] Task In Progress (89% complete) [55/62 subtasks] | Subtask: Enable/Disable SSH on NSX Edge Nodes (0%)
+[06-25-2026_16:11:00] [36:33] Task In Progress (89% complete) [55/62 subtasks] | Subtask: Enable/Disable SSH on NSX Edge Nodes (0%)
+[06-25-2026_16:11:30] Task b4377422-48ef-47d2-821e-ee9452033bde completed successfully
+[06-25-2026_16:11:30] Workload Domain Edge Cluster deployed successfully!
+[06-25-2026_16:11:30] 
+Edge Cluster Deployment Complete!
+[06-25-2026_16:11:30]   StartTime: 06/25/2026 15:34:24
+[06-25-2026_16:11:30]   EndTime:   06/25/2026 16:11:30
+[06-25-2026_16:11:30]   Duration:  37.1 minutes

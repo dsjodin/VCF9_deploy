@@ -1,0 +1,1195 @@
+[06-24-2026_06:24:07] Connecting to VCF Management vCenter Server mgmt-vc ...
+[06-24-2026_06:24:08] Transferring configuration shell script (vcfSddcmScript.sh) to SDDC Manager VM ...
+[06-24-2026_06:24:08] Running configuration shell script on SDDC Manager VM ...
+[06-24-2026_06:26:15] Disconnecting from VCF Management vCenter Server mgmt-vc ...
+[06-24-2026_06:26:15] 
+========================================
+[06-24-2026_06:26:15]   SDDC MANAGER SOFTWARE DEPOT CONFIG
+[06-24-2026_06:26:15] ========================================
+
+[06-24-2026_06:26:15] Waiting for SDDC Manager API to become ready...
+[06-24-2026_06:26:16]   ✓ SDDC Manager API is now ready!
+[06-24-2026_06:26:16] DEBUG: Method: PUT
+[06-24-2026_06:26:16] DEBUG: Uri: https://10.2.101.100/v1/system/settings/depot
+[06-24-2026_06:26:16] Failed to connect to VCF Software Depot
+[06-24-2026_06:26:16] DEBUG: Initiating depot sync
+[06-24-2026_06:26:16] ✓ VCF Software Depot sync initiated
+[06-24-2026_06:26:16] Waiting for depot sync to complete...
+[06-25-2026_07:30:43] 
+========================================
+[06-25-2026_07:30:43]   SDDC MANAGER SOFTWARE DEPOT CONFIG
+[06-25-2026_07:30:43] ========================================
+
+[06-25-2026_07:30:43] Waiting for SDDC Manager API to become ready...
+[06-25-2026_07:30:43]   ✓ SDDC Manager API is now ready!
+[06-25-2026_07:30:43] Retrieving VCF release components...
+[06-25-2026_07:30:43]   Found 16 components for VCF 9.1.0.0
+[06-25-2026_07:30:43] 
+Initiating bundle downloads...
+[06-25-2026_07:30:43] Processing: VCF_SERVICE_VCD_MIGRATION_BACKEND
+[06-25-2026_07:30:44] DEBUG: Starting download for bundle 1998d24e-9fa4-5a13-b795-472537e224d2
+[06-25-2026_07:30:44]   ▶ Bundle download initiated: 
+[06-25-2026_07:30:44] Processing: VIDB
+[06-25-2026_07:30:44] DEBUG: Starting download for bundle 0911b05e-e5c1-5036-867f-7a12066c8d06
+[06-25-2026_07:30:44]   ▶ Bundle download initiated: 
+[06-25-2026_07:30:44] Processing: VRA
+[06-25-2026_07:30:44] Processing: VCF_SDDC_LCM
+[06-25-2026_07:30:44] Processing: TELEMETRY_ACCEPTOR
+[06-25-2026_07:30:45] DEBUG: Starting download for bundle cfdc3829-f065-50ec-8c4e-2c2fc85ccc56
+[06-25-2026_07:30:45]   ▶ Bundle download initiated: 
+[06-25-2026_07:30:45] Processing: VCENTER
+[06-25-2026_07:30:45] Processing: VCF_LICENSE_SERVER
+[06-25-2026_07:30:45] Processing: NSX_T_MANAGER
+[06-25-2026_07:30:45] Processing: VROPS
+[06-25-2026_07:30:45] Processing: VCF_FLEET_LCM
+[06-25-2026_07:30:45] Processing: SDDC_MANAGER
+[06-25-2026_07:30:45] Processing: VCF_SALT
+[06-25-2026_07:30:45] Processing: VCF_OPS_CLOUD_PROXY
+[06-25-2026_07:30:45] Processing: VSP
+[06-25-2026_07:30:45] DEBUG: Starting download for bundle aa88f811-700a-5384-b86e-c40191985348
+[06-25-2026_07:30:45]   ▶ Bundle download initiated: 
+[06-25-2026_07:30:45] Processing: VCF_SALT_RAAS
+[06-25-2026_07:30:45] Processing: DEPOT_SERVICE
+[06-25-2026_07:30:46] DEBUG: Starting download for bundle 2549d171-774b-5662-8a40-a40f8cb2cf11
+[06-25-2026_07:30:46]   ▶ Bundle download initiated: 
+[06-25-2026_07:30:46] 
+Monitoring bundle download progress (Total bundles: 16)...
+[06-25-2026_07:30:46]   Bundle Status: 11 completed | 5 in progress | 0 failed
+[06-25-2026_07:30:46]     DEBUG: Available properties for VIDB: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-25-2026_07:30:46]     → VIDB: SCHEDULED
+[06-25-2026_07:30:46]     DEBUG: Available properties for VCF_SERVICE_VCD_MIGRATION_BACKEND: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-25-2026_07:30:46]     → VCF_SERVICE_VCD_MIGRATION_BACKEND: SCHEDULED
+[06-25-2026_07:30:46]     DEBUG: Available properties for VSP: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-25-2026_07:30:46]     → VSP: SCHEDULED
+[06-25-2026_07:30:46]     DEBUG: Available properties for DEPOT_SERVICE: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-25-2026_07:30:46]     → DEPOT_SERVICE: SCHEDULED
+[06-25-2026_07:30:46]     DEBUG: Available properties for TELEMETRY_ACCEPTOR: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-25-2026_07:30:46]     → TELEMETRY_ACCEPTOR: SCHEDULED
+[06-25-2026_07:31:46]   Bundle Status: 11 completed | 5 in progress | 0 failed
+[06-25-2026_07:31:46]     DEBUG: Available properties for VIDB: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadStartTime, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-25-2026_07:31:46]     → VIDB: INPROGRESS
+[06-25-2026_07:31:46]     DEBUG: Available properties for VCF_SERVICE_VCD_MIGRATION_BACKEND: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadStartTime, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-25-2026_07:31:46]     → VCF_SERVICE_VCD_MIGRATION_BACKEND: INPROGRESS
+[06-25-2026_07:31:46]     DEBUG: Available properties for VSP: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-25-2026_07:31:46]     → VSP: SCHEDULED
+[06-25-2026_07:31:46]     DEBUG: Available properties for DEPOT_SERVICE: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-25-2026_07:31:46]     → DEPOT_SERVICE: SCHEDULED
+[06-25-2026_07:31:46]     DEBUG: Available properties for TELEMETRY_ACCEPTOR: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadStartTime, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-25-2026_07:31:46]     → TELEMETRY_ACCEPTOR: INPROGRESS
+[06-25-2026_07:32:46]   Bundle Status: 11 completed | 5 in progress | 0 failed
+[06-25-2026_07:32:46]     DEBUG: Available properties for VIDB: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadStartTime, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-25-2026_07:32:46]     → VIDB: INPROGRESS
+[06-25-2026_07:32:46]     DEBUG: Available properties for VCF_SERVICE_VCD_MIGRATION_BACKEND: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadStartTime, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-25-2026_07:32:46]     → VCF_SERVICE_VCD_MIGRATION_BACKEND: INPROGRESS
+[06-25-2026_07:32:46]     DEBUG: Available properties for VSP: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-25-2026_07:32:46]     → VSP: SCHEDULED
+[06-25-2026_07:32:46]     DEBUG: Available properties for DEPOT_SERVICE: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-25-2026_07:32:46]     → DEPOT_SERVICE: SCHEDULED
+[06-25-2026_07:32:46]     DEBUG: Available properties for TELEMETRY_ACCEPTOR: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadStartTime, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-25-2026_07:32:46]     → TELEMETRY_ACCEPTOR: INPROGRESS
+[06-25-2026_07:33:46]   Bundle Status: 11 completed | 2 in progress | 3 failed
+[06-25-2026_07:33:46]     DEBUG: Available properties for VSP: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadStartTime, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-25-2026_07:33:46]     → VSP: INPROGRESS
+[06-25-2026_07:33:46]     DEBUG: Available properties for DEPOT_SERVICE: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadStartTime, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-25-2026_07:33:46]     → DEPOT_SERVICE: INPROGRESS
+[06-25-2026_07:33:46]   ⟳ Retrying failed bundle: VIDB (attempt 1/3)
+[06-25-2026_07:33:46] DEBUG: Deleting bundle 0911b05e-e5c1-5036-867f-7a12066c8d06
+[06-25-2026_07:33:46]   Deleted bundle 0911b05e-e5c1-5036-867f-7a12066c8d06 for retry
+[06-25-2026_07:33:47] DEBUG: Starting download for bundle 0911b05e-e5c1-5036-867f-7a12066c8d06
+[06-25-2026_07:33:47]   ✗ Failed to download bundle 0911b05e-e5c1-5036-867f-7a12066c8d06: Response status code does not indicate success: 404 ().
+[06-25-2026_07:33:47]   ⟳ Retrying failed bundle: VCF_SERVICE_VCD_MIGRATION_BACKEND (attempt 1/3)
+[06-25-2026_07:33:47] DEBUG: Deleting bundle 1998d24e-9fa4-5a13-b795-472537e224d2
+[06-25-2026_07:33:47]   Deleted bundle 1998d24e-9fa4-5a13-b795-472537e224d2 for retry
+[06-25-2026_07:33:47] DEBUG: Starting download for bundle 1998d24e-9fa4-5a13-b795-472537e224d2
+[06-25-2026_07:33:47]   ✗ Failed to download bundle 1998d24e-9fa4-5a13-b795-472537e224d2: Response status code does not indicate success: 404 ().
+[06-25-2026_07:33:47]   ⟳ Retrying failed bundle: TELEMETRY_ACCEPTOR (attempt 1/3)
+[06-25-2026_07:33:48] DEBUG: Deleting bundle cfdc3829-f065-50ec-8c4e-2c2fc85ccc56
+[06-25-2026_07:33:48]   Deleted bundle cfdc3829-f065-50ec-8c4e-2c2fc85ccc56 for retry
+[06-25-2026_07:33:48] DEBUG: Starting download for bundle cfdc3829-f065-50ec-8c4e-2c2fc85ccc56
+[06-25-2026_07:33:48]   ✗ Failed to download bundle cfdc3829-f065-50ec-8c4e-2c2fc85ccc56: Response status code does not indicate success: 404 ().
+[06-25-2026_07:34:48]   Bundle Status: 14 completed | 2 in progress | 0 failed
+[06-25-2026_07:34:48]     DEBUG: Available properties for VSP: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadStartTime, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-25-2026_07:34:48]     → VSP: INPROGRESS
+[06-25-2026_07:34:48]     DEBUG: Available properties for DEPOT_SERVICE: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadStartTime, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-25-2026_07:34:48]     → DEPOT_SERVICE: INPROGRESS
+[06-25-2026_07:37:08] 
+========================================
+[06-25-2026_07:37:08]   SDDC MANAGER BUNDLE DOWNLOAD
+[06-25-2026_07:37:08] ========================================
+
+[06-25-2026_07:37:08] Waiting for SDDC Manager API to become ready...
+[06-25-2026_07:37:08]   SDDC Manager API is now ready!
+[06-25-2026_07:37:09] Retrieving VCF release components...
+[06-25-2026_07:37:09]   Found 16 components for VCF 9.1.0.0
+[06-25-2026_07:37:09]   VROPS: 2 bundle ids, using 2a4a0cfa-c823-5999-a831-f12dc522b95f
+[06-25-2026_07:37:09]   VRA: 2 bundle ids, using 8adb94df-7a39-5c96-a924-215cce4a605c
+[06-25-2026_07:37:09]   VCF_SDDC_LCM: 2 bundle ids, using 75c2165f-ac1e-55da-8c96-d394bf441f56
+[06-25-2026_07:37:09]   VCF_FLEET_LCM: 2 bundle ids, using ad3f0777-a0c9-509c-86cd-86001cebcf8f
+[06-25-2026_07:37:09]   VCENTER: 2 bundle ids, using 581cfc8b-6d2e-51e1-8412-528c4506e419
+[06-25-2026_07:37:09]   SDDC_MANAGER: 2 bundle ids, using fe5daf52-a3e1-5487-8ec4-25270533bb23
+[06-25-2026_07:37:09]   VCF_SALT: 2 bundle ids, using 3092fe38-b997-5f2f-b397-6776c6601880
+[06-25-2026_07:37:09]   NSX_T_MANAGER: 2 bundle ids, using 043bbcda-7ec2-5874-84e4-0f51472f3d5c
+[06-25-2026_07:37:09]   VCF_SALT_RAAS: 2 bundle ids, using 1e7fd7e4-042c-5c6c-a7ba-a2c926a90f4f
+[06-25-2026_07:37:09]   VCF_LICENSE_SERVER: 2 bundle ids, using 62f68bab-de0c-5d96-8222-577c3ac4270e
+[06-25-2026_07:37:09]   VCF_OPS_CLOUD_PROXY: 2 bundle ids, using 9599b55f-952b-5b2f-a96a-7529a9e904ae
+[06-25-2026_07:37:09] 
+Initiating bundle downloads...
+[06-25-2026_07:37:09] Processing: VCF_SERVICE_VCD_MIGRATION_BACKEND
+[06-25-2026_07:37:09] DEBUG: Starting download for bundle 1998d24e-9fa4-5a13-b795-472537e224d2
+[06-25-2026_07:37:09]   Failed to download bundle 1998d24e-9fa4-5a13-b795-472537e224d2: Response status code does not indicate success: 404 ().
+[06-25-2026_07:37:09] Processing: VIDB
+[06-25-2026_07:37:09] DEBUG: Starting download for bundle 0911b05e-e5c1-5036-867f-7a12066c8d06
+[06-25-2026_07:37:09]   Failed to download bundle 0911b05e-e5c1-5036-867f-7a12066c8d06: Response status code does not indicate success: 404 ().
+[06-25-2026_07:37:09] Processing: VRA
+[06-25-2026_07:37:10] DEBUG: Starting download for bundle 8adb94df-7a39-5c96-a924-215cce4a605c
+[06-25-2026_07:37:10]   Bundle download initiated: 
+[06-25-2026_07:37:10] Processing: VCF_SDDC_LCM
+[06-25-2026_07:37:10] DEBUG: Starting download for bundle 75c2165f-ac1e-55da-8c96-d394bf441f56
+[06-25-2026_07:37:10]   Bundle download initiated: 
+[06-25-2026_07:37:10] Processing: TELEMETRY_ACCEPTOR
+[06-25-2026_07:37:10] DEBUG: Starting download for bundle cfdc3829-f065-50ec-8c4e-2c2fc85ccc56
+[06-25-2026_07:37:11]   Failed to download bundle cfdc3829-f065-50ec-8c4e-2c2fc85ccc56: Response status code does not indicate success: 404 ().
+[06-25-2026_07:37:11] Processing: VCENTER
+[06-25-2026_07:37:11] DEBUG: Starting download for bundle 581cfc8b-6d2e-51e1-8412-528c4506e419
+[06-25-2026_07:37:11]   Bundle download initiated: 
+[06-25-2026_07:37:11] Processing: VCF_LICENSE_SERVER
+[06-25-2026_07:37:11] DEBUG: Starting download for bundle 62f68bab-de0c-5d96-8222-577c3ac4270e
+[06-25-2026_07:37:11]   Bundle download initiated: 
+[06-25-2026_07:37:11] Processing: NSX_T_MANAGER
+[06-25-2026_07:37:12] DEBUG: Starting download for bundle 043bbcda-7ec2-5874-84e4-0f51472f3d5c
+[06-25-2026_07:37:12]   Bundle download initiated: 
+[06-25-2026_07:37:12] Processing: VROPS
+[06-25-2026_07:37:12] DEBUG: Starting download for bundle 2a4a0cfa-c823-5999-a831-f12dc522b95f
+[06-25-2026_07:37:12]   Bundle download initiated: 
+[06-25-2026_07:37:12] Processing: VCF_FLEET_LCM
+[06-25-2026_07:37:12] DEBUG: Starting download for bundle ad3f0777-a0c9-509c-86cd-86001cebcf8f
+[06-25-2026_07:37:12]   Bundle download initiated: 
+[06-25-2026_07:37:12] Processing: SDDC_MANAGER
+[06-25-2026_07:37:13] DEBUG: Starting download for bundle fe5daf52-a3e1-5487-8ec4-25270533bb23
+[06-25-2026_07:37:13]   Bundle download initiated: 
+[06-25-2026_07:37:13] Processing: VCF_SALT
+[06-25-2026_07:37:13] DEBUG: Starting download for bundle 3092fe38-b997-5f2f-b397-6776c6601880
+[06-25-2026_07:37:13]   Bundle download initiated: 
+[06-25-2026_07:37:13] Processing: VCF_OPS_CLOUD_PROXY
+[06-25-2026_07:37:13] DEBUG: Starting download for bundle 9599b55f-952b-5b2f-a96a-7529a9e904ae
+[06-25-2026_07:37:13]   Bundle download initiated: 
+[06-25-2026_07:37:13] Processing: VSP
+[06-25-2026_07:37:14] DEBUG: Starting download for bundle aa88f811-700a-5384-b86e-c40191985348
+[06-25-2026_07:37:14]   Bundle download initiated: 
+[06-25-2026_07:37:14] Processing: VCF_SALT_RAAS
+[06-25-2026_07:37:14] DEBUG: Starting download for bundle 1e7fd7e4-042c-5c6c-a7ba-a2c926a90f4f
+[06-25-2026_07:37:14]   Bundle download initiated: 
+[06-25-2026_07:37:14] Processing: DEPOT_SERVICE
+[06-25-2026_07:37:14] DEBUG: Starting download for bundle 2549d171-774b-5662-8a40-a40f8cb2cf11
+[06-25-2026_07:37:14]   Bundle download initiated: 
+[06-25-2026_07:37:15] 
+Monitoring bundle download progress (Total bundles: 16)...
+[06-25-2026_07:37:15]   Bundle Status: 3 completed | 13 in progress | 0 failed
+[06-25-2026_07:37:15]     DEBUG: Available properties for VROPS: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-25-2026_07:37:15]     -> VROPS: SCHEDULED
+[06-25-2026_07:37:15]     DEBUG: Available properties for VCF_SALT_RAAS: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-25-2026_07:37:15]     -> VCF_SALT_RAAS: SCHEDULED
+[06-25-2026_07:37:15]     DEBUG: Available properties for VCF_OPS_CLOUD_PROXY: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-25-2026_07:37:15]     -> VCF_OPS_CLOUD_PROXY: SCHEDULED
+[06-25-2026_07:37:15]     DEBUG: Available properties for VCF_FLEET_LCM: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-25-2026_07:37:15]     -> VCF_FLEET_LCM: SCHEDULED
+[06-25-2026_07:37:15]     DEBUG: Available properties for VCF_LICENSE_SERVER: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-25-2026_07:37:15]     -> VCF_LICENSE_SERVER: SCHEDULED
+[06-25-2026_07:37:15]     DEBUG: Available properties for VCF_SALT: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-25-2026_07:37:15]     -> VCF_SALT: SCHEDULED
+[06-25-2026_07:37:15]     DEBUG: Available properties for VCF_SDDC_LCM: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadStartTime, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-25-2026_07:37:15]     -> VCF_SDDC_LCM: INPROGRESS
+[06-25-2026_07:37:15]     DEBUG: Available properties for VSP: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-25-2026_07:37:15]     -> VSP: SCHEDULED
+[06-25-2026_07:37:15]     DEBUG: Available properties for NSX_T_MANAGER: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-25-2026_07:37:15]     -> NSX_T_MANAGER: SCHEDULED
+[06-25-2026_07:37:15]     DEBUG: Available properties for VRA: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadStartTime, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-25-2026_07:37:15]     -> VRA: INPROGRESS
+[06-25-2026_07:37:15]     DEBUG: Available properties for DEPOT_SERVICE: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-25-2026_07:37:15]     -> DEPOT_SERVICE: SCHEDULED
+[06-25-2026_07:37:15]     DEBUG: Available properties for VCENTER: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadStartTime, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-25-2026_07:37:15]     -> VCENTER: INPROGRESS
+[06-25-2026_07:37:15]     DEBUG: Available properties for SDDC_MANAGER: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-25-2026_07:37:15]     -> SDDC_MANAGER: SCHEDULED
+[06-25-2026_07:38:15]   Bundle Status: 3 completed | 13 in progress | 0 failed
+[06-25-2026_07:38:15]     DEBUG: Available properties for VROPS: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-25-2026_07:38:15]     -> VROPS: SCHEDULED
+[06-25-2026_07:38:15]     DEBUG: Available properties for VCF_SALT_RAAS: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-25-2026_07:38:15]     -> VCF_SALT_RAAS: SCHEDULED
+[06-25-2026_07:38:15]     DEBUG: Available properties for VCF_OPS_CLOUD_PROXY: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-25-2026_07:38:15]     -> VCF_OPS_CLOUD_PROXY: SCHEDULED
+[06-25-2026_07:38:15]     DEBUG: Available properties for VCF_FLEET_LCM: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-25-2026_07:38:15]     -> VCF_FLEET_LCM: SCHEDULED
+[06-25-2026_07:38:15]     DEBUG: Available properties for VCF_LICENSE_SERVER: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-25-2026_07:38:15]     -> VCF_LICENSE_SERVER: SCHEDULED
+[06-25-2026_07:38:15]     DEBUG: Available properties for VCF_SALT: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-25-2026_07:38:15]     -> VCF_SALT: SCHEDULED
+[06-25-2026_07:38:15]     DEBUG: Available properties for VCF_SDDC_LCM: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadStartTime, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-25-2026_07:38:15]     -> VCF_SDDC_LCM: INPROGRESS
+[06-25-2026_07:38:15]     DEBUG: Available properties for VSP: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-25-2026_07:38:15]     -> VSP: SCHEDULED
+[06-25-2026_07:38:15]     DEBUG: Available properties for NSX_T_MANAGER: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-25-2026_07:38:15]     -> NSX_T_MANAGER: SCHEDULED
+[06-25-2026_07:38:15]     DEBUG: Available properties for VRA: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadStartTime, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-25-2026_07:38:15]     -> VRA: INPROGRESS
+[06-25-2026_07:38:15]     DEBUG: Available properties for DEPOT_SERVICE: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-25-2026_07:38:15]     -> DEPOT_SERVICE: SCHEDULED
+[06-25-2026_07:38:15]     DEBUG: Available properties for VCENTER: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadStartTime, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-25-2026_07:38:15]     -> VCENTER: INPROGRESS
+[06-25-2026_07:38:15]     DEBUG: Available properties for SDDC_MANAGER: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-25-2026_07:38:15]     -> SDDC_MANAGER: SCHEDULED
+[06-25-2026_07:39:15]   Bundle Status: 3 completed | 10 in progress | 3 failed
+[06-25-2026_07:39:15]     DEBUG: Available properties for VROPS: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadStartTime, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-25-2026_07:39:15]     -> VROPS: INPROGRESS
+[06-25-2026_07:39:15]     DEBUG: Available properties for VCF_SALT_RAAS: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-25-2026_07:39:15]     -> VCF_SALT_RAAS: SCHEDULED
+[06-25-2026_07:39:15]     DEBUG: Available properties for VCF_OPS_CLOUD_PROXY: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-25-2026_07:39:15]     -> VCF_OPS_CLOUD_PROXY: SCHEDULED
+[06-25-2026_07:39:15]     DEBUG: Available properties for VCF_FLEET_LCM: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-25-2026_07:39:15]     -> VCF_FLEET_LCM: SCHEDULED
+[06-25-2026_07:39:15]     DEBUG: Available properties for VCF_LICENSE_SERVER: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadStartTime, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-25-2026_07:39:15]     -> VCF_LICENSE_SERVER: INPROGRESS
+[06-25-2026_07:39:15]     DEBUG: Available properties for VCF_SALT: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-25-2026_07:39:15]     -> VCF_SALT: SCHEDULED
+[06-25-2026_07:39:15]     DEBUG: Available properties for VSP: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-25-2026_07:39:15]     -> VSP: SCHEDULED
+[06-25-2026_07:39:15]     DEBUG: Available properties for NSX_T_MANAGER: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadStartTime, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-25-2026_07:39:15]     -> NSX_T_MANAGER: INPROGRESS
+[06-25-2026_07:39:15]     DEBUG: Available properties for DEPOT_SERVICE: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-25-2026_07:39:15]     -> DEPOT_SERVICE: SCHEDULED
+[06-25-2026_07:39:15]     DEBUG: Available properties for SDDC_MANAGER: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-25-2026_07:39:15]     -> SDDC_MANAGER: SCHEDULED
+[06-25-2026_07:39:15]   Retrying failed bundle: VCF_SDDC_LCM (attempt 1/3)
+[06-25-2026_07:39:15] DEBUG: Deleting bundle 75c2165f-ac1e-55da-8c96-d394bf441f56
+[06-25-2026_07:39:15]   Deleted bundle 75c2165f-ac1e-55da-8c96-d394bf441f56 for retry
+[06-25-2026_07:39:16] DEBUG: Starting download for bundle 75c2165f-ac1e-55da-8c96-d394bf441f56
+[06-25-2026_07:39:16]   Failed to download bundle 75c2165f-ac1e-55da-8c96-d394bf441f56: Response status code does not indicate success: 404 ().
+[06-25-2026_07:39:16]   Retrying failed bundle: VRA (attempt 1/3)
+[06-25-2026_07:39:16] DEBUG: Deleting bundle 8adb94df-7a39-5c96-a924-215cce4a605c
+[06-25-2026_07:39:16]   Deleted bundle 8adb94df-7a39-5c96-a924-215cce4a605c for retry
+[06-25-2026_07:39:16] DEBUG: Starting download for bundle 8adb94df-7a39-5c96-a924-215cce4a605c
+[06-25-2026_07:39:16]   Failed to download bundle 8adb94df-7a39-5c96-a924-215cce4a605c: Response status code does not indicate success: 404 ().
+[06-25-2026_07:39:16]   Retrying failed bundle: VCENTER (attempt 1/3)
+[06-25-2026_07:39:16] DEBUG: Deleting bundle 581cfc8b-6d2e-51e1-8412-528c4506e419
+[06-25-2026_07:39:16]   Deleted bundle 581cfc8b-6d2e-51e1-8412-528c4506e419 for retry
+[06-25-2026_07:39:17] DEBUG: Starting download for bundle 581cfc8b-6d2e-51e1-8412-528c4506e419
+[06-25-2026_07:39:17]   Failed to download bundle 581cfc8b-6d2e-51e1-8412-528c4506e419: Response status code does not indicate success: 404 ().
+[06-25-2026_07:40:17]   Bundle Status: 6 completed | 10 in progress | 0 failed
+[06-25-2026_07:40:17]     DEBUG: Available properties for VROPS: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadStartTime, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-25-2026_07:40:17]     -> VROPS: INPROGRESS
+[06-25-2026_07:40:17]     DEBUG: Available properties for VCF_SALT_RAAS: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-25-2026_07:40:17]     -> VCF_SALT_RAAS: SCHEDULED
+[06-25-2026_07:40:17]     DEBUG: Available properties for DEPOT_SERVICE: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-25-2026_07:40:17]     -> DEPOT_SERVICE: SCHEDULED
+[06-25-2026_07:40:17]     DEBUG: Available properties for VCF_OPS_CLOUD_PROXY: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-25-2026_07:40:17]     -> VCF_OPS_CLOUD_PROXY: SCHEDULED
+[06-25-2026_07:40:17]     DEBUG: Available properties for VCF_FLEET_LCM: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-25-2026_07:40:17]     -> VCF_FLEET_LCM: SCHEDULED
+[06-25-2026_07:40:17]     DEBUG: Available properties for VCF_LICENSE_SERVER: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadStartTime, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-25-2026_07:40:17]     -> VCF_LICENSE_SERVER: INPROGRESS
+[06-25-2026_07:40:17]     DEBUG: Available properties for VCF_SALT: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-25-2026_07:40:17]     -> VCF_SALT: SCHEDULED
+[06-25-2026_07:40:17]     DEBUG: Available properties for SDDC_MANAGER: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-25-2026_07:40:17]     -> SDDC_MANAGER: SCHEDULED
+[06-25-2026_07:40:17]     DEBUG: Available properties for VSP: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-25-2026_07:40:17]     -> VSP: SCHEDULED
+[06-25-2026_07:40:17]     DEBUG: Available properties for NSX_T_MANAGER: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadStartTime, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-25-2026_07:40:17]     -> NSX_T_MANAGER: INPROGRESS
+[06-25-2026_07:41:17]   Bundle Status: 6 completed | 7 in progress | 3 failed
+[06-25-2026_07:41:17]     DEBUG: Available properties for VCF_SALT_RAAS: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-25-2026_07:41:17]     -> VCF_SALT_RAAS: SCHEDULED
+[06-25-2026_07:41:17]     DEBUG: Available properties for DEPOT_SERVICE: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-25-2026_07:41:17]     -> DEPOT_SERVICE: SCHEDULED
+[06-25-2026_07:41:17]     DEBUG: Available properties for VCF_OPS_CLOUD_PROXY: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-25-2026_07:41:17]     -> VCF_OPS_CLOUD_PROXY: SCHEDULED
+[06-25-2026_07:41:17]     DEBUG: Available properties for VCF_FLEET_LCM: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadStartTime, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-25-2026_07:41:17]     -> VCF_FLEET_LCM: INPROGRESS
+[06-25-2026_07:41:17]     DEBUG: Available properties for VCF_SALT: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadStartTime, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-25-2026_07:41:17]     -> VCF_SALT: INPROGRESS
+[06-25-2026_07:41:17]     DEBUG: Available properties for SDDC_MANAGER: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadStartTime, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-25-2026_07:41:17]     -> SDDC_MANAGER: INPROGRESS
+[06-25-2026_07:41:17]     DEBUG: Available properties for VSP: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-25-2026_07:41:17]     -> VSP: SCHEDULED
+[06-25-2026_07:41:17]   Retrying failed bundle: VROPS (attempt 1/3)
+[06-25-2026_07:41:17] DEBUG: Deleting bundle 2a4a0cfa-c823-5999-a831-f12dc522b95f
+[06-25-2026_07:41:17]   Deleted bundle 2a4a0cfa-c823-5999-a831-f12dc522b95f for retry
+[06-25-2026_07:41:18] DEBUG: Starting download for bundle 2a4a0cfa-c823-5999-a831-f12dc522b95f
+[06-25-2026_07:41:18]   Failed to download bundle 2a4a0cfa-c823-5999-a831-f12dc522b95f: Response status code does not indicate success: 404 ().
+[06-25-2026_07:41:18]   Retrying failed bundle: VCF_LICENSE_SERVER (attempt 1/3)
+[06-25-2026_07:41:18] DEBUG: Deleting bundle 62f68bab-de0c-5d96-8222-577c3ac4270e
+[06-25-2026_07:41:18]   Deleted bundle 62f68bab-de0c-5d96-8222-577c3ac4270e for retry
+[06-25-2026_07:41:18] DEBUG: Starting download for bundle 62f68bab-de0c-5d96-8222-577c3ac4270e
+[06-25-2026_07:41:18]   Failed to download bundle 62f68bab-de0c-5d96-8222-577c3ac4270e: Response status code does not indicate success: 404 ().
+[06-25-2026_07:41:18]   Retrying failed bundle: NSX_T_MANAGER (attempt 1/3)
+[06-25-2026_07:41:18] DEBUG: Deleting bundle 043bbcda-7ec2-5874-84e4-0f51472f3d5c
+[06-25-2026_07:41:18]   Deleted bundle 043bbcda-7ec2-5874-84e4-0f51472f3d5c for retry
+[06-25-2026_07:41:19] DEBUG: Starting download for bundle 043bbcda-7ec2-5874-84e4-0f51472f3d5c
+[06-25-2026_07:41:19]   Failed to download bundle 043bbcda-7ec2-5874-84e4-0f51472f3d5c: Response status code does not indicate success: 404 ().
+[06-25-2026_07:42:19]   Bundle Status: 9 completed | 7 in progress | 0 failed
+[06-25-2026_07:42:19]     DEBUG: Available properties for VCF_SALT_RAAS: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-25-2026_07:42:19]     -> VCF_SALT_RAAS: SCHEDULED
+[06-25-2026_07:42:19]     DEBUG: Available properties for DEPOT_SERVICE: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-25-2026_07:42:19]     -> DEPOT_SERVICE: SCHEDULED
+[06-25-2026_07:42:19]     DEBUG: Available properties for VCF_OPS_CLOUD_PROXY: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-25-2026_07:42:19]     -> VCF_OPS_CLOUD_PROXY: SCHEDULED
+[06-25-2026_07:42:19]     DEBUG: Available properties for VCF_FLEET_LCM: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadStartTime, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-25-2026_07:42:19]     -> VCF_FLEET_LCM: INPROGRESS
+[06-25-2026_07:42:19]     DEBUG: Available properties for VCF_SALT: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadStartTime, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-25-2026_07:42:19]     -> VCF_SALT: INPROGRESS
+[06-25-2026_07:42:19]     DEBUG: Available properties for SDDC_MANAGER: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadStartTime, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-25-2026_07:42:19]     -> SDDC_MANAGER: INPROGRESS
+[06-25-2026_07:42:19]     DEBUG: Available properties for VSP: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-25-2026_07:42:19]     -> VSP: SCHEDULED
+[06-25-2026_07:43:19]   Bundle Status: 9 completed | 4 in progress | 3 failed
+[06-25-2026_07:43:19]     DEBUG: Available properties for VCF_SALT_RAAS: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-25-2026_07:43:19]     -> VCF_SALT_RAAS: SCHEDULED
+[06-25-2026_07:43:19]     DEBUG: Available properties for DEPOT_SERVICE: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-25-2026_07:43:19]     -> DEPOT_SERVICE: SCHEDULED
+[06-25-2026_07:43:19]     DEBUG: Available properties for VCF_OPS_CLOUD_PROXY: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadStartTime, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-25-2026_07:43:19]     -> VCF_OPS_CLOUD_PROXY: INPROGRESS
+[06-25-2026_07:43:19]     DEBUG: Available properties for VSP: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadStartTime, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-25-2026_07:43:19]     -> VSP: INPROGRESS
+[06-25-2026_07:43:19]   Retrying failed bundle: VCF_FLEET_LCM (attempt 1/3)
+[06-25-2026_07:43:19] DEBUG: Deleting bundle ad3f0777-a0c9-509c-86cd-86001cebcf8f
+[06-25-2026_07:43:19]   Deleted bundle ad3f0777-a0c9-509c-86cd-86001cebcf8f for retry
+[06-25-2026_07:43:20] DEBUG: Starting download for bundle ad3f0777-a0c9-509c-86cd-86001cebcf8f
+[06-25-2026_07:43:20]   Failed to download bundle ad3f0777-a0c9-509c-86cd-86001cebcf8f: Response status code does not indicate success: 404 ().
+[06-25-2026_07:43:20]   Retrying failed bundle: VCF_SALT (attempt 1/3)
+[06-25-2026_07:43:20] DEBUG: Deleting bundle 3092fe38-b997-5f2f-b397-6776c6601880
+[06-25-2026_07:43:20]   Deleted bundle 3092fe38-b997-5f2f-b397-6776c6601880 for retry
+[06-25-2026_07:43:20] DEBUG: Starting download for bundle 3092fe38-b997-5f2f-b397-6776c6601880
+[06-25-2026_07:43:20]   Failed to download bundle 3092fe38-b997-5f2f-b397-6776c6601880: Response status code does not indicate success: 404 ().
+[06-25-2026_07:43:20]   Retrying failed bundle: SDDC_MANAGER (attempt 1/3)
+[06-25-2026_07:43:20] DEBUG: Deleting bundle fe5daf52-a3e1-5487-8ec4-25270533bb23
+[06-25-2026_07:43:20]   Deleted bundle fe5daf52-a3e1-5487-8ec4-25270533bb23 for retry
+[06-25-2026_07:43:21] DEBUG: Starting download for bundle fe5daf52-a3e1-5487-8ec4-25270533bb23
+[06-25-2026_07:43:21]   Failed to download bundle fe5daf52-a3e1-5487-8ec4-25270533bb23: Response status code does not indicate success: 404 ().
+[06-25-2026_07:44:21]   Bundle Status: 12 completed | 4 in progress | 0 failed
+[06-25-2026_07:44:21]     DEBUG: Available properties for VCF_SALT_RAAS: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-25-2026_07:44:21]     -> VCF_SALT_RAAS: SCHEDULED
+[06-25-2026_07:44:21]     DEBUG: Available properties for DEPOT_SERVICE: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-25-2026_07:44:21]     -> DEPOT_SERVICE: SCHEDULED
+[06-25-2026_07:44:21]     DEBUG: Available properties for VCF_OPS_CLOUD_PROXY: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadStartTime, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-25-2026_07:44:21]     -> VCF_OPS_CLOUD_PROXY: INPROGRESS
+[06-25-2026_07:44:21]     DEBUG: Available properties for VSP: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadStartTime, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-25-2026_07:44:21]     -> VSP: INPROGRESS
+[06-25-2026_07:45:21]   Bundle Status: 12 completed | 2 in progress | 2 failed
+[06-25-2026_07:45:21]     DEBUG: Available properties for VCF_SALT_RAAS: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadStartTime, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-25-2026_07:45:21]     -> VCF_SALT_RAAS: INPROGRESS
+[06-25-2026_07:45:21]     DEBUG: Available properties for DEPOT_SERVICE: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadStartTime, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-25-2026_07:45:21]     -> DEPOT_SERVICE: INPROGRESS
+[06-25-2026_07:45:21]   Retrying failed bundle: VCF_OPS_CLOUD_PROXY (attempt 1/3)
+[06-25-2026_07:45:21] DEBUG: Deleting bundle 9599b55f-952b-5b2f-a96a-7529a9e904ae
+[06-25-2026_07:45:21]   Deleted bundle 9599b55f-952b-5b2f-a96a-7529a9e904ae for retry
+[06-25-2026_07:45:21] DEBUG: Starting download for bundle 9599b55f-952b-5b2f-a96a-7529a9e904ae
+[06-25-2026_07:45:21]   Failed to download bundle 9599b55f-952b-5b2f-a96a-7529a9e904ae: Response status code does not indicate success: 404 ().
+[06-25-2026_07:45:21]   Retrying failed bundle: VSP (attempt 1/3)
+[06-25-2026_07:45:22] DEBUG: Deleting bundle aa88f811-700a-5384-b86e-c40191985348
+[06-25-2026_07:45:22]   Deleted bundle aa88f811-700a-5384-b86e-c40191985348 for retry
+[06-25-2026_07:45:22] DEBUG: Starting download for bundle aa88f811-700a-5384-b86e-c40191985348
+[06-25-2026_07:45:22]   Failed to download bundle aa88f811-700a-5384-b86e-c40191985348: Response status code does not indicate success: 404 ().
+[06-25-2026_07:46:22]   Bundle Status: 14 completed | 2 in progress | 0 failed
+[06-25-2026_07:46:22]     DEBUG: Available properties for VCF_SALT_RAAS: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadStartTime, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-25-2026_07:46:22]     -> VCF_SALT_RAAS: INPROGRESS
+[06-25-2026_07:46:22]     DEBUG: Available properties for DEPOT_SERVICE: componentType, version, bundleId, downloadId, downloadStatus, downloadedSize, downloadStartTime, downloadScheduledTime, isDownloadCancellable, isDownloadable
+[06-25-2026_07:46:22]     -> DEPOT_SERVICE: INPROGRESS
+[06-25-2026_07:47:22]   Bundle Status: 14 completed | 0 in progress | 2 failed
+[06-25-2026_07:47:22]   Retrying failed bundle: VCF_SALT_RAAS (attempt 1/3)
+[06-25-2026_07:47:22] DEBUG: Deleting bundle 1e7fd7e4-042c-5c6c-a7ba-a2c926a90f4f
+[06-25-2026_07:47:22]   Deleted bundle 1e7fd7e4-042c-5c6c-a7ba-a2c926a90f4f for retry
+[06-25-2026_07:47:23] DEBUG: Starting download for bundle 1e7fd7e4-042c-5c6c-a7ba-a2c926a90f4f
+[06-25-2026_07:47:23]   Failed to download bundle 1e7fd7e4-042c-5c6c-a7ba-a2c926a90f4f: Response status code does not indicate success: 404 ().
+[06-25-2026_07:47:23]   Retrying failed bundle: DEPOT_SERVICE (attempt 1/3)
+[06-25-2026_07:47:23] DEBUG: Deleting bundle 2549d171-774b-5662-8a40-a40f8cb2cf11
+[06-25-2026_07:47:23]   Deleted bundle 2549d171-774b-5662-8a40-a40f8cb2cf11 for retry
+[06-25-2026_07:47:23] DEBUG: Starting download for bundle 2549d171-774b-5662-8a40-a40f8cb2cf11
+[06-25-2026_07:47:23]   Failed to download bundle 2549d171-774b-5662-8a40-a40f8cb2cf11: Response status code does not indicate success: 404 ().
+[06-25-2026_07:48:23]   Bundle Status: 16 completed | 0 in progress | 0 failed
+[06-25-2026_07:48:23] 
+All 16 bundles downloaded successfully!
+[06-25-2026_07:48:25] Connecting to SDDC Manager at 10.2.101.100 ...
+[06-25-2026_07:48:26]   Successfully connected to SDDC Manager
+[06-25-2026_07:48:26] Generating VCF Workload Domain Host Commission file vcf-commission-host-ui.json and vcf-commission-host-api.json for SDDC Manager UI and API
+[06-25-2026_07:48:27] Existing Network Pools discovered in SDDC Manager:
+[06-25-2026_07:48:27]   - Name: m01-np01  |  ID: 82a1c037-46fe-4249-8ab7-9cdf92b9b0d2
+[06-25-2026_07:48:27] WLD Network Pool 'w01-np01' not found, creating ...
+[06-25-2026_07:48:27] Creating WLD Network Pool with spec:
+{
+  "networks": [
+    {
+      "mtu": 8900,
+      "mask": "255.255.255.0",
+      "type": "VMOTION",
+      "vlanId": 201,
+      "ipPools": [
+        {
+          "end": "10.10.201.50",
+          "start": "10.10.201.10"
+        }
+      ],
+      "subnet": "10.10.201.0",
+      "gateway": "10.10.201.1"
+    },
+    {
+      "mtu": 8900,
+      "mask": "255.255.255.0",
+      "type": "VSAN",
+      "vlanId": 203,
+      "ipPools": [
+        {
+          "end": "10.10.203.50",
+          "start": "10.10.203.10"
+        }
+      ],
+      "subnet": "10.10.203.0",
+      "gateway": "10.10.203.1"
+    }
+  ],
+  "name": "w01-np01"
+}
+[06-25-2026_07:48:27] Created WLD Network Pool 'w01-np01' (ID: e972a5c5-3715-4f6d-a3c4-8047107bf516)
+[06-25-2026_07:48:27] Using WLD Network Pool 'w01-np01' (ID: e972a5c5-3715-4f6d-a3c4-8047107bf516)
+[06-25-2026_07:48:27] Commissioning ESXi hosts for Workload Domain deployment using vcf-commission-host-api.json ...
+[06-25-2026_07:48:27] DEBUG: Method: POST
+[06-25-2026_07:48:27] DEBUG: Uri: https://10.2.101.100/v1/hosts
+[06-25-2026_07:48:27] DEBUG: Body: [
+  {
+    "fqdn": "esx05.vcf.lab.io",
+    "username": "root",
+    "password": "VMwareVCF9!",
+    "networkPoolId": "e972a5c5-3715-4f6d-a3c4-8047107bf516",
+    "storageType": "VSAN_ESA"
+  },
+  {
+    "fqdn": "esx06.vcf.lab.io",
+    "username": "root",
+    "password": "VMwareVCF9!",
+    "networkPoolId": "e972a5c5-3715-4f6d-a3c4-8047107bf516",
+    "storageType": "VSAN_ESA"
+  },
+  {
+    "fqdn": "esx07.vcf.lab.io",
+    "username": "root",
+    "password": "VMwareVCF9!",
+    "networkPoolId": "e972a5c5-3715-4f6d-a3c4-8047107bf516",
+    "storageType": "VSAN_ESA"
+  }
+]
+
+[06-25-2026_07:48:28]   Host commission task started with ID: e87f1e41-2666-4a77-a7ab-bf3a8140f7a4
+[06-25-2026_07:48:28] Waiting for host commission to complete...
+[06-25-2026_07:49:29]   Host commission failed!
+[06-25-2026_07:49:29] Retrieving unassigned ESXi hosts from SDDC Manager and creating Workload Domain JSON deployment file vcf-w01-deployment.json
+[06-25-2026_07:49:29]   Found 0 unassigned useable hosts
+[06-25-2026_07:49:29] Saving Workload Domain deployment spec to vcf-w01-deployment.json
+[06-25-2026_07:49:29] 
+========================================
+[06-25-2026_07:49:29]   STARTING WORKLOAD DOMAIN DEPLOYMENT
+[06-25-2026_07:49:29] ========================================
+
+[06-25-2026_07:49:29] DEBUG: Method: POST
+[06-25-2026_07:49:29] DEBUG: Uri: https://10.2.101.100/v1/domains
+[06-25-2026_07:49:31] Failed to start Workload Domain deployment
+[06-25-2026_09:31:31] 
+========================================
+[06-25-2026_09:31:31]   SDDC MANAGER BUNDLE DOWNLOAD
+[06-25-2026_09:31:31] ========================================
+
+[06-25-2026_09:31:31] Waiting for SDDC Manager API to become ready...
+[06-25-2026_09:31:32]   SDDC Manager API is now ready!
+[06-25-2026_09:31:32] Retrieving VCF release components...
+[06-25-2026_09:31:32]   Found 16 components for VCF 9.1.0.0
+[06-25-2026_09:31:32]   VROPS: 2 bundle ids, using 2a4a0cfa-c823-5999-a831-f12dc522b95f
+[06-25-2026_09:31:32]   VRA: 2 bundle ids, using 8adb94df-7a39-5c96-a924-215cce4a605c
+[06-25-2026_09:31:32]   VCF_SDDC_LCM: 2 bundle ids, using 75c2165f-ac1e-55da-8c96-d394bf441f56
+[06-25-2026_09:31:32]   VCF_FLEET_LCM: 2 bundle ids, using ad3f0777-a0c9-509c-86cd-86001cebcf8f
+[06-25-2026_09:31:32]   VCENTER: 2 bundle ids, using 581cfc8b-6d2e-51e1-8412-528c4506e419
+[06-25-2026_09:31:32]   SDDC_MANAGER: 2 bundle ids, using fe5daf52-a3e1-5487-8ec4-25270533bb23
+[06-25-2026_09:31:32]   VCF_SALT: 2 bundle ids, using 3092fe38-b997-5f2f-b397-6776c6601880
+[06-25-2026_09:31:32]   NSX_T_MANAGER: 2 bundle ids, using 043bbcda-7ec2-5874-84e4-0f51472f3d5c
+[06-25-2026_09:31:32]   VCF_SALT_RAAS: 2 bundle ids, using 1e7fd7e4-042c-5c6c-a7ba-a2c926a90f4f
+[06-25-2026_09:31:32]   VCF_LICENSE_SERVER: 2 bundle ids, using 62f68bab-de0c-5d96-8222-577c3ac4270e
+[06-25-2026_09:31:32]   VCF_OPS_CLOUD_PROXY: 2 bundle ids, using 9599b55f-952b-5b2f-a96a-7529a9e904ae
+[06-25-2026_09:31:32] 
+Initiating bundle downloads...
+[06-25-2026_09:31:32] Processing: VCF_SERVICE_VCD_MIGRATION_BACKEND
+[06-25-2026_09:31:32] DEBUG: Starting download for bundle 1998d24e-9fa4-5a13-b795-472537e224d2
+[06-25-2026_09:31:32]   Failed to download bundle 1998d24e-9fa4-5a13-b795-472537e224d2: Response status code does not indicate success: 404 ().
+[06-25-2026_09:31:32] Processing: VIDB
+[06-25-2026_09:31:32] DEBUG: Starting download for bundle 0911b05e-e5c1-5036-867f-7a12066c8d06
+[06-25-2026_09:31:32]   Failed to download bundle 0911b05e-e5c1-5036-867f-7a12066c8d06: Response status code does not indicate success: 404 ().
+[06-25-2026_09:31:32] Processing: VRA
+[06-25-2026_09:31:33] DEBUG: Starting download for bundle 8adb94df-7a39-5c96-a924-215cce4a605c
+[06-25-2026_09:31:33]   Failed to download bundle 8adb94df-7a39-5c96-a924-215cce4a605c: Response status code does not indicate success: 404 ().
+[06-25-2026_09:31:33] Processing: VCF_SDDC_LCM
+[06-25-2026_09:31:33] DEBUG: Starting download for bundle 75c2165f-ac1e-55da-8c96-d394bf441f56
+[06-25-2026_09:31:33]   Failed to download bundle 75c2165f-ac1e-55da-8c96-d394bf441f56: Response status code does not indicate success: 404 ().
+[06-25-2026_09:31:33] Processing: TELEMETRY_ACCEPTOR
+[06-25-2026_09:31:33] DEBUG: Starting download for bundle cfdc3829-f065-50ec-8c4e-2c2fc85ccc56
+[06-25-2026_09:31:33]   Failed to download bundle cfdc3829-f065-50ec-8c4e-2c2fc85ccc56: Response status code does not indicate success: 404 ().
+[06-25-2026_09:31:33] Processing: VCENTER
+[06-25-2026_09:31:34] DEBUG: Starting download for bundle 581cfc8b-6d2e-51e1-8412-528c4506e419
+[06-25-2026_09:31:34]   Failed to download bundle 581cfc8b-6d2e-51e1-8412-528c4506e419: Response status code does not indicate success: 404 ().
+[06-25-2026_09:31:34] Processing: VCF_LICENSE_SERVER
+[06-25-2026_09:31:34] DEBUG: Starting download for bundle 62f68bab-de0c-5d96-8222-577c3ac4270e
+[06-25-2026_09:31:34]   Failed to download bundle 62f68bab-de0c-5d96-8222-577c3ac4270e: Response status code does not indicate success: 404 ().
+[06-25-2026_09:31:34] Processing: NSX_T_MANAGER
+[06-25-2026_09:31:34] DEBUG: Starting download for bundle 043bbcda-7ec2-5874-84e4-0f51472f3d5c
+[06-25-2026_09:31:34]   Failed to download bundle 043bbcda-7ec2-5874-84e4-0f51472f3d5c: Response status code does not indicate success: 404 ().
+[06-25-2026_09:31:34] Processing: VROPS
+[06-25-2026_09:31:35] DEBUG: Starting download for bundle 2a4a0cfa-c823-5999-a831-f12dc522b95f
+[06-25-2026_09:31:35]   Failed to download bundle 2a4a0cfa-c823-5999-a831-f12dc522b95f: Response status code does not indicate success: 404 ().
+[06-25-2026_09:31:35] Processing: VCF_FLEET_LCM
+[06-25-2026_09:31:35] DEBUG: Starting download for bundle ad3f0777-a0c9-509c-86cd-86001cebcf8f
+[06-25-2026_09:31:35]   Failed to download bundle ad3f0777-a0c9-509c-86cd-86001cebcf8f: Response status code does not indicate success: 404 ().
+[06-25-2026_09:31:35] Processing: SDDC_MANAGER
+[06-25-2026_09:31:35] DEBUG: Starting download for bundle fe5daf52-a3e1-5487-8ec4-25270533bb23
+[06-25-2026_09:31:35]   Failed to download bundle fe5daf52-a3e1-5487-8ec4-25270533bb23: Response status code does not indicate success: 404 ().
+[06-25-2026_09:31:35] Processing: VCF_SALT
+[06-25-2026_09:31:35] DEBUG: Starting download for bundle 3092fe38-b997-5f2f-b397-6776c6601880
+[06-25-2026_09:31:35]   Failed to download bundle 3092fe38-b997-5f2f-b397-6776c6601880: Response status code does not indicate success: 404 ().
+[06-25-2026_09:31:35] Processing: VCF_OPS_CLOUD_PROXY
+[06-25-2026_09:31:36] DEBUG: Starting download for bundle 9599b55f-952b-5b2f-a96a-7529a9e904ae
+[06-25-2026_09:31:36]   Failed to download bundle 9599b55f-952b-5b2f-a96a-7529a9e904ae: Response status code does not indicate success: 404 ().
+[06-25-2026_09:31:36] Processing: VSP
+[06-25-2026_09:31:36] DEBUG: Starting download for bundle aa88f811-700a-5384-b86e-c40191985348
+[06-25-2026_09:31:36]   Failed to download bundle aa88f811-700a-5384-b86e-c40191985348: Response status code does not indicate success: 404 ().
+[06-25-2026_09:31:36] Processing: VCF_SALT_RAAS
+[06-25-2026_09:31:37] DEBUG: Starting download for bundle 1e7fd7e4-042c-5c6c-a7ba-a2c926a90f4f
+[06-25-2026_09:31:37]   Failed to download bundle 1e7fd7e4-042c-5c6c-a7ba-a2c926a90f4f: Response status code does not indicate success: 404 ().
+[06-25-2026_09:31:37] Processing: DEPOT_SERVICE
+[06-25-2026_09:31:37] DEBUG: Starting download for bundle 2549d171-774b-5662-8a40-a40f8cb2cf11
+[06-25-2026_09:31:37]   Failed to download bundle 2549d171-774b-5662-8a40-a40f8cb2cf11: Response status code does not indicate success: 404 ().
+[06-25-2026_09:31:37] 
+Monitoring bundle download progress (Total bundles: 16)...
+[06-25-2026_09:31:37]   Bundle Status: 16 completed | 0 in progress | 0 failed
+[06-25-2026_09:31:37] 
+All 16 bundles downloaded successfully!
+[06-25-2026_09:31:37] Connecting to SDDC Manager at 10.2.101.100 ...
+[06-25-2026_09:31:38]   Successfully connected to SDDC Manager
+[06-25-2026_09:31:38] Generating VCF Workload Domain Host Commission file vcf-commission-host-ui.json and vcf-commission-host-api.json for SDDC Manager UI and API
+[06-25-2026_09:31:38] Existing Network Pools discovered in SDDC Manager:
+[06-25-2026_09:31:38]   - Name: m01-np01  |  ID: 82a1c037-46fe-4249-8ab7-9cdf92b9b0d2
+[06-25-2026_09:31:38]   - Name: w01-np01  |  ID: e972a5c5-3715-4f6d-a3c4-8047107bf516
+[06-25-2026_09:31:38] Found existing WLD Network Pool 'w01-np01' (ID: e972a5c5-3715-4f6d-a3c4-8047107bf516)
+[06-25-2026_09:31:38] Using WLD Network Pool 'w01-np01' (ID: e972a5c5-3715-4f6d-a3c4-8047107bf516)
+[06-25-2026_09:31:38] Commissioning ESXi hosts for Workload Domain deployment using vcf-commission-host-api.json ...
+[06-25-2026_09:31:38] DEBUG: Method: POST
+[06-25-2026_09:31:38] DEBUG: Uri: https://10.2.101.100/v1/hosts
+[06-25-2026_09:31:38] DEBUG: Body: [
+  {
+    "fqdn": "esx05.vcf.lab.io",
+    "username": "root",
+    "password": "VMwareVCF9!",
+    "networkPoolId": "e972a5c5-3715-4f6d-a3c4-8047107bf516",
+    "storageType": "VSAN_ESA"
+  },
+  {
+    "fqdn": "esx06.vcf.lab.io",
+    "username": "root",
+    "password": "VMwareVCF9!",
+    "networkPoolId": "e972a5c5-3715-4f6d-a3c4-8047107bf516",
+    "storageType": "VSAN_ESA"
+  },
+  {
+    "fqdn": "esx07.vcf.lab.io",
+    "username": "root",
+    "password": "VMwareVCF9!",
+    "networkPoolId": "e972a5c5-3715-4f6d-a3c4-8047107bf516",
+    "storageType": "VSAN_ESA"
+  }
+]
+
+[06-25-2026_09:31:39]   Host commission task started with ID: 9af0da5c-03d5-4199-a8bd-abc4f5a5116c
+[06-25-2026_09:31:39] Waiting for host commission to complete...
+[06-25-2026_09:38:39]   Host commission failed!
+[06-25-2026_09:38:39] Retrieving unassigned ESXi hosts from SDDC Manager and creating Workload Domain JSON deployment file vcf-w01-deployment.json
+[06-25-2026_09:38:39]   Found 0 unassigned useable hosts
+[06-25-2026_09:38:39] Saving Workload Domain deployment spec to vcf-w01-deployment.json
+[06-25-2026_09:38:39] 
+========================================
+[06-25-2026_09:38:39]   STARTING WORKLOAD DOMAIN DEPLOYMENT
+[06-25-2026_09:38:39] ========================================
+
+[06-25-2026_09:38:40] DEBUG: Method: POST
+[06-25-2026_09:38:40] DEBUG: Uri: https://10.2.101.100/v1/domains
+[06-25-2026_09:38:40] Failed to start Workload Domain deployment
+[06-25-2026_09:46:53] 
+========================================
+[06-25-2026_09:46:53]   SDDC MANAGER BUNDLE DOWNLOAD
+[06-25-2026_09:46:53] ========================================
+
+[06-25-2026_09:46:53] Waiting for SDDC Manager API to become ready...
+[06-25-2026_09:46:53]   SDDC Manager API is now ready!
+[06-25-2026_09:46:53] Retrieving VCF release components...
+[06-25-2026_09:46:53]   Found 16 components for VCF 9.1.0.0
+[06-25-2026_09:46:53]   VROPS: 2 bundle ids, using 2a4a0cfa-c823-5999-a831-f12dc522b95f
+[06-25-2026_09:46:53]   VRA: 2 bundle ids, using 8adb94df-7a39-5c96-a924-215cce4a605c
+[06-25-2026_09:46:53]   VCF_SDDC_LCM: 2 bundle ids, using 75c2165f-ac1e-55da-8c96-d394bf441f56
+[06-25-2026_09:46:53]   VCF_FLEET_LCM: 2 bundle ids, using ad3f0777-a0c9-509c-86cd-86001cebcf8f
+[06-25-2026_09:46:53]   VCENTER: 2 bundle ids, using 581cfc8b-6d2e-51e1-8412-528c4506e419
+[06-25-2026_09:46:53]   SDDC_MANAGER: 2 bundle ids, using fe5daf52-a3e1-5487-8ec4-25270533bb23
+[06-25-2026_09:46:53]   VCF_SALT: 2 bundle ids, using 3092fe38-b997-5f2f-b397-6776c6601880
+[06-25-2026_09:46:53]   NSX_T_MANAGER: 2 bundle ids, using 043bbcda-7ec2-5874-84e4-0f51472f3d5c
+[06-25-2026_09:46:53]   VCF_SALT_RAAS: 2 bundle ids, using 1e7fd7e4-042c-5c6c-a7ba-a2c926a90f4f
+[06-25-2026_09:46:53]   VCF_LICENSE_SERVER: 2 bundle ids, using 62f68bab-de0c-5d96-8222-577c3ac4270e
+[06-25-2026_09:46:53]   VCF_OPS_CLOUD_PROXY: 2 bundle ids, using 9599b55f-952b-5b2f-a96a-7529a9e904ae
+[06-25-2026_09:46:53] 
+Initiating bundle downloads...
+[06-25-2026_09:46:53] Processing: VCF_SERVICE_VCD_MIGRATION_BACKEND
+[06-25-2026_09:46:54] DEBUG: Starting download for bundle 1998d24e-9fa4-5a13-b795-472537e224d2
+[06-25-2026_09:46:54]   Failed to download bundle 1998d24e-9fa4-5a13-b795-472537e224d2: Response status code does not indicate success: 404 ().
+[06-25-2026_09:46:54] Processing: VIDB
+[06-25-2026_09:46:54] DEBUG: Starting download for bundle 0911b05e-e5c1-5036-867f-7a12066c8d06
+[06-25-2026_09:46:54]   Failed to download bundle 0911b05e-e5c1-5036-867f-7a12066c8d06: Response status code does not indicate success: 404 ().
+[06-25-2026_09:46:54] Processing: VRA
+[06-25-2026_09:46:54] DEBUG: Starting download for bundle 8adb94df-7a39-5c96-a924-215cce4a605c
+[06-25-2026_09:46:54]   Failed to download bundle 8adb94df-7a39-5c96-a924-215cce4a605c: Response status code does not indicate success: 404 ().
+[06-25-2026_09:46:54] Processing: VCF_SDDC_LCM
+[06-25-2026_09:46:55] DEBUG: Starting download for bundle 75c2165f-ac1e-55da-8c96-d394bf441f56
+[06-25-2026_09:46:55]   Failed to download bundle 75c2165f-ac1e-55da-8c96-d394bf441f56: Response status code does not indicate success: 404 ().
+[06-25-2026_09:46:55] Processing: TELEMETRY_ACCEPTOR
+[06-25-2026_09:46:55] DEBUG: Starting download for bundle cfdc3829-f065-50ec-8c4e-2c2fc85ccc56
+[06-25-2026_09:46:55]   Failed to download bundle cfdc3829-f065-50ec-8c4e-2c2fc85ccc56: Response status code does not indicate success: 404 ().
+[06-25-2026_09:46:55] Processing: VCENTER
+[06-25-2026_09:46:55] DEBUG: Starting download for bundle 581cfc8b-6d2e-51e1-8412-528c4506e419
+[06-25-2026_09:46:55]   Failed to download bundle 581cfc8b-6d2e-51e1-8412-528c4506e419: Response status code does not indicate success: 404 ().
+[06-25-2026_09:46:55] Processing: VCF_LICENSE_SERVER
+[06-25-2026_09:46:56] DEBUG: Starting download for bundle 62f68bab-de0c-5d96-8222-577c3ac4270e
+[06-25-2026_09:46:56]   Failed to download bundle 62f68bab-de0c-5d96-8222-577c3ac4270e: Response status code does not indicate success: 404 ().
+[06-25-2026_09:46:56] Processing: NSX_T_MANAGER
+[06-25-2026_09:46:56] DEBUG: Starting download for bundle 043bbcda-7ec2-5874-84e4-0f51472f3d5c
+[06-25-2026_09:46:56]   Failed to download bundle 043bbcda-7ec2-5874-84e4-0f51472f3d5c: Response status code does not indicate success: 404 ().
+[06-25-2026_09:46:56] Processing: VROPS
+[06-25-2026_09:46:56] DEBUG: Starting download for bundle 2a4a0cfa-c823-5999-a831-f12dc522b95f
+[06-25-2026_09:46:56]   Failed to download bundle 2a4a0cfa-c823-5999-a831-f12dc522b95f: Response status code does not indicate success: 404 ().
+[06-25-2026_09:46:56] Processing: VCF_FLEET_LCM
+[06-25-2026_09:46:56] DEBUG: Starting download for bundle ad3f0777-a0c9-509c-86cd-86001cebcf8f
+[06-25-2026_09:46:56]   Failed to download bundle ad3f0777-a0c9-509c-86cd-86001cebcf8f: Response status code does not indicate success: 404 ().
+[06-25-2026_09:46:56] Processing: SDDC_MANAGER
+[06-25-2026_09:46:57] DEBUG: Starting download for bundle fe5daf52-a3e1-5487-8ec4-25270533bb23
+[06-25-2026_09:46:57]   Failed to download bundle fe5daf52-a3e1-5487-8ec4-25270533bb23: Response status code does not indicate success: 404 ().
+[06-25-2026_09:46:57] Processing: VCF_SALT
+[06-25-2026_09:46:57] DEBUG: Starting download for bundle 3092fe38-b997-5f2f-b397-6776c6601880
+[06-25-2026_09:46:57]   Failed to download bundle 3092fe38-b997-5f2f-b397-6776c6601880: Response status code does not indicate success: 404 ().
+[06-25-2026_09:46:57] Processing: VCF_OPS_CLOUD_PROXY
+[06-25-2026_09:46:57] DEBUG: Starting download for bundle 9599b55f-952b-5b2f-a96a-7529a9e904ae
+[06-25-2026_09:46:57]   Failed to download bundle 9599b55f-952b-5b2f-a96a-7529a9e904ae: Response status code does not indicate success: 404 ().
+[06-25-2026_09:46:57] Processing: VSP
+[06-25-2026_09:46:57] DEBUG: Starting download for bundle aa88f811-700a-5384-b86e-c40191985348
+[06-25-2026_09:46:57]   Failed to download bundle aa88f811-700a-5384-b86e-c40191985348: Response status code does not indicate success: 404 ().
+[06-25-2026_09:46:57] Processing: VCF_SALT_RAAS
+[06-25-2026_09:46:58] DEBUG: Starting download for bundle 1e7fd7e4-042c-5c6c-a7ba-a2c926a90f4f
+[06-25-2026_09:46:58]   Failed to download bundle 1e7fd7e4-042c-5c6c-a7ba-a2c926a90f4f: Response status code does not indicate success: 404 ().
+[06-25-2026_09:46:58] Processing: DEPOT_SERVICE
+[06-25-2026_09:46:58] DEBUG: Starting download for bundle 2549d171-774b-5662-8a40-a40f8cb2cf11
+[06-25-2026_09:46:58]   Failed to download bundle 2549d171-774b-5662-8a40-a40f8cb2cf11: Response status code does not indicate success: 404 ().
+[06-25-2026_09:46:58] 
+Monitoring bundle download progress (Total bundles: 16)...
+[06-25-2026_09:46:58]   Bundle Status: 16 completed | 0 in progress | 0 failed
+[06-25-2026_09:46:58] 
+All 16 bundles downloaded successfully!
+[06-25-2026_09:46:58] Connecting to SDDC Manager at 10.2.101.100 ...
+[06-25-2026_09:46:59]   Successfully connected to SDDC Manager
+[06-25-2026_09:46:59] Generating VCF Workload Domain Host Commission file vcf-commission-host-ui.json and vcf-commission-host-api.json for SDDC Manager UI and API
+[06-25-2026_09:46:59] Existing Network Pools discovered in SDDC Manager:
+[06-25-2026_09:46:59]   - Name: m01-np01  |  ID: 82a1c037-46fe-4249-8ab7-9cdf92b9b0d2
+[06-25-2026_09:46:59]   - Name: w01-np01  |  ID: e972a5c5-3715-4f6d-a3c4-8047107bf516
+[06-25-2026_09:46:59] Found existing WLD Network Pool 'w01-np01' (ID: e972a5c5-3715-4f6d-a3c4-8047107bf516)
+[06-25-2026_09:46:59] Using WLD Network Pool 'w01-np01' (ID: e972a5c5-3715-4f6d-a3c4-8047107bf516)
+[06-25-2026_09:46:59] Commissioning ESXi hosts for Workload Domain deployment using vcf-commission-host-api.json ...
+[06-25-2026_09:47:00] DEBUG: Method: POST
+[06-25-2026_09:47:00] DEBUG: Uri: https://10.2.101.100/v1/hosts
+[06-25-2026_09:47:00] DEBUG: Body: [
+  {
+    "fqdn": "esx05.vcf.lab.io",
+    "username": "root",
+    "password": "VMwareVCF9!",
+    "networkPoolId": "e972a5c5-3715-4f6d-a3c4-8047107bf516",
+    "storageType": "VSAN_ESA"
+  },
+  {
+    "fqdn": "esx06.vcf.lab.io",
+    "username": "root",
+    "password": "VMwareVCF9!",
+    "networkPoolId": "e972a5c5-3715-4f6d-a3c4-8047107bf516",
+    "storageType": "VSAN_ESA"
+  },
+  {
+    "fqdn": "esx07.vcf.lab.io",
+    "username": "root",
+    "password": "VMwareVCF9!",
+    "networkPoolId": "e972a5c5-3715-4f6d-a3c4-8047107bf516",
+    "storageType": "VSAN_ESA"
+  }
+]
+
+[06-25-2026_09:47:00]   Host commission task started with ID: 031e1f2f-1ec9-4543-b2e3-7394c84e5013
+[06-25-2026_09:47:00] Waiting for host commission to complete...
+[06-25-2026_09:54:00]   Host commission failed!
+[06-25-2026_09:54:00] Retrieving unassigned ESXi hosts from SDDC Manager and creating Workload Domain JSON deployment file vcf-w01-deployment.json
+[06-25-2026_09:54:00]   Found 0 unassigned useable hosts
+[06-25-2026_09:54:01] Saving Workload Domain deployment spec to vcf-w01-deployment.json
+[06-25-2026_09:54:01] 
+========================================
+[06-25-2026_09:54:01]   STARTING WORKLOAD DOMAIN DEPLOYMENT
+[06-25-2026_09:54:01] ========================================
+
+[06-25-2026_09:54:01] DEBUG: Method: POST
+[06-25-2026_09:54:01] DEBUG: Uri: https://10.2.101.100/v1/domains
+[06-25-2026_09:54:01] Failed to start Workload Domain deployment
+[06-25-2026_10:51:07] 
+========================================
+[06-25-2026_10:51:07]   SDDC MANAGER BUNDLE DOWNLOAD
+[06-25-2026_10:51:07] ========================================
+
+[06-25-2026_10:51:07] Waiting for SDDC Manager API to become ready...
+[06-25-2026_10:51:07]   SDDC Manager API is now ready!
+[06-25-2026_10:51:07] Retrieving VCF release components...
+[06-25-2026_10:51:07]   Found 16 components for VCF 9.1.0.0
+[06-25-2026_10:51:07]   VROPS: 2 bundle ids, using 2a4a0cfa-c823-5999-a831-f12dc522b95f
+[06-25-2026_10:51:07]   VRA: 2 bundle ids, using 8adb94df-7a39-5c96-a924-215cce4a605c
+[06-25-2026_10:51:07]   VCF_SDDC_LCM: 2 bundle ids, using 75c2165f-ac1e-55da-8c96-d394bf441f56
+[06-25-2026_10:51:07]   VCF_FLEET_LCM: 2 bundle ids, using ad3f0777-a0c9-509c-86cd-86001cebcf8f
+[06-25-2026_10:51:07]   VCENTER: 2 bundle ids, using 581cfc8b-6d2e-51e1-8412-528c4506e419
+[06-25-2026_10:51:07]   SDDC_MANAGER: 2 bundle ids, using fe5daf52-a3e1-5487-8ec4-25270533bb23
+[06-25-2026_10:51:07]   VCF_SALT: 2 bundle ids, using 3092fe38-b997-5f2f-b397-6776c6601880
+[06-25-2026_10:51:07]   NSX_T_MANAGER: 2 bundle ids, using 043bbcda-7ec2-5874-84e4-0f51472f3d5c
+[06-25-2026_10:51:07]   VCF_SALT_RAAS: 2 bundle ids, using 1e7fd7e4-042c-5c6c-a7ba-a2c926a90f4f
+[06-25-2026_10:51:07]   VCF_LICENSE_SERVER: 2 bundle ids, using 62f68bab-de0c-5d96-8222-577c3ac4270e
+[06-25-2026_10:51:07]   VCF_OPS_CLOUD_PROXY: 2 bundle ids, using 9599b55f-952b-5b2f-a96a-7529a9e904ae
+[06-25-2026_10:51:07] 
+Initiating bundle downloads...
+[06-25-2026_10:51:07] Processing: VCF_SERVICE_VCD_MIGRATION_BACKEND
+[06-25-2026_10:51:08] DEBUG: Starting download for bundle 1998d24e-9fa4-5a13-b795-472537e224d2
+[06-25-2026_10:51:08]   Failed to download bundle 1998d24e-9fa4-5a13-b795-472537e224d2: Response status code does not indicate success: 404 ().
+[06-25-2026_10:51:08] Processing: VIDB
+[06-25-2026_10:51:08] DEBUG: Starting download for bundle 0911b05e-e5c1-5036-867f-7a12066c8d06
+[06-25-2026_10:51:08]   Failed to download bundle 0911b05e-e5c1-5036-867f-7a12066c8d06: Response status code does not indicate success: 404 ().
+[06-25-2026_10:51:08] Processing: VRA
+[06-25-2026_10:51:08] DEBUG: Starting download for bundle 8adb94df-7a39-5c96-a924-215cce4a605c
+[06-25-2026_10:51:08]   Failed to download bundle 8adb94df-7a39-5c96-a924-215cce4a605c: Response status code does not indicate success: 404 ().
+[06-25-2026_10:51:08] Processing: VCF_SDDC_LCM
+[06-25-2026_10:51:08] DEBUG: Starting download for bundle 75c2165f-ac1e-55da-8c96-d394bf441f56
+[06-25-2026_10:51:08]   Failed to download bundle 75c2165f-ac1e-55da-8c96-d394bf441f56: Response status code does not indicate success: 404 ().
+[06-25-2026_10:51:08] Processing: TELEMETRY_ACCEPTOR
+[06-25-2026_10:51:09] DEBUG: Starting download for bundle cfdc3829-f065-50ec-8c4e-2c2fc85ccc56
+[06-25-2026_10:51:09]   Failed to download bundle cfdc3829-f065-50ec-8c4e-2c2fc85ccc56: Response status code does not indicate success: 404 ().
+[06-25-2026_10:51:09] Processing: VCENTER
+[06-25-2026_10:51:09] DEBUG: Starting download for bundle 581cfc8b-6d2e-51e1-8412-528c4506e419
+[06-25-2026_10:51:09]   Failed to download bundle 581cfc8b-6d2e-51e1-8412-528c4506e419: Response status code does not indicate success: 404 ().
+[06-25-2026_10:51:09] Processing: VCF_LICENSE_SERVER
+[06-25-2026_10:51:09] DEBUG: Starting download for bundle 62f68bab-de0c-5d96-8222-577c3ac4270e
+[06-25-2026_10:51:09]   Failed to download bundle 62f68bab-de0c-5d96-8222-577c3ac4270e: Response status code does not indicate success: 404 ().
+[06-25-2026_10:51:09] Processing: NSX_T_MANAGER
+[06-25-2026_10:51:10] DEBUG: Starting download for bundle 043bbcda-7ec2-5874-84e4-0f51472f3d5c
+[06-25-2026_10:51:10]   Failed to download bundle 043bbcda-7ec2-5874-84e4-0f51472f3d5c: Response status code does not indicate success: 404 ().
+[06-25-2026_10:51:10] Processing: VROPS
+[06-25-2026_10:51:10] DEBUG: Starting download for bundle 2a4a0cfa-c823-5999-a831-f12dc522b95f
+[06-25-2026_10:51:10]   Failed to download bundle 2a4a0cfa-c823-5999-a831-f12dc522b95f: Response status code does not indicate success: 404 ().
+[06-25-2026_10:51:10] Processing: VCF_FLEET_LCM
+[06-25-2026_10:51:10] DEBUG: Starting download for bundle ad3f0777-a0c9-509c-86cd-86001cebcf8f
+[06-25-2026_10:51:10]   Failed to download bundle ad3f0777-a0c9-509c-86cd-86001cebcf8f: Response status code does not indicate success: 404 ().
+[06-25-2026_10:51:10] Processing: SDDC_MANAGER
+[06-25-2026_10:51:11] DEBUG: Starting download for bundle fe5daf52-a3e1-5487-8ec4-25270533bb23
+[06-25-2026_10:51:11]   Failed to download bundle fe5daf52-a3e1-5487-8ec4-25270533bb23: Response status code does not indicate success: 404 ().
+[06-25-2026_10:51:11] Processing: VCF_SALT
+[06-25-2026_10:51:11] DEBUG: Starting download for bundle 3092fe38-b997-5f2f-b397-6776c6601880
+[06-25-2026_10:51:11]   Failed to download bundle 3092fe38-b997-5f2f-b397-6776c6601880: Response status code does not indicate success: 404 ().
+[06-25-2026_10:51:11] Processing: VCF_OPS_CLOUD_PROXY
+[06-25-2026_10:51:11] DEBUG: Starting download for bundle 9599b55f-952b-5b2f-a96a-7529a9e904ae
+[06-25-2026_10:51:11]   Failed to download bundle 9599b55f-952b-5b2f-a96a-7529a9e904ae: Response status code does not indicate success: 404 ().
+[06-25-2026_10:51:11] Processing: VSP
+[06-25-2026_10:51:12] DEBUG: Starting download for bundle aa88f811-700a-5384-b86e-c40191985348
+[06-25-2026_10:51:12]   Failed to download bundle aa88f811-700a-5384-b86e-c40191985348: Response status code does not indicate success: 404 ().
+[06-25-2026_10:51:12] Processing: VCF_SALT_RAAS
+[06-25-2026_10:51:12] DEBUG: Starting download for bundle 1e7fd7e4-042c-5c6c-a7ba-a2c926a90f4f
+[06-25-2026_10:51:12]   Failed to download bundle 1e7fd7e4-042c-5c6c-a7ba-a2c926a90f4f: Response status code does not indicate success: 404 ().
+[06-25-2026_10:51:12] Processing: DEPOT_SERVICE
+[06-25-2026_10:51:12] DEBUG: Starting download for bundle 2549d171-774b-5662-8a40-a40f8cb2cf11
+[06-25-2026_10:51:12]   Failed to download bundle 2549d171-774b-5662-8a40-a40f8cb2cf11: Response status code does not indicate success: 404 ().
+[06-25-2026_10:51:12] 
+Monitoring bundle download progress (Total bundles: 16)...
+[06-25-2026_10:51:12]   Bundle Status: 16 completed | 0 in progress | 0 failed
+[06-25-2026_10:51:12] 
+All 16 bundles downloaded successfully!
+[06-25-2026_10:51:12] Connecting to SDDC Manager at 10.2.101.100 ...
+[06-25-2026_10:51:13]   Successfully connected to SDDC Manager
+[06-25-2026_10:51:13] Generating VCF Workload Domain Host Commission file vcf-commission-host-ui.json and vcf-commission-host-api.json for SDDC Manager UI and API
+[06-25-2026_10:51:13] Existing Network Pools discovered in SDDC Manager:
+[06-25-2026_10:51:13]   - Name: m01-np01  |  ID: 82a1c037-46fe-4249-8ab7-9cdf92b9b0d2
+[06-25-2026_10:51:13]   - Name: w01-np01  |  ID: e972a5c5-3715-4f6d-a3c4-8047107bf516
+[06-25-2026_10:51:13] Found existing WLD Network Pool 'w01-np01' (ID: e972a5c5-3715-4f6d-a3c4-8047107bf516)
+[06-25-2026_10:51:13] Using WLD Network Pool 'w01-np01' (ID: e972a5c5-3715-4f6d-a3c4-8047107bf516)
+[06-25-2026_10:51:13] Commissioning ESXi hosts for Workload Domain deployment using vcf-commission-host-api.json ...
+[06-25-2026_10:51:14] DEBUG: Method: POST
+[06-25-2026_10:51:14] DEBUG: Uri: https://10.2.101.100/v1/hosts
+[06-25-2026_10:51:14] DEBUG: Body: [
+  {
+    "fqdn": "esx05.vcf.lab.io",
+    "username": "root",
+    "password": "VMwareVCF9!",
+    "networkPoolId": "e972a5c5-3715-4f6d-a3c4-8047107bf516",
+    "storageType": "VSAN_ESA"
+  },
+  {
+    "fqdn": "esx06.vcf.lab.io",
+    "username": "root",
+    "password": "VMwareVCF9!",
+    "networkPoolId": "e972a5c5-3715-4f6d-a3c4-8047107bf516",
+    "storageType": "VSAN_ESA"
+  },
+  {
+    "fqdn": "esx07.vcf.lab.io",
+    "username": "root",
+    "password": "VMwareVCF9!",
+    "networkPoolId": "e972a5c5-3715-4f6d-a3c4-8047107bf516",
+    "storageType": "VSAN_ESA"
+  }
+]
+
+[06-25-2026_10:51:14]   Host commission task started with ID: 36209949-8655-4de3-abdf-5cc5e83cc7ff
+[06-25-2026_10:51:14] Waiting for host commission to complete...
+[06-25-2026_10:57:44]   Host commission failed!
+[06-25-2026_10:57:44]   - Subtask 'ValidateHostsAction': FAILED
+[06-25-2026_10:57:44]       {
+  "errorCode": "HOSTS_VALIDATION_FOR_COMMISSION_FAILED",
+  "errorType": "ERROR",
+  "arguments": [
+    "[[esx05.vcf.lab.io: Failed to validate vSAN HCL status.], [esx06.vcf.lab.io: Failed to validate vSAN HCL status.], [esx07.vcf.lab.io: Host must have only Management tag enabled on the VMkernel network interface, found more than one tag or non Management tag..]]"
+  ],
+  "message": "ESXi Hosts validation for commission failed. errors: [[esx05.vcf.lab.io: Failed to validate vSAN HCL status.], [esx06.vcf.lab.io: Failed to validate vSAN HCL status.], [esx07.vcf.lab.io: Host must have only Management tag enabled on the VMkernel network interface, found more than one tag or non Management tag..]].",
+  "causes": [],
+  "referenceToken": "LTJT10"
+}
+[06-25-2026_10:57:44]   - Subtask 'ValidateSystemLockAvailabilityAction': PENDING
+[06-25-2026_10:57:44]   - Subtask 'SaveToInventoryAction': PENDING
+[06-25-2026_10:57:44]   - Subtask 'GenerateAcquireResourcesLockData': PENDING
+[06-25-2026_10:57:44]   - Subtask 'UpdateTaskRegistrationAction': PENDING
+[06-25-2026_10:57:44]   - Subtask 'FetchDnsAndNtpAction': PENDING
+[06-25-2026_10:57:44]   - Subtask 'GenerateEsxiConfigurationInput': PENDING
+[06-25-2026_10:57:44]   - Subtask 'UpdateKnownHostsOnSddcManagerAction': PENDING
+[06-25-2026_10:57:44]   - Subtask 'InstallTemporaryESXiCertificateAction': PENDING
+[06-25-2026_10:57:44]   - Subtask 'UpdateInputForDisableEsxiLockdownMode': PENDING
+[06-25-2026_10:57:44]   - Subtask 'Retrieve ESX Host(s) Lockdown Mode Configuration': PENDING
+[06-25-2026_10:57:44]   - Subtask 'Disable Lockdown Mode on ESX Hosts': PENDING
+[06-25-2026_10:57:44]   - Subtask 'UpdateInputToCreateEsxiServiceAccounts': PENDING
+[06-25-2026_10:57:44]   - Subtask 'Create New Local ESX Host User': PENDING
+[06-25-2026_10:57:44]   - Subtask 'Assign Role to New ESX User': PENDING
+[06-25-2026_10:57:44]   - Subtask 'Grant Administrator Access to ESX Host Users': PENDING
+[06-25-2026_10:57:44]   - Subtask 'Add Service Accounts to ESX Lockdown Mode Exception Users List': PENDING
+[06-25-2026_10:57:44]   - Subtask 'GenerateInputForConfiguringEsxiLockdownModeAction': PENDING
+[06-25-2026_10:57:44]   - Subtask 'Configure Lockdown Mode on ESX Hosts': PENDING
+[06-25-2026_10:57:44]   - Subtask 'ConfigureDnsAction': PENDING
+[06-25-2026_10:57:44]   - Subtask 'ConfigureNtpAction': PENDING
+[06-25-2026_10:57:44]   - Subtask 'FetchHostsAttributesAction': PENDING
+[06-25-2026_10:57:44]   - Subtask 'RotateHostSshKeysAction': PENDING
+[06-25-2026_10:57:44]   - Subtask 'UpdateInputForDisableSshOnEsxiHostsAction': PENDING
+[06-25-2026_10:57:44]   - Subtask 'Disable SSH on ESX Host(s)': PENDING
+[06-25-2026_10:57:44]   - Subtask 'UpdateInventoryAction': PENDING
+[06-25-2026_10:57:44]   - Subtask 'Automation Helper Action': PENDING
+[06-25-2026_10:57:44]   - Subtask 'Refresh Inventory Cache': PENDING
+[06-25-2026_10:57:44]   - Subtask 'Add ESXi Root Credentials to SDDC Manager Credentials Store': PENDING
+[06-25-2026_10:57:44]   - Subtask 'GenerateInputToCleanSkippedHostConfigurationAction': PENDING
+[06-25-2026_10:57:44]   - Subtask 'RemoveHostFromKnownHostsAction': PENDING
+[06-25-2026_10:57:44]   - Subtask 'DeleteHostFromInventoryAction': PENDING
+[06-25-2026_10:57:44]   - Subtask 'ReleaseResourceLocksIfResourcesExistAction': PENDING
+[06-25-2026_10:57:44] Aborting: host commission failed. Fix the issue above before continuing.
+[06-25-2026_11:15:54] 
+========================================
+[06-25-2026_11:15:54]   SDDC MANAGER BUNDLE DOWNLOAD
+[06-25-2026_11:15:54] ========================================
+
+[06-25-2026_11:15:54] Waiting for SDDC Manager API to become ready...
+[06-25-2026_11:15:54]   SDDC Manager API is now ready!
+[06-25-2026_11:15:55] Retrieving VCF release components...
+[06-25-2026_11:15:55]   Found 16 components for VCF 9.1.0.0
+[06-25-2026_11:15:55]   VROPS: 2 bundle ids, using 2a4a0cfa-c823-5999-a831-f12dc522b95f
+[06-25-2026_11:15:55]   VRA: 2 bundle ids, using 8adb94df-7a39-5c96-a924-215cce4a605c
+[06-25-2026_11:15:55]   VCF_SDDC_LCM: 2 bundle ids, using 75c2165f-ac1e-55da-8c96-d394bf441f56
+[06-25-2026_11:15:55]   VCF_FLEET_LCM: 2 bundle ids, using ad3f0777-a0c9-509c-86cd-86001cebcf8f
+[06-25-2026_11:15:55]   VCENTER: 2 bundle ids, using 581cfc8b-6d2e-51e1-8412-528c4506e419
+[06-25-2026_11:15:55]   SDDC_MANAGER: 2 bundle ids, using fe5daf52-a3e1-5487-8ec4-25270533bb23
+[06-25-2026_11:15:55]   VCF_SALT: 2 bundle ids, using 3092fe38-b997-5f2f-b397-6776c6601880
+[06-25-2026_11:15:55]   NSX_T_MANAGER: 2 bundle ids, using 043bbcda-7ec2-5874-84e4-0f51472f3d5c
+[06-25-2026_11:15:55]   VCF_SALT_RAAS: 2 bundle ids, using 1e7fd7e4-042c-5c6c-a7ba-a2c926a90f4f
+[06-25-2026_11:15:55]   VCF_LICENSE_SERVER: 2 bundle ids, using 62f68bab-de0c-5d96-8222-577c3ac4270e
+[06-25-2026_11:15:55]   VCF_OPS_CLOUD_PROXY: 2 bundle ids, using 9599b55f-952b-5b2f-a96a-7529a9e904ae
+[06-25-2026_11:15:55] 
+Initiating bundle downloads...
+[06-25-2026_11:15:55] Processing: VCF_SERVICE_VCD_MIGRATION_BACKEND
+[06-25-2026_11:15:55] DEBUG: Starting download for bundle 1998d24e-9fa4-5a13-b795-472537e224d2
+[06-25-2026_11:15:55]   Failed to download bundle 1998d24e-9fa4-5a13-b795-472537e224d2: Response status code does not indicate success: 404 ().
+[06-25-2026_11:15:55] Processing: VIDB
+[06-25-2026_11:15:56] DEBUG: Starting download for bundle 0911b05e-e5c1-5036-867f-7a12066c8d06
+[06-25-2026_11:15:56]   Failed to download bundle 0911b05e-e5c1-5036-867f-7a12066c8d06: Response status code does not indicate success: 404 ().
+[06-25-2026_11:15:56] Processing: VRA
+[06-25-2026_11:15:56] DEBUG: Starting download for bundle 8adb94df-7a39-5c96-a924-215cce4a605c
+[06-25-2026_11:15:56]   Failed to download bundle 8adb94df-7a39-5c96-a924-215cce4a605c: Response status code does not indicate success: 404 ().
+[06-25-2026_11:15:56] Processing: VCF_SDDC_LCM
+[06-25-2026_11:15:57] DEBUG: Starting download for bundle 75c2165f-ac1e-55da-8c96-d394bf441f56
+[06-25-2026_11:15:57]   Failed to download bundle 75c2165f-ac1e-55da-8c96-d394bf441f56: Response status code does not indicate success: 404 ().
+[06-25-2026_11:15:57] Processing: TELEMETRY_ACCEPTOR
+[06-25-2026_11:15:57] DEBUG: Starting download for bundle cfdc3829-f065-50ec-8c4e-2c2fc85ccc56
+[06-25-2026_11:15:57]   Failed to download bundle cfdc3829-f065-50ec-8c4e-2c2fc85ccc56: Response status code does not indicate success: 404 ().
+[06-25-2026_11:15:57] Processing: VCENTER
+[06-25-2026_11:15:57] DEBUG: Starting download for bundle 581cfc8b-6d2e-51e1-8412-528c4506e419
+[06-25-2026_11:15:57]   Failed to download bundle 581cfc8b-6d2e-51e1-8412-528c4506e419: Response status code does not indicate success: 404 ().
+[06-25-2026_11:15:57] Processing: VCF_LICENSE_SERVER
+[06-25-2026_11:15:58] DEBUG: Starting download for bundle 62f68bab-de0c-5d96-8222-577c3ac4270e
+[06-25-2026_11:15:58]   Failed to download bundle 62f68bab-de0c-5d96-8222-577c3ac4270e: Response status code does not indicate success: 404 ().
+[06-25-2026_11:15:58] Processing: NSX_T_MANAGER
+[06-25-2026_11:15:58] DEBUG: Starting download for bundle 043bbcda-7ec2-5874-84e4-0f51472f3d5c
+[06-25-2026_11:15:58]   Failed to download bundle 043bbcda-7ec2-5874-84e4-0f51472f3d5c: Response status code does not indicate success: 404 ().
+[06-25-2026_11:15:58] Processing: VROPS
+[06-25-2026_11:15:59] DEBUG: Starting download for bundle 2a4a0cfa-c823-5999-a831-f12dc522b95f
+[06-25-2026_11:15:59]   Failed to download bundle 2a4a0cfa-c823-5999-a831-f12dc522b95f: Response status code does not indicate success: 404 ().
+[06-25-2026_11:15:59] Processing: VCF_FLEET_LCM
+[06-25-2026_11:15:59] DEBUG: Starting download for bundle ad3f0777-a0c9-509c-86cd-86001cebcf8f
+[06-25-2026_11:15:59]   Failed to download bundle ad3f0777-a0c9-509c-86cd-86001cebcf8f: Response status code does not indicate success: 404 ().
+[06-25-2026_11:15:59] Processing: SDDC_MANAGER
+[06-25-2026_11:15:59] DEBUG: Starting download for bundle fe5daf52-a3e1-5487-8ec4-25270533bb23
+[06-25-2026_11:15:59]   Failed to download bundle fe5daf52-a3e1-5487-8ec4-25270533bb23: Response status code does not indicate success: 404 ().
+[06-25-2026_11:15:59] Processing: VCF_SALT
+[06-25-2026_11:16:00] DEBUG: Starting download for bundle 3092fe38-b997-5f2f-b397-6776c6601880
+[06-25-2026_11:16:00]   Failed to download bundle 3092fe38-b997-5f2f-b397-6776c6601880: Response status code does not indicate success: 404 ().
+[06-25-2026_11:16:00] Processing: VCF_OPS_CLOUD_PROXY
+[06-25-2026_11:16:00] DEBUG: Starting download for bundle 9599b55f-952b-5b2f-a96a-7529a9e904ae
+[06-25-2026_11:16:01]   Failed to download bundle 9599b55f-952b-5b2f-a96a-7529a9e904ae: Response status code does not indicate success: 404 ().
+[06-25-2026_11:16:01] Processing: VSP
+[06-25-2026_11:16:01] DEBUG: Starting download for bundle aa88f811-700a-5384-b86e-c40191985348
+[06-25-2026_11:16:01]   Failed to download bundle aa88f811-700a-5384-b86e-c40191985348: Response status code does not indicate success: 404 ().
+[06-25-2026_11:16:01] Processing: VCF_SALT_RAAS
+[06-25-2026_11:16:01] DEBUG: Starting download for bundle 1e7fd7e4-042c-5c6c-a7ba-a2c926a90f4f
+[06-25-2026_11:16:01]   Failed to download bundle 1e7fd7e4-042c-5c6c-a7ba-a2c926a90f4f: Response status code does not indicate success: 404 ().
+[06-25-2026_11:16:01] Processing: DEPOT_SERVICE
+[06-25-2026_11:16:02] DEBUG: Starting download for bundle 2549d171-774b-5662-8a40-a40f8cb2cf11
+[06-25-2026_11:16:02]   Failed to download bundle 2549d171-774b-5662-8a40-a40f8cb2cf11: Response status code does not indicate success: 404 ().
+[06-25-2026_11:16:02] 
+Monitoring bundle download progress (Total bundles: 16)...
+[06-25-2026_11:16:02]   Bundle Status: 16 completed | 0 in progress | 0 failed
+[06-25-2026_11:16:02] 
+All 16 bundles downloaded successfully!
+[06-25-2026_11:16:02] Connecting to SDDC Manager at 10.2.101.100 ...
+[06-25-2026_11:16:04]   Successfully connected to SDDC Manager
+[06-25-2026_11:16:04] Generating VCF Workload Domain Host Commission file vcf-commission-host-ui.json and vcf-commission-host-api.json for SDDC Manager UI and API
+[06-25-2026_11:16:04] Existing Network Pools discovered in SDDC Manager:
+[06-25-2026_11:16:04]   - Name: m01-np01  |  ID: 82a1c037-46fe-4249-8ab7-9cdf92b9b0d2
+[06-25-2026_11:16:04]   - Name: w01-np01  |  ID: e972a5c5-3715-4f6d-a3c4-8047107bf516
+[06-25-2026_11:16:04] Found existing WLD Network Pool 'w01-np01' (ID: e972a5c5-3715-4f6d-a3c4-8047107bf516)
+[06-25-2026_11:16:04] Using WLD Network Pool 'w01-np01' (ID: e972a5c5-3715-4f6d-a3c4-8047107bf516)
+[06-25-2026_11:16:04] Commissioning ESXi hosts for Workload Domain deployment using vcf-commission-host-api.json ...
+[06-25-2026_11:16:04] DEBUG: Method: POST
+[06-25-2026_11:16:04] DEBUG: Uri: https://10.2.101.100/v1/hosts
+[06-25-2026_11:16:04] DEBUG: Body: [
+  {
+    "fqdn": "esx05.vcf.lab.io",
+    "username": "root",
+    "password": "VMwareVCF9!",
+    "networkPoolId": "e972a5c5-3715-4f6d-a3c4-8047107bf516",
+    "storageType": "VSAN_ESA"
+  },
+  {
+    "fqdn": "esx06.vcf.lab.io",
+    "username": "root",
+    "password": "VMwareVCF9!",
+    "networkPoolId": "e972a5c5-3715-4f6d-a3c4-8047107bf516",
+    "storageType": "VSAN_ESA"
+  },
+  {
+    "fqdn": "esx07.vcf.lab.io",
+    "username": "root",
+    "password": "VMwareVCF9!",
+    "networkPoolId": "e972a5c5-3715-4f6d-a3c4-8047107bf516",
+    "storageType": "VSAN_ESA"
+  }
+]
+
+[06-25-2026_11:16:04] Failed to commission hosts
+[06-25-2026_11:16:24] 
+========================================
+[06-25-2026_11:16:24]   SDDC MANAGER BUNDLE DOWNLOAD
+[06-25-2026_11:16:24] ========================================
+
+[06-25-2026_11:16:24] Waiting for SDDC Manager API to become ready...
+[06-25-2026_11:16:24]   SDDC Manager API is now ready!
+[06-25-2026_11:16:24] Retrieving VCF release components...
+[06-25-2026_11:16:24]   Found 16 components for VCF 9.1.0.0
+[06-25-2026_11:16:24]   VROPS: 2 bundle ids, using 2a4a0cfa-c823-5999-a831-f12dc522b95f
+[06-25-2026_11:16:24]   VRA: 2 bundle ids, using 8adb94df-7a39-5c96-a924-215cce4a605c
+[06-25-2026_11:16:24]   VCF_SDDC_LCM: 2 bundle ids, using 75c2165f-ac1e-55da-8c96-d394bf441f56
+[06-25-2026_11:16:24]   VCF_FLEET_LCM: 2 bundle ids, using ad3f0777-a0c9-509c-86cd-86001cebcf8f
+[06-25-2026_11:16:24]   VCENTER: 2 bundle ids, using 581cfc8b-6d2e-51e1-8412-528c4506e419
+[06-25-2026_11:16:24]   SDDC_MANAGER: 2 bundle ids, using fe5daf52-a3e1-5487-8ec4-25270533bb23
+[06-25-2026_11:16:24]   VCF_SALT: 2 bundle ids, using 3092fe38-b997-5f2f-b397-6776c6601880
+[06-25-2026_11:16:24]   NSX_T_MANAGER: 2 bundle ids, using 043bbcda-7ec2-5874-84e4-0f51472f3d5c
+[06-25-2026_11:16:24]   VCF_SALT_RAAS: 2 bundle ids, using 1e7fd7e4-042c-5c6c-a7ba-a2c926a90f4f
+[06-25-2026_11:16:24]   VCF_LICENSE_SERVER: 2 bundle ids, using 62f68bab-de0c-5d96-8222-577c3ac4270e
+[06-25-2026_11:16:24]   VCF_OPS_CLOUD_PROXY: 2 bundle ids, using 9599b55f-952b-5b2f-a96a-7529a9e904ae
+[06-25-2026_11:16:24] 
+Initiating bundle downloads...
+[06-25-2026_11:16:24] Processing: VCF_SERVICE_VCD_MIGRATION_BACKEND
+[06-25-2026_11:16:25] DEBUG: Starting download for bundle 1998d24e-9fa4-5a13-b795-472537e224d2
+[06-25-2026_11:16:25]   Failed to download bundle 1998d24e-9fa4-5a13-b795-472537e224d2: Response status code does not indicate success: 404 ().
+[06-25-2026_11:16:25] Processing: VIDB
+[06-25-2026_11:16:25] DEBUG: Starting download for bundle 0911b05e-e5c1-5036-867f-7a12066c8d06
+[06-25-2026_11:16:25]   Failed to download bundle 0911b05e-e5c1-5036-867f-7a12066c8d06: Response status code does not indicate success: 404 ().
+[06-25-2026_11:16:25] Processing: VRA
+[06-25-2026_11:16:25] DEBUG: Starting download for bundle 8adb94df-7a39-5c96-a924-215cce4a605c
+[06-25-2026_11:16:25]   Failed to download bundle 8adb94df-7a39-5c96-a924-215cce4a605c: Response status code does not indicate success: 404 ().
+[06-25-2026_11:16:25] Processing: VCF_SDDC_LCM
+[06-25-2026_11:16:26] DEBUG: Starting download for bundle 75c2165f-ac1e-55da-8c96-d394bf441f56
+[06-25-2026_11:16:26]   Failed to download bundle 75c2165f-ac1e-55da-8c96-d394bf441f56: Response status code does not indicate success: 404 ().
+[06-25-2026_11:16:26] Processing: TELEMETRY_ACCEPTOR
+[06-25-2026_11:16:26] DEBUG: Starting download for bundle cfdc3829-f065-50ec-8c4e-2c2fc85ccc56
+[06-25-2026_11:16:26]   Failed to download bundle cfdc3829-f065-50ec-8c4e-2c2fc85ccc56: Response status code does not indicate success: 404 ().
+[06-25-2026_11:16:26] Processing: VCENTER
+[06-25-2026_11:16:26] DEBUG: Starting download for bundle 581cfc8b-6d2e-51e1-8412-528c4506e419
+[06-25-2026_11:16:26]   Failed to download bundle 581cfc8b-6d2e-51e1-8412-528c4506e419: Response status code does not indicate success: 404 ().
+[06-25-2026_11:16:26] Processing: VCF_LICENSE_SERVER
+[06-25-2026_11:16:27] DEBUG: Starting download for bundle 62f68bab-de0c-5d96-8222-577c3ac4270e
+[06-25-2026_11:16:27]   Failed to download bundle 62f68bab-de0c-5d96-8222-577c3ac4270e: Response status code does not indicate success: 404 ().
+[06-25-2026_11:16:27] Processing: NSX_T_MANAGER
+[06-25-2026_11:16:27] DEBUG: Starting download for bundle 043bbcda-7ec2-5874-84e4-0f51472f3d5c
+[06-25-2026_11:16:27]   Failed to download bundle 043bbcda-7ec2-5874-84e4-0f51472f3d5c: Response status code does not indicate success: 404 ().
+[06-25-2026_11:16:27] Processing: VROPS
+[06-25-2026_11:16:27] DEBUG: Starting download for bundle 2a4a0cfa-c823-5999-a831-f12dc522b95f
+[06-25-2026_11:16:27]   Failed to download bundle 2a4a0cfa-c823-5999-a831-f12dc522b95f: Response status code does not indicate success: 404 ().
+[06-25-2026_11:16:27] Processing: VCF_FLEET_LCM
+[06-25-2026_11:16:28] DEBUG: Starting download for bundle ad3f0777-a0c9-509c-86cd-86001cebcf8f
+[06-25-2026_11:16:28]   Failed to download bundle ad3f0777-a0c9-509c-86cd-86001cebcf8f: Response status code does not indicate success: 404 ().
+[06-25-2026_11:16:28] Processing: SDDC_MANAGER
+[06-25-2026_11:16:28] DEBUG: Starting download for bundle fe5daf52-a3e1-5487-8ec4-25270533bb23
+[06-25-2026_11:16:28]   Failed to download bundle fe5daf52-a3e1-5487-8ec4-25270533bb23: Response status code does not indicate success: 404 ().
+[06-25-2026_11:16:28] Processing: VCF_SALT
+[06-25-2026_11:16:29] DEBUG: Starting download for bundle 3092fe38-b997-5f2f-b397-6776c6601880
+[06-25-2026_11:16:29]   Failed to download bundle 3092fe38-b997-5f2f-b397-6776c6601880: Response status code does not indicate success: 404 ().
+[06-25-2026_11:16:29] Processing: VCF_OPS_CLOUD_PROXY
+[06-25-2026_11:16:29] DEBUG: Starting download for bundle 9599b55f-952b-5b2f-a96a-7529a9e904ae
+[06-25-2026_11:16:29]   Failed to download bundle 9599b55f-952b-5b2f-a96a-7529a9e904ae: Response status code does not indicate success: 404 ().
+[06-25-2026_11:16:29] Processing: VSP
+[06-25-2026_11:16:29] DEBUG: Starting download for bundle aa88f811-700a-5384-b86e-c40191985348
+[06-25-2026_11:16:29]   Failed to download bundle aa88f811-700a-5384-b86e-c40191985348: Response status code does not indicate success: 404 ().
+[06-25-2026_11:16:29] Processing: VCF_SALT_RAAS
+[06-25-2026_11:16:30] DEBUG: Starting download for bundle 1e7fd7e4-042c-5c6c-a7ba-a2c926a90f4f
+[06-25-2026_11:16:30]   Failed to download bundle 1e7fd7e4-042c-5c6c-a7ba-a2c926a90f4f: Response status code does not indicate success: 404 ().
+[06-25-2026_11:16:30] Processing: DEPOT_SERVICE
+[06-25-2026_11:16:30] DEBUG: Starting download for bundle 2549d171-774b-5662-8a40-a40f8cb2cf11
+[06-25-2026_11:16:30]   Failed to download bundle 2549d171-774b-5662-8a40-a40f8cb2cf11: Response status code does not indicate success: 404 ().
+[06-25-2026_11:16:30] 
+Monitoring bundle download progress (Total bundles: 16)...
+[06-25-2026_11:16:31]   Bundle Status: 16 completed | 0 in progress | 0 failed
+[06-25-2026_11:16:31] 
+All 16 bundles downloaded successfully!
+[06-25-2026_11:16:31] Connecting to SDDC Manager at 10.2.101.100 ...
+[06-25-2026_11:16:32]   Successfully connected to SDDC Manager
+[06-25-2026_11:16:32] Generating VCF Workload Domain Host Commission file vcf-commission-host-ui.json and vcf-commission-host-api.json for SDDC Manager UI and API
+[06-25-2026_11:16:32] Existing Network Pools discovered in SDDC Manager:
+[06-25-2026_11:16:32]   - Name: m01-np01  |  ID: 82a1c037-46fe-4249-8ab7-9cdf92b9b0d2
+[06-25-2026_11:16:32]   - Name: w01-np01  |  ID: e972a5c5-3715-4f6d-a3c4-8047107bf516
+[06-25-2026_11:16:32] Found existing WLD Network Pool 'w01-np01' (ID: e972a5c5-3715-4f6d-a3c4-8047107bf516)
+[06-25-2026_11:16:32] Using WLD Network Pool 'w01-np01' (ID: e972a5c5-3715-4f6d-a3c4-8047107bf516)
+[06-25-2026_11:16:32] Commissioning ESXi hosts for Workload Domain deployment using vcf-commission-host-api.json ...
+[06-25-2026_11:16:32] DEBUG: Method: POST
+[06-25-2026_11:16:32] DEBUG: Uri: https://10.2.101.100/v1/hosts
+[06-25-2026_11:16:32] DEBUG: Body: [
+  {
+    "fqdn": "esx05.vcf.lab.io",
+    "username": "root",
+    "password": "VMwareVCF9!",
+    "networkPoolId": "e972a5c5-3715-4f6d-a3c4-8047107bf516",
+    "storageType": "VSAN_ESA"
+  },
+  {
+    "fqdn": "esx06.vcf.lab.io",
+    "username": "root",
+    "password": "VMwareVCF9!",
+    "networkPoolId": "e972a5c5-3715-4f6d-a3c4-8047107bf516",
+    "storageType": "VSAN_ESA"
+  },
+  {
+    "fqdn": "esx07.vcf.lab.io",
+    "username": "root",
+    "password": "VMwareVCF9!",
+    "networkPoolId": "e972a5c5-3715-4f6d-a3c4-8047107bf516",
+    "storageType": "VSAN_ESA"
+  }
+]
+
+[06-25-2026_11:16:34]   Host commission task started with ID: 3a72cdb8-82df-4f5d-90b5-5fa328e5b369
+[06-25-2026_11:16:34] Waiting for host commission to complete...
+[06-25-2026_11:20:05]   Host commission completed successfully
+[06-25-2026_11:20:05] Retrieving unassigned ESXi hosts from SDDC Manager and creating Workload Domain JSON deployment file vcf-w01-deployment.json
+[06-25-2026_11:20:05]   Found 2 unassigned useable hosts
+[06-25-2026_11:20:05] Saving Workload Domain deployment spec to vcf-w01-deployment.json
+[06-25-2026_11:20:05] 
+========================================
+[06-25-2026_11:20:05]   STARTING WORKLOAD DOMAIN DEPLOYMENT
+[06-25-2026_11:20:05] ========================================
+
+[06-25-2026_11:20:05] DEBUG: Method: POST
+[06-25-2026_11:20:05] DEBUG: Uri: https://10.2.101.100/v1/domains
+[06-25-2026_11:20:13] Failed to start Workload Domain deployment
+[06-25-2026_11:20:13] Server response body:
+[06-25-2026_12:42:45] Connecting to SDDC Manager at 10.2.101.100 ...
+[06-25-2026_12:42:46]   Successfully connected to SDDC Manager
+[06-25-2026_12:42:46] Generating VCF Workload Domain Host Commission file vcf-commission-host-ui.json and vcf-commission-host-api.json for SDDC Manager UI and API
+[06-25-2026_12:42:47] Existing Network Pools discovered in SDDC Manager:
+[06-25-2026_12:42:47]   - Name: m01-np01  |  ID: 82a1c037-46fe-4249-8ab7-9cdf92b9b0d2
+[06-25-2026_12:42:47]   - Name: w01-np01  |  ID: e972a5c5-3715-4f6d-a3c4-8047107bf516
+[06-25-2026_12:42:47] Found existing WLD Network Pool 'w01-np01' (ID: e972a5c5-3715-4f6d-a3c4-8047107bf516)
+[06-25-2026_12:42:47] Using WLD Network Pool 'w01-np01' (ID: e972a5c5-3715-4f6d-a3c4-8047107bf516)
+[06-25-2026_12:42:47] Commissioning ESXi hosts for Workload Domain deployment using vcf-commission-host-api.json ...
+[06-25-2026_12:42:47] DEBUG: Method: POST
+[06-25-2026_12:42:47] DEBUG: Uri: https://10.2.101.100/v1/hosts
+[06-25-2026_12:42:47] DEBUG: Body: [
+  {
+    "fqdn": "esx05.vcf.lab.io",
+    "username": "root",
+    "password": "VMwareVCF9!",
+    "networkPoolId": "e972a5c5-3715-4f6d-a3c4-8047107bf516",
+    "storageType": "VSAN_ESA"
+  },
+  {
+    "fqdn": "esx06.vcf.lab.io",
+    "username": "root",
+    "password": "VMwareVCF9!",
+    "networkPoolId": "e972a5c5-3715-4f6d-a3c4-8047107bf516",
+    "storageType": "VSAN_ESA"
+  },
+  {
+    "fqdn": "esx07.vcf.lab.io",
+    "username": "root",
+    "password": "VMwareVCF9!",
+    "networkPoolId": "e972a5c5-3715-4f6d-a3c4-8047107bf516",
+    "storageType": "VSAN_ESA"
+  }
+]
+
+[06-25-2026_12:42:47]   Host commission task started with ID: d57a1dfe-b10f-4178-b08f-3c02d64025ff
+[06-25-2026_12:42:47] Waiting for host commission to complete...
+[06-25-2026_12:46:17]   Host commission completed successfully
+[06-25-2026_12:46:17] Retrieving unassigned ESXi hosts from SDDC Manager and creating Workload Domain JSON deployment file vcf-w01-deployment.json
+[06-25-2026_12:46:18]   Found 3 unassigned useable hosts
+[06-25-2026_12:46:18] Saving Workload Domain deployment spec to vcf-w01-deployment.json
+[06-25-2026_12:46:18] 
+========================================
+[06-25-2026_12:46:18]   STARTING WORKLOAD DOMAIN DEPLOYMENT
+[06-25-2026_12:46:18] ========================================
+
+[06-25-2026_12:46:18] DEBUG: Method: POST
+[06-25-2026_12:46:18] DEBUG: Uri: https://10.2.101.100/v1/domains
+[06-25-2026_12:46:23]   Workload Domain deployment task started with ID: 68fd89be-054a-4f66-8a60-2cfcc195a51e
+[06-25-2026_12:46:23] 
+Open a browser to monitor the deployment progress:
+[06-25-2026_12:46:23]   - VCF Operations: https://10.2.101.100
+[06-25-2026_12:46:23]   - vCenter Server: https://10.2.101.101
+[06-25-2026_12:46:23] 
+========================================
+[06-25-2026_12:46:23]   VCF WORKLOAD DOMAIN DEPLOYMENT COMPLETE
+[06-25-2026_12:46:23] ========================================
+[06-25-2026_12:46:23]   StartTime: 2026-06-25 12:42:44
+[06-25-2026_12:46:23]   EndTime:   2026-06-25 12:46:23
+[06-25-2026_12:46:23]   Duration:  3.65 minutes
+[06-25-2026_12:46:23]   Log File:  vcf-workload-domain-deployment.log
+[06-25-2026_12:46:23] ========================================

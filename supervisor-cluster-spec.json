@@ -1,44 +1,44 @@
 {
   "size_hint": "TINY",
   "service_cidr": {
-    "address": "10.96.0.0",
-    "prefix": 24
+    "prefix": 24,
+    "address": "10.96.0.0"
   },
   "network_provider": "NSXT_CONTAINER_PLUGIN",
   "ncp_cluster_network_spec": {
-    "nsx_edge_cluster": "ef812d7b-0273-4f71-9323-5f181bad86c2",
+    "nsx_edge_cluster": "4f88e530-98b2-407c-b168-5eef3bfeaebc",
     "pod_cidrs": [
       {
-        "address": "10.244.0.0",
-        "prefix": 20
+        "prefix": 20,
+        "address": "10.244.0.0"
       }
     ],
     "ingress_cidrs": [
       {
-        "address": "10.2.220.0",
-        "prefix": 24
+        "prefix": 24,
+        "address": "10.2.220.0"
       }
     ],
     "egress_cidrs": [
       {
-        "address": "10.2.221.0",
-        "prefix": 24
+        "prefix": 24,
+        "address": "10.2.221.0"
       }
     ],
-    "cluster_distributed_switch": "50 05 c2 42 4f a5 39 52-36 d7 84 6d 6f 47 32 98",
-    "nsx_tier0_gateway": "9d7408e4-6624-4d86-9a07-dc12a1291a10",
+    "cluster_distributed_switch": "50 13 62 59 c7 e2 1d 64-0f ff 85 4f f3 00 03 15",
+    "nsx_tier0_gateway": "bddcef6e-1904-481b-bc65-7104bd24d4ea",
     "namespace_subnet_prefix": 28,
     "routed_mode": false
   },
   "master_management_network": {
     "mode": "STATICRANGE",
     "address_range": {
-      "subnet_mask": "255.255.255.0",
-      "address_count": 5,
       "starting_address": "10.2.200.220",
-      "gateway": "10.2.200.1"
+      "gateway": "10.2.200.1",
+      "address_count": 5,
+      "subnet_mask": "255.255.255.0"
     },
-    "network": "dvportgroup-14"
+    "network": "dvportgroup-13"
   },
   "master_storage_policy": "aa6d5a82-1c88-45da-85d3-3d74b91a5bad",
   "ephemeral_storage_policy": "aa6d5a82-1c88-45da-85d3-3d74b91a5bad",
@@ -54,7 +54,7 @@
   "master_NTP_servers": [
     "10.1.10.1"
   ],
-  "default_kubernetes_service_content_library": "dc7cd8a9-d6f5-4ce9-ad23-d766bfeb09b8",
+  "default_kubernetes_service_content_library": "f4769ee2-04df-473d-813d-6f2fab1becb4",
   "image_storage": {
     "storage_policy": "aa6d5a82-1c88-45da-85d3-3d74b91a5bad"
   }
